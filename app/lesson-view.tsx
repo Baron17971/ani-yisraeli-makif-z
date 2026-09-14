@@ -6,6 +6,7 @@ import { lessons } from "./data";
 export function LessonView({ index }: { index: number }) {
   const lesson=lessons[index],previous=lessons[index-1],next=lessons[index+1];
   const about=lesson.about??[lesson.description];
+  const lessonHref=(slug:string)=>slug==="startup-nation"?`/lessons/${slug}`:`/lessons/${slug}.html`;
   return <><Header/><main className="lesson-page" style={{"--accent":lesson.accentColor} as React.CSSProperties}>
     <div className="lesson-shell">
       <nav className="breadcrumbs" aria-label="פירורי לחם"><Link href="/">ראשי</Link><span>/</span><Link href="/#lessons">השיעורים</Link><span>/</span><span>{lesson.title}</span></nav>
@@ -26,9 +27,9 @@ export function LessonView({ index }: { index: number }) {
       {lesson.materials&&<section className="lesson-content-section"><p className="eyebrow">למורה</p><h2>חומרים להורדה</h2><div className="resource-grid">{lesson.materials.map((material)=>material.url?<a className="resource-card" href={material.url} target="_blank" rel="noreferrer" key={material.title}><span className="resource-kicker">חומר נלווה</span><h3>{material.title}</h3><p>{material.description}</p><strong>{material.label} <ExternalLink size={16}/></strong></a>:<article className="resource-card resource-card-static" key={material.title}><span className="resource-kicker">חומר נלווה</span><h3>{material.title}</h3><p>{material.description}</p></article>)}</div></section>}
 
       <nav className="lesson-navigation" aria-label="מעבר בין שיעורים">
-        <div>{previous&&<Link href={`/lessons/${previous.slug}`}><ArrowRight size={18}/><span><small>השיעור הקודם</small>{previous.title}</span></Link>}</div>
+        <div>{previous&&<Link href={lessonHref(previous.slug)}><ArrowRight size={18}/><span><small>השיעור הקודם</small>{previous.title}</span></Link>}</div>
         <Link className="all-lessons" href="/#lessons"><Grid2X2 size={18}/>כל השיעורים</Link>
-        <div>{next&&<Link href={`/lessons/${next.slug}`}><span><small>השיעור הבא</small>{next.title}</span><ArrowLeft size={18}/></Link>}</div>
+        <div>{next&&<Link href={lessonHref(next.slug)}><span><small>השיעור הבא</small>{next.title}</span><ArrowLeft size={18}/></Link>}</div>
       </nav>
     </div>
   </main><Footer/></>
