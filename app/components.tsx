@@ -15,8 +15,9 @@ export function Header() {
 }
 
 export function LessonCard({lesson,index}:{lesson:Lesson;index?:number}) {
+  const lessonHref=lesson.slug==="startup-nation"?`/lessons/${lesson.slug}`:`/lessons/${lesson.slug}.html`;
   return <article className="lesson-card" style={{"--accent":lesson.accentColor} as React.CSSProperties}>
-    <Link href={`/lessons/${lesson.slug}`} className="lesson-card-link" aria-label={`למערך השיעור: ${lesson.title}`}>
+    <Link href={lessonHref} className="lesson-card-link" aria-label={`למערך השיעור: ${lesson.title}`}>
       <div className="card-visual"><img src={lesson.coverImage} alt={`שקף הפתיחה של השיעור ${lesson.title}`}/><span className="lesson-number">{String((index??0)+1).padStart(2,"0")}</span></div>
       <div className="card-content"><span className="category">{lesson.category}</span><h3>{lesson.title}</h3><p>{lesson.description}</p><span className="text-link">למערך השיעור <ArrowLeft size={18}/></span></div>
     </Link>
