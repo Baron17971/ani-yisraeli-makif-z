@@ -11,6 +11,7 @@ export function Header() {
     <Link className="corner-logo" href="/#home" aria-label="מקיף ז׳ אשדוד, עמוד הבית"><img src="/makif-z-logo.png" alt="מקיף ז׳ אשדוד"/></Link>
     <div className="nav-shell"><span className="header-logo-spacer" aria-hidden="true"/><nav className="desktop-nav" aria-label="ניווט ראשי">{links.map(([l,h])=><Link key={h} href={h}>{l}</Link>)}</nav><button className="menu-button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label={open?"סגירת תפריט":"פתיחת תפריט"}>{open?<X/>:<Menu/>}</button></div>
     {open&&<nav className="mobile-nav" aria-label="ניווט במובייל">{links.map(([l,h])=><Link key={h} href={h} onClick={()=>setOpen(false)}>{l}</Link>)}</nav>}
+    <style jsx global>{`.site-header .corner-logo{width:112px!important;height:112px!important;top:3px!important}.site-header .header-logo-spacer{display:block;width:118px;flex:0 0 118px}@media(max-width:700px){.site-header .corner-logo{width:88px!important;height:88px!important;right:8px!important;top:2px!important}.site-header .header-logo-spacer{width:92px;flex-basis:92px}}`}</style>
   </header>
 }
 
