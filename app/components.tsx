@@ -9,7 +9,7 @@ export function Header() {
   const links=[["ראשי","/#home"],["השיעורים","/#lessons"],["על התוכנית","/#about"]];
   return <header className="site-header">
     <Link className="corner-logo" href="/#home" aria-label="מקיף ז׳ אשדוד, עמוד הבית"><img src="/makif-z-logo.png" alt="מקיף ז׳ אשדוד"/></Link>
-    <div className="nav-shell"><Link className="brand" href="/#home"><span aria-hidden="true">✡</span>אני ישראלי</Link><nav className="desktop-nav" aria-label="ניווט ראשי">{links.map(([l,h])=><Link key={h} href={h}>{l}</Link>)}</nav><button className="menu-button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label={open?"סגירת תפריט":"פתיחת תפריט"}>{open?<X/>:<Menu/>}</button></div>
+    <div className="nav-shell"><span className="header-logo-spacer" aria-hidden="true"/><nav className="desktop-nav" aria-label="ניווט ראשי">{links.map(([l,h])=><Link key={h} href={h}>{l}</Link>)}</nav><button className="menu-button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label={open?"סגירת תפריט":"פתיחת תפריט"}>{open?<X/>:<Menu/>}</button></div>
     {open&&<nav className="mobile-nav" aria-label="ניווט במובייל">{links.map(([l,h])=><Link key={h} href={h} onClick={()=>setOpen(false)}>{l}</Link>)}</nav>}
   </header>
 }
