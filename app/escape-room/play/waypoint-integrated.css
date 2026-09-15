@@ -1,0 +1,49 @@
+/* Waypoint is a visual part of the page, not a card inside another card. */
+.game-media.portrait {
+  width: 100%;
+  margin: 8px 0 4px;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+
+.game-media.portrait img {
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  max-height: none !important;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  object-fit: contain;
+}
+
+/* The dark zoom badge made the artwork look like a nested card. */
+.game-media.portrait > span {
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  padding: 5px 9px;
+  border: 0;
+  background: rgba(7, 24, 33, .5);
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+  opacity: .72;
+}
+
+@media (max-width: 700px) {
+  .game-media.portrait {
+    width: calc(100% + 36px);
+    margin-right: -18px;
+    margin-left: -18px;
+  }
+
+  .game-media.portrait img {
+    width: 100%;
+  }
+}
