@@ -59,9 +59,51 @@ export default function OpeningGateV2() {
       const detail = (event as CustomEvent<{ muted?: boolean }>).detail;
       if (audioRef.current) audioRef.current.muted = Boolean(detail?.muted);
     };
+
+    // The game page has its own reset button. It clears the saved stage in the
+    // same tab, so the browser does not emit a storage event. Detect that reset
+    // explicitly and reopen this gate immediately, instead of exposing the old
+    // legacy intro screens that still exist underneath the gate.
+    const reopenAfterReset = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element) || !target.closest(".reset-button")) return;
+
+      window.setTimeout(() => {
+        let shouldReopen = false;
+        try {
+          const saved = window.localStorage.getItem(`${STORAGE_PREFIX}:${room}`);
+          if (!saved) {
+            shouldReopen = true;
+          } else {
+            const parsed = JSON.parse(saved) as { stage?: number };
+            shouldReopen = (parsed.stage || 0) < 2;
+          }
+          if (shouldReopen) {
+            window.localStorage.removeItem(`ani-yisraeli-opening-version:${room}`);
+          }
+        } catch {
+          shouldReopen = true;
+        }
+
+        if (!shouldReopen) return;
+        if (transitionTimerRef.current) window.clearTimeout(transitionTimerRef.current);
+        if (enterButtonTimerRef.current) window.clearTimeout(enterButtonTimerRef.current);
+        audioRef.current?.pause();
+        setCanEnterTunnel(false);
+        setLeaving(false);
+        setPhase("team");
+        setTeam({ names: "", className: classFromLink });
+        setVisible(true);
+        setReady(true);
+        window.scrollTo({ top: 0, behavior: "auto" });
+      }, 0);
+    };
+
     window.addEventListener("escape-audio-muted", syncMute);
+    document.addEventListener("click", reopenAfterReset, true);
     return () => {
       window.removeEventListener("escape-audio-muted", syncMute);
+      document.removeEventListener("click", reopenAfterReset, true);
       if (transitionTimerRef.current) window.clearTimeout(transitionTimerRef.current);
       if (enterButtonTimerRef.current) window.clearTimeout(enterButtonTimerRef.current);
       audioRef.current?.pause();
@@ -93,9 +135,8 @@ export default function OpeningGateV2() {
     window.scrollTo({ top: 0, behavior: "auto" });
     void startMusic();
 
-    // A fresh, separate click is required on the cinematic screen before
-    // entering the stations. The short arming delay prevents a mobile tap
-    // from carrying through to the newly rendered button.
+    // Require a fresh, separate tap on the cinematic screen. This also guards
+    // against mobile tap-through from the previous form button.
     setCanEnterTunnel(false);
     if (enterButtonTimerRef.current) window.clearTimeout(enterButtonTimerRef.current);
     setPhase("image");
