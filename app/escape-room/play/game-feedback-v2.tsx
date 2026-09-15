@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, Lightbulb, Sparkles, Volume2, VolumeX, XCircle } from "lucide-react";
+import { CheckCircle2, Lightbulb, Sparkles, Trophy, Volume2, VolumeX, XCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const AUDIO_PREF_KEY = "ani-yisraeli-audio-muted";
@@ -163,7 +163,7 @@ export default function GameFeedbackV2() {
       if (!muted) tone(kind);
       if (celebrationTimerRef.current) window.clearTimeout(celebrationTimerRef.current);
       setCelebration(kind);
-      celebrationTimerRef.current = window.setTimeout(() => setCelebration(null), kind === "victory" ? 1800 : 950);
+      celebrationTimerRef.current = window.setTimeout(() => setCelebration(null), kind === "victory" ? 1800 : 1250);
     };
 
     const handleWrong = () => {
@@ -204,7 +204,6 @@ export default function GameFeedbackV2() {
     const onSubmit = (event: Event) => {
       const target = event.target;
       if (!(target instanceof HTMLFormElement) || !target.classList.contains("answer-box")) return;
-      // Wait for React to render the result of this exact attempt.
       window.setTimeout(inspectAnswerResult, 80);
     };
 
@@ -264,7 +263,7 @@ export default function GameFeedbackV2() {
     </div>}
 
     {celebration && <div className={`feedback-v2-celebration ${celebration}`} aria-hidden="true">
-      <span>{celebration === "victory" ? <Sparkles size={44}/> : <CheckCircle2 size={40}/>}</span>
+      <span>{celebration === "victory" ? <Sparkles size={44}/> : <Trophy size={68} strokeWidth={1.8}/>}</span>
       {celebration === "victory" && <div className="feedback-v2-confetti">{Array.from({ length: 16 }, (_, index) => <i key={index}/>)}</div>}
     </div>}
 
@@ -273,15 +272,16 @@ export default function GameFeedbackV2() {
       .feedback-v2-sound{bottom:calc(12px + env(safe-area-inset-bottom))}.feedback-v2-hint{bottom:calc(62px + env(safe-area-inset-bottom));color:#f6d98f;border-color:rgba(246,217,143,.42);animation:feedback-v2-hint-pulse 1.5s ease-in-out infinite}
       .feedback-v2-card{position:fixed;left:12px;bottom:calc(112px + env(safe-area-inset-bottom));z-index:96;width:min(390px,calc(100vw - 24px));box-sizing:border-box;padding:16px 17px;border:1px solid rgba(125,211,252,.3);border-radius:16px;background:rgba(8,36,83,.98);color:#eaf4ff;box-shadow:0 22px 60px rgba(0,0,0,.5);font-family:"Varela Round",Arial,sans-serif}.feedback-v2-card>div{display:flex;align-items:center;gap:8px;color:#f6d98f;margin-bottom:8px}.feedback-v2-card p{margin:7px 0;line-height:1.65;font-size:.9rem}.feedback-v2-card .feedback-v2-teacher{padding-top:9px;margin-top:11px;border-top:1px solid rgba(246,217,143,.22);color:#f6d98f;font-weight:800}.feedback-v2-card>button{margin-top:8px;padding:7px 10px;border:0;border-radius:9px;background:rgba(255,255,255,.08);color:#dbeafe;font:inherit;cursor:pointer}
       .feedback-v2-toast{position:fixed;z-index:98;right:50%;top:calc(82px + env(safe-area-inset-top));transform:translateX(50%);width:min(520px,calc(100vw - 28px));box-sizing:border-box;display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:14px;color:#fff;box-shadow:0 18px 42px rgba(0,0,0,.38);backdrop-filter:blur(12px);font:800 .9rem/1.5 "Varela Round",Arial,sans-serif;animation:feedback-v2-toast-in .24s ease both}.feedback-v2-toast.wrong{background:rgba(89,25,36,.96);border:1px solid rgba(255,180,173,.35);color:#ffd9d5}.feedback-v2-toast.success{background:rgba(10,77,68,.96);border:1px solid rgba(132,238,205,.34);color:#d7fff2}
-      .feedback-v2-shake{animation:feedback-v2-shake .36s ease}.feedback-v2-celebration{position:fixed;inset:0;z-index:95;pointer-events:none;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,rgba(96,165,250,.24),transparent 31%);animation:feedback-v2-fade .95s ease both}.feedback-v2-celebration>span{width:96px;height:96px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(125,211,252,.55);background:rgba(8,36,83,.95);color:#bfe8ff;box-shadow:0 0 54px rgba(96,165,250,.4);animation:feedback-v2-pop .7s ease both}.feedback-v2-celebration.victory{background:radial-gradient(circle at 50% 48%,rgba(246,217,143,.28),transparent 36%);animation-duration:1.8s}.feedback-v2-celebration.victory>span{color:#f6d98f;border-color:rgba(246,217,143,.55)}
-      .feedback-v2-confetti{position:absolute;inset:0;overflow:hidden}.feedback-v2-confetti i{position:absolute;top:-8%;left:50%;width:8px;height:18px;border-radius:3px;background:#f6d98f;opacity:.9;animation:feedback-v2-confetti 1.6s ease-out both}.feedback-v2-confetti i:nth-child(2n){background:#7dd3fc}.feedback-v2-confetti i:nth-child(3n){background:#fff}.feedback-v2-confetti i:nth-child(1){left:10%;animation-delay:.02s}.feedback-v2-confetti i:nth-child(2){left:18%;animation-delay:.14s}.feedback-v2-confetti i:nth-child(3){left:26%;animation-delay:.06s}.feedback-v2-confetti i:nth-child(4){left:34%;animation-delay:.2s}.feedback-v2-confetti i:nth-child(5){left:42%;animation-delay:.1s}.feedback-v2-confetti i:nth-child(6){left:50%;animation-delay:.18s}.feedback-v2-confetti i:nth-child(7){left:58%;animation-delay:.04s}.feedback-v2-confetti i:nth-child(8){left:66%;animation-delay:.16s}.feedback-v2-confetti i:nth-child(9){left:74%;animation-delay:.08s}.feedback-v2-confetti i:nth-child(10){left:82%;animation-delay:.22s}.feedback-v2-confetti i:nth-child(11){left:90%;animation-delay:.12s}.feedback-v2-confetti i:nth-child(n+12){left:calc(8% + (var(--n, 5) * 7%));animation-delay:.24s}
+      .feedback-v2-shake{animation:feedback-v2-shake .36s ease}.feedback-v2-celebration{position:fixed;inset:0;z-index:95;pointer-events:none;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,rgba(246,217,143,.3),rgba(96,165,250,.12) 22%,transparent 42%);animation:feedback-v2-fade 1.25s ease both}.feedback-v2-celebration>span{width:132px;height:132px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(246,217,143,.68);background:radial-gradient(circle at 35% 28%,rgba(255,250,220,.2),rgba(8,36,83,.97) 62%);color:#f6d98f;box-shadow:0 0 24px rgba(246,217,143,.28),0 0 72px rgba(246,217,143,.38);animation:feedback-v2-trophy-pop .82s cubic-bezier(.16,.84,.28,1.25) both}.feedback-v2-celebration.victory{background:radial-gradient(circle at 50% 48%,rgba(246,217,143,.28),transparent 36%);animation-duration:1.8s}.feedback-v2-celebration.victory>span{width:96px;height:96px;color:#f6d98f;border-color:rgba(246,217,143,.55)}
+      .feedback-v2-confetti{position:absolute;inset:0;overflow:hidden}.feedback-v2-confetti i{position:absolute;top:-8%;left:50%;width:8px;height:18px;border-radius:3px;background:#f6d98f;opacity:.9;animation:feedback-v2-confetti 1.6s ease-out both}.feedback-v2-confetti i:nth-child(2n){background:#7dd3fc}.feedback-v2-confetti i:nth-child(3n){background:#fff}.feedback-v2-confetti i:nth-child(1){left:10%;animation-delay:.02s}.feedback-v2-confetti i:nth-child(2){left:18%;animation-delay:.14s}.feedback-v2-confetti i:nth-child(3){left:26%;animation-delay:.06s}.feedback-v2-confetti i:nth-child(4){left:34%;animation-delay:.2s}.feedback-v2-confetti i:nth-child(5){left:42%;animation-delay:.1s}.feedback-v2-confetti i:nth-child(6){left:50%;animation-delay:.18s}.feedback-v2-confetti i:nth-child(7){left:58%;animation-delay:.04s}.feedback-v2-confetti i:nth-child(8){left:66%;animation-delay:.16s}.feedback-v2-confetti i:nth-child(9){left:74%;animation-delay:.08s}.feedback-v2-confetti i:nth-child(10){left:82%;animation-delay:.22s}.feedback-v2-confetti i:nth-child(11){left:90%;animation-delay:.12s}.feedback-v2-confetti i:nth-child(n+12){left:50%;animation-delay:.24s}
       @keyframes feedback-v2-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(5px)}50%{transform:translateX(-5px)}75%{transform:translateX(3px)}}
+      @keyframes feedback-v2-trophy-pop{0%{opacity:0;transform:scale(.35) rotate(-8deg)}58%{opacity:1;transform:scale(1.14) rotate(3deg)}78%{transform:scale(.96) rotate(-1deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
       @keyframes feedback-v2-pop{from{opacity:0;transform:scale(.6)}60%{opacity:1;transform:scale(1.12)}to{opacity:1;transform:scale(1)}}
-      @keyframes feedback-v2-fade{0%{opacity:0}18%,72%{opacity:1}100%{opacity:0}}
+      @keyframes feedback-v2-fade{0%{opacity:0}16%,76%{opacity:1}100%{opacity:0}}
       @keyframes feedback-v2-toast-in{from{opacity:0;transform:translate(50%,-8px)}to{opacity:1;transform:translate(50%,0)}}
       @keyframes feedback-v2-hint-pulse{0%,100%{box-shadow:0 10px 28px rgba(0,0,0,.35)}50%{box-shadow:0 10px 34px rgba(246,217,143,.24)}}
       @keyframes feedback-v2-confetti{0%{transform:translateY(-10vh) rotate(0deg)}100%{transform:translateY(110vh) rotate(560deg)}}
-      @media(max-width:700px){.feedback-v2-sound,.feedback-v2-hint{left:10px}.feedback-v2-card{left:10px;width:calc(100vw - 20px)}.feedback-v2-toast{top:calc(72px + env(safe-area-inset-top));font-size:.84rem}}
+      @media(max-width:700px){.feedback-v2-sound,.feedback-v2-hint{left:10px}.feedback-v2-card{left:10px;width:calc(100vw - 20px)}.feedback-v2-toast{top:calc(72px + env(safe-area-inset-top));font-size:.84rem}.feedback-v2-celebration>span{width:118px;height:118px}}
       @media(prefers-reduced-motion:reduce){.feedback-v2-shake,.feedback-v2-celebration,.feedback-v2-celebration>span,.feedback-v2-toast,.feedback-v2-hint,.feedback-v2-confetti i{animation:none!important}}
     `}</style>
   </>;
