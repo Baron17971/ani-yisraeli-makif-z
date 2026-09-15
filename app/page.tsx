@@ -35,7 +35,8 @@ export default function Home() {
     </section>
   </main><Footer/>
   <style>{`
-    .home-program-section{padding:clamp(48px,6vw,72px) clamp(22px,5vw,84px) clamp(48px,6vw,68px);background:linear-gradient(180deg,#fff 0%,#f7faf9 100%)}
+    .quote-section{padding-top:clamp(20px,2.2vw,28px)!important;padding-bottom:clamp(24px,3vw,36px)!important;border-bottom:1px solid #e3ecef}
+    .home-program-section{position:relative;padding:clamp(42px,5.2vw,62px) clamp(22px,5vw,84px) clamp(42px,5.4vw,62px);background:linear-gradient(180deg,#f8fcfd 0%,#f3f9fb 100%);border-bottom:1px solid #dce9ed}
     .home-program-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1180px;margin:0 auto}
     .home-program-card{position:relative;min-height:190px;padding:26px 22px;border:1px solid transparent;border-radius:24px;display:grid;grid-template-rows:68px 4.5em;align-content:center;justify-items:center;gap:16px;text-align:center;overflow:hidden;box-shadow:0 12px 30px rgba(15,48,62,.15);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background-color .34s ease}
     .home-program-card::after{content:"";position:absolute;inset:auto -28px -52px auto;width:112px;height:112px;border-radius:50%;background:currentColor;opacity:.08;pointer-events:none}
@@ -48,15 +49,16 @@ export default function Home() {
     .home-program-card:nth-child(3) .home-program-icon,.home-program-card:nth-child(4) .home-program-icon{background:rgba(255,255,255,.42);box-shadow:inset 0 0 0 1px rgba(3,4,94,.07),0 7px 18px rgba(3,4,94,.08)}
     .home-program-card h2{position:relative;z-index:1;margin:0;color:#f7fbfb;font-size:clamp(1.04rem,1.45vw,1.24rem);line-height:1.5;font-weight:700;height:4.5em;display:flex;align-items:center;justify-content:center}
     .home-program-card:nth-child(3) h2,.home-program-card:nth-child(4) h2{color:#03045e}
-    .home-program-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .home-program-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px;padding-top:2px}
     .home-program-button{display:inline-flex;align-items:center;justify-content:center;min-width:158px;padding:12px 23px;border-radius:999px;font-weight:700;border:1px solid var(--deep);transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
     .home-program-button.primary{background:var(--deep);color:#fff}
     .home-program-button.secondary{background:rgba(255,255,255,.72);color:var(--deep)}
     .home-program-button:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:translateY(-1px)}
-    .home-pedagogy-section{padding-top:26px}
-    .home-pedagogy-section .pedagogy{margin-top:0}
+    .home-pedagogy-section{padding:clamp(34px,4.2vw,50px) clamp(22px,5vw,84px) clamp(42px,5vw,58px)!important;background:#f6f8f8!important;border-top:0}
+    .home-pedagogy-section .pedagogy{max-width:1180px;margin:0 auto;padding-top:0;border-top:0}
 
-    .site-dark .home-program-section{background:linear-gradient(180deg,#102129 0%,#0d1c23 100%)}
+    .site-dark .quote-section{border-bottom-color:#29424c}
+    .site-dark .home-program-section{background:linear-gradient(180deg,#102129 0%,#0d1c23 100%);border-bottom-color:#29424c}
     .site-dark .home-program-card{box-shadow:0 12px 30px rgba(0,0,0,.17)}
     .site-dark .home-program-card:nth-child(1){background:linear-gradient(145deg,#17343b 0%,#132b33 100%);border-color:#2c565d;color:#79c7c4}
     .site-dark .home-program-card:nth-child(2){background:linear-gradient(145deg,#192f3e 0%,#142833 100%);border-color:#304b5c;color:#84b7c7}
@@ -67,18 +69,20 @@ export default function Home() {
     .site-dark .home-program-card:hover{box-shadow:0 18px 38px rgba(0,0,0,.25)}
     .site-dark .home-program-button.primary{background:#247f82;border-color:#247f82;color:#fff}
     .site-dark .home-program-button.secondary{background:rgba(255,255,255,.035);color:#dce8ea;border-color:#58717b}
+    .site-dark .home-pedagogy-section{background:#0a1920!important}
 
     @media(max-width:900px){.home-program-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:600px){
-      .home-program-section{padding:36px 20px 42px}
+      .quote-section{padding-bottom:24px!important}
+      .home-program-section{padding:32px 20px 36px}
       .home-program-grid{grid-template-columns:1fr 1fr;gap:12px}
       .home-program-card{min-height:172px;padding:18px 12px;border-radius:20px;grid-template-rows:58px 4.35em;gap:11px}
       .home-program-icon{width:58px;height:58px}
       .home-program-icon svg{width:28px;height:28px}
       .home-program-card h2{font-size:.96rem;line-height:1.45;height:4.35em}
-      .home-program-actions{margin-top:26px}
+      .home-program-actions{margin-top:24px}
       .home-program-button{min-width:138px}
-      .home-pedagogy-section{padding-top:18px}
+      .home-pedagogy-section{padding:30px 20px 38px!important}
     }
   `}</style></>;
 }
