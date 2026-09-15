@@ -1,0 +1,165 @@
+.tunnel-opening-gate{
+  position:fixed;
+  inset:0;
+  z-index:250;
+  display:grid;
+  place-items:end center;
+  overflow:hidden;
+  background:#061821;
+  color:#fff;
+  isolation:isolate;
+  animation:gate-in .55s ease both;
+}
+
+.tunnel-opening-gate.leaving{
+  animation:gate-out .85s ease both;
+  pointer-events:none;
+}
+
+.tunnel-opening-image{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    #061821 url('/escape-room/tunnel-opening.webp') center center/contain no-repeat;
+  transform:scale(1.015);
+  animation:gate-image-breathe 10s ease-in-out infinite alternate;
+}
+
+.tunnel-opening-shade{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(180deg,rgba(2,11,15,.03) 0%,rgba(2,11,15,.02) 54%,rgba(2,11,15,.64) 78%,rgba(2,11,15,.94) 100%),
+    radial-gradient(circle at 50% 54%,transparent 35%,rgba(2,11,15,.2) 100%);
+}
+
+.tunnel-opening-copy{
+  position:relative;
+  z-index:2;
+  width:min(560px,calc(100% - 32px));
+  box-sizing:border-box;
+  margin:0 auto clamp(22px,5vh,52px);
+  padding:20px 22px 18px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;
+  background:rgba(5,22,30,.72);
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+  backdrop-filter:blur(12px);
+  text-align:center;
+}
+
+.tunnel-opening-copy p{
+  margin:0 0 6px;
+  color:#a7e2de;
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+
+.tunnel-opening-copy strong{
+  display:block;
+  margin-bottom:15px;
+  color:#fff;
+  font-size:clamp(1.25rem,4vw,1.6rem);
+  line-height:1.3;
+}
+
+.tunnel-opening-copy button{
+  width:100%;
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:0;
+  border-radius:14px;
+  background:#f1d99b;
+  color:#17313b;
+  font:900 1rem/1 "Varela Round",Arial,sans-serif;
+  cursor:pointer;
+  box-shadow:0 10px 26px rgba(0,0,0,.22);
+  transition:transform .2s ease,background-color .2s ease;
+}
+
+.tunnel-opening-copy button:hover{
+  transform:translateY(-1px);
+  background:#ffe8aa;
+}
+
+.tunnel-opening-copy>span{
+  display:block;
+  margin-top:9px;
+  color:#b9cacc;
+  font-size:.72rem;
+  line-height:1.5;
+}
+
+.intro-music-control{
+  position:fixed;
+  left:12px;
+  bottom:calc(12px + env(safe-area-inset-bottom));
+  z-index:210;
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:0 10px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  background:rgba(4,21,29,.84);
+  color:#f1d99b;
+  box-shadow:0 10px 28px rgba(0,0,0,.25);
+  backdrop-filter:blur(9px);
+  font:800 .75rem/1 "Varela Round",Arial,sans-serif;
+  cursor:pointer;
+}
+
+@keyframes gate-image-breathe{
+  from{transform:scale(1.015)}
+  to{transform:scale(1.055)}
+}
+
+@keyframes gate-in{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes gate-out{
+  0%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.025)}
+}
+
+@media(max-width:700px){
+  .tunnel-opening-image{
+    background-size:cover;
+    background-position:center 44%;
+  }
+
+  .tunnel-opening-copy{
+    width:calc(100% - 24px);
+    margin-bottom:calc(12px + env(safe-area-inset-bottom));
+    padding:16px 16px 14px;
+    border-radius:18px;
+  }
+
+  .tunnel-opening-copy strong{
+    font-size:1.3rem;
+    margin-bottom:12px;
+  }
+
+  .tunnel-opening-copy button{
+    min-height:52px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .tunnel-opening-gate,
+  .tunnel-opening-gate.leaving,
+  .tunnel-opening-image,
+  .tunnel-opening-copy button{
+    animation:none!important;
+    transition:none!important;
+  }
+}
