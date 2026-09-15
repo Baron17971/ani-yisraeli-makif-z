@@ -6,6 +6,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 const STORAGE_PREFIX = "ani-yisraeli-time-tunnel-v2";
 const AUDIO_PREF_KEY = "ani-yisraeli-audio-muted";
 const OPENING_VERSION = "blue-v2";
+const ENTER_BUTTON_ARM_DELAY_MS = 1400;
 
 type Team = { names: string; className: string };
 type OpeningPhase = "team" | "image";
@@ -13,9 +14,11 @@ type OpeningPhase = "team" | "image";
 export default function OpeningGateV2() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const transitionTimerRef = useRef<number | null>(null);
+  const enterButtonTimerRef = useRef<number | null>(null);
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
   const [leaving, setLeaving] = useState(false);
+  const [canEnterTunnel, setCanEnterTunnel] = useState(false);
   const [phase, setPhase] = useState<OpeningPhase>("team");
   const [roomId, setRoomId] = useState("");
   const [team, setTeam] = useState<Team>({ names: "", className: "" });
@@ -60,6 +63,7 @@ export default function OpeningGateV2() {
     return () => {
       window.removeEventListener("escape-audio-muted", syncMute);
       if (transitionTimerRef.current) window.clearTimeout(transitionTimerRef.current);
+      if (enterButtonTimerRef.current) window.clearTimeout(enterButtonTimerRef.current);
       audioRef.current?.pause();
     };
   }, []);
@@ -88,11 +92,21 @@ export default function OpeningGateV2() {
 
     window.scrollTo({ top: 0, behavior: "auto" });
     void startMusic();
+
+    // A fresh, separate click is required on the cinematic screen before
+    // entering the stations. The short arming delay prevents a mobile tap
+    // from carrying through to the newly rendered button.
+    setCanEnterTunnel(false);
+    if (enterButtonTimerRef.current) window.clearTimeout(enterButtonTimerRef.current);
     setPhase("image");
+    enterButtonTimerRef.current = window.setTimeout(() => {
+      setCanEnterTunnel(true);
+      enterButtonTimerRef.current = null;
+    }, ENTER_BUTTON_ARM_DELAY_MS);
   };
 
   const enterTunnel = () => {
-    if (!roomId) return;
+    if (!roomId || !canEnterTunnel || leaving) return;
     const cleanTeam = { names: team.names.trim(), className: team.className.trim() };
     const startedAt = Date.now();
 
@@ -136,7 +150,7 @@ export default function OpeningGateV2() {
         <div className="tunnel-opening-copy">
           <p>עבר • הווה • עתיד</p>
           <strong>המסע מתחיל כאן</strong>
-          <button type="button" onClick={enterTunnel}>כניסה למנהרת הזמן <ArrowLeft size={20}/></button>
+          <button type="button" onClick={enterTunnel} disabled={!canEnterTunnel || leaving}>כניסה למנהרת הזמן <ArrowLeft size={20}/></button>
         </div>
       </>}
     </section>
