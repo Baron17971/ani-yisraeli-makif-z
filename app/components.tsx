@@ -28,9 +28,6 @@ export function Header({showLogo=true}:{showLogo?:boolean}={}) {
       .site-header .mobile-nav a.nav-active{position:relative;color:#caf0f8;font-weight:700;padding-right:13px}
       .site-header .mobile-nav a.nav-active::before{content:"";position:absolute;right:0;top:50%;width:3px;height:18px;border-radius:99px;background:#90e0ef;transform:translateY(-50%)}
       .site-header .menu-button{color:#fff}
-      .hero-shade{background:linear-gradient(90deg,rgba(3,4,94,.72) 0%,rgba(0,119,182,.46) 48%,rgba(0,180,216,.10) 80%),linear-gradient(0deg,rgba(3,4,94,.42),transparent 65%)!important}
-      .program-about-shade{background:linear-gradient(90deg,rgba(3,4,94,.74) 0%,rgba(0,119,182,.40) 50%,rgba(0,180,216,.08) 100%),linear-gradient(0deg,rgba(3,4,94,.40),transparent 65%)!important}
-      .museum-space-shade{background:linear-gradient(90deg,rgba(3,4,94,.84) 0%,rgba(0,119,182,.54) 50%,rgba(0,180,216,.16) 84%),linear-gradient(0deg,rgba(3,4,94,.46),transparent 64%)!important}
       .program-about-page,.museum-space-page{background:#f7fcfe!important}
       .lesson-page{background:linear-gradient(#e9f8fc 0,#fff 430px)!important}
       @media(max-width:700px){
