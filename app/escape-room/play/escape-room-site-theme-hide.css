@@ -1,0 +1,7 @@
+/* The site-wide theme toggle is unrelated to the escape-room theme switch.
+   Hide it anywhere the escape-room UI is active so only one working toggle is visible. */
+body:has(.tunnel-opening-gate) .site-theme-toggle,
+body:has(.student-game) .site-theme-toggle,
+body:has(.victory-screen) .site-theme-toggle{
+  display:none!important;
+}
