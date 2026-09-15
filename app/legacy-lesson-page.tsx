@@ -78,7 +78,7 @@ export function LegacyLessonPage({index,tools,materials,guide,showGuide=true,obj
       .legacy-lesson-page .lesson-hero .hook{margin-top:14px!important;font-size:clamp(1rem,1.45vw,1.15rem)!important;line-height:1.65}
       .legacy-lesson-page .lesson-hero .meta{margin-top:18px!important}
       .legacy-lesson-page .cover{aspect-ratio:16/9;overflow:hidden;background:var(--mist);border-bottom:5px solid var(--accent)}
-      .legacy-lesson-page .cover img{width:100%;height:100%;object-fit:contain}
+      .legacy-lesson-page .cover img{width:100%;height:100%;object-fit:cover;object-position:center}
       .legacy-lesson-page #about p{max-width:940px;color:var(--muted);font-size:1rem}
       @media(max-width:800px){
         .legacy-lesson-page .shell{padding-top:24px}
