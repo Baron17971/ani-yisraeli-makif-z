@@ -1,12 +1,14 @@
 "use client";
 
-import { ArrowLeft } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, Users } from "lucide-react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 const STORAGE_PREFIX = "ani-yisraeli-time-tunnel-v2";
-const GATE_PREFIX = "ani-yisraeli-opening-seen";
 const AUDIO_PREF_KEY = "ani-yisraeli-audio-muted";
 const BUNDLE_URL = "/escape-room/escape-room-opening-assets.zip";
+
+type Team = { names: string; className: string };
+type OpeningPhase = "team" | "image";
 
 async function extractZipEntry(buffer: ArrayBuffer, entryName: string, mime: string) {
   const view = new DataView(buffer);
@@ -53,25 +55,30 @@ export default function OpeningGate() {
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
   const [leaving, setLeaving] = useState(false);
+  const [phase, setPhase] = useState<OpeningPhase>("team");
   const [roomId, setRoomId] = useState("");
+  const [team, setTeam] = useState<Team>({ names: "", className: "" });
   const [imageSrc, setImageSrc] = useState("");
   const [audioSrc, setAudioSrc] = useState("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const room = (params.get("room") ?? "").trim().toUpperCase();
+    const classFromLink = (params.get("class") ?? "").trim();
     setRoomId(room);
+    setTeam({ names: "", className: classFromLink });
     if (!room) { setReady(true); return; }
 
     let shouldShow = true;
     try {
       const saved = window.localStorage.getItem(`${STORAGE_PREFIX}:${room}`);
-      const seen = window.sessionStorage.getItem(`${GATE_PREFIX}:${room}`);
       if (saved) {
-        const parsed = JSON.parse(saved) as { stage?: number };
-        if ((parsed.stage ?? 0) >= 1) shouldShow = false;
+        const parsed = JSON.parse(saved) as { stage?: number; team?: Team };
+        if ((parsed.stage ?? 0) >= 2) shouldShow = false;
+        if ((parsed.stage ?? 0) < 2 && parsed.team) {
+          setTeam({ names: parsed.team.names ?? "", className: parsed.team.className || classFromLink });
+        }
       }
-      if (seen === "1") shouldShow = false;
     } catch {}
     setVisible(shouldShow);
     setReady(true);
@@ -80,7 +87,20 @@ export default function OpeningGate() {
       const detail = (event as CustomEvent<{ muted?: boolean }>).detail;
       if (audioRef.current) audioRef.current.muted = Boolean(detail?.muted);
     };
+
+    const showGate = () => {
+      const freshParams = new URLSearchParams(window.location.search);
+      const freshClass = (freshParams.get("class") ?? "").trim();
+      audioRef.current?.pause();
+      if (audioRef.current) audioRef.current.currentTime = 0;
+      setTeam({ names: "", className: freshClass });
+      setPhase("team");
+      setLeaving(false);
+      setVisible(true);
+    };
+
     window.addEventListener("escape-audio-muted", syncMute);
+    window.addEventListener("time-tunnel-show-gate", showGate);
 
     if (shouldShow) {
       void (async () => {
@@ -106,6 +126,7 @@ export default function OpeningGate() {
 
     return () => {
       window.removeEventListener("escape-audio-muted", syncMute);
+      window.removeEventListener("time-tunnel-show-gate", showGate);
       if (hideTimerRef.current) window.clearTimeout(hideTimerRef.current);
       audioRef.current?.pause();
       objectUrlsRef.current.forEach(url => URL.revokeObjectURL(url));
@@ -121,28 +142,69 @@ export default function OpeningGate() {
     try { await audio.play(); } catch {}
   };
 
-  const enterTunnel = async () => {
-    if (roomId) {
-      try { window.sessionStorage.setItem(`${GATE_PREFIX}:${roomId}`, "1"); } catch {}
-    }
-    await startMusic();
+  const openCinematicScreen = (event: FormEvent) => {
+    event.preventDefault();
+    if (!team.names.trim() || !team.className.trim()) return;
+
+    try {
+      const root = document.documentElement;
+      if (!document.fullscreenElement && root.requestFullscreen) {
+        void root.requestFullscreen().catch(() => undefined);
+      }
+    } catch {}
+
+    window.scrollTo({ top: 0, behavior: "auto" });
+    void startMusic();
+    setPhase("image");
+  };
+
+  const enterTunnel = () => {
+    if (!roomId) return;
+    const startedAt = Date.now();
+    const cleanTeam = { names: team.names.trim(), className: team.className.trim() };
+    try {
+      window.localStorage.setItem(`${STORAGE_PREFIX}:${roomId}`, JSON.stringify({ stage: 2, team: cleanTeam, startedAt }));
+    } catch {}
+
+    window.dispatchEvent(new CustomEvent("time-tunnel-start", { detail: { team: cleanTeam, startedAt } }));
     setLeaving(true);
-    hideTimerRef.current = window.setTimeout(() => setVisible(false), 850);
+    hideTimerRef.current = window.setTimeout(() => setVisible(false), 760);
   };
 
   if (!ready || !roomId) return null;
 
   return <>
     <audio ref={audioRef} src={audioSrc || undefined} preload="auto" aria-hidden="true" />
-    {visible && <section className={`tunnel-opening-gate${leaving ? " leaving" : ""}`} aria-label="פתיחת מנהרת הזמן">
-      <div className={`tunnel-opening-image${imageSrc ? " loaded" : ""}`} style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined} aria-hidden="true" />
-      <div className="tunnel-opening-shade" aria-hidden="true" />
-      <div className="tunnel-opening-copy">
-        <p>עבר • הווה • עתיד</p>
-        <strong>המסע מתחיל כאן</strong>
-        <button type="button" onClick={enterTunnel}>כניסה למנהרת הזמן <ArrowLeft size={20}/></button>
-        <span>{audioSrc ? "הלחיצה תפעיל מוזיקת פתיחה בעוצמה נמוכה" : "המדיה נטענת — אפשר להיכנס למסע"}</span>
-      </div>
+    {visible && <section className={`tunnel-opening-gate phase-${phase}${leaving ? " leaving" : ""}`} aria-label="פתיחת מנהרת הזמן" dir="rtl">
+      {phase === "team" ? <div className="tunnel-preflight">
+        <div className="preflight-glow" aria-hidden="true" />
+        <div className="preflight-content">
+          <p className="preflight-kicker">אני ישראלי • מנהרת הזמן</p>
+          <h1>מוכנים?</h1>
+          <h2>מי יוצא לדרך?</h2>
+          <form className="preflight-form" onSubmit={openCinematicScreen}>
+            <label>
+              <span><Users size={17}/> שמות חברי הצוות</span>
+              <input value={team.names} onChange={event => setTeam(current => ({ ...current, names: event.target.value }))} placeholder="לדוגמה: נועה, אדם, מאיה" autoFocus required />
+            </label>
+            {team.className ? <div className="preflight-class"><span>הכיתה שלכם</span><strong>{team.className}</strong></div> : <label>
+              <span>כיתה</span>
+              <input value={team.className} onChange={event => setTeam(current => ({ ...current, className: event.target.value }))} placeholder="י׳1" required />
+            </label>}
+            <button type="submit" disabled={!team.names.trim() || !team.className.trim()}>
+              אנחנו מוכנים — יוצאים לדרך <ArrowLeft size={20}/>
+            </button>
+          </form>
+        </div>
+      </div> : <>
+        <div className={`tunnel-opening-image${imageSrc ? " loaded" : ""}`} style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined} aria-hidden="true" />
+        <div className="tunnel-opening-shade" aria-hidden="true" />
+        <div className="tunnel-opening-copy">
+          <p>עבר • הווה • עתיד</p>
+          <strong>המסע מתחיל כאן</strong>
+          <button type="button" onClick={enterTunnel}>כניסה למנהרת הזמן <ArrowLeft size={20}/></button>
+        </div>
+      </>}
     </section>}
   </>;
 }
