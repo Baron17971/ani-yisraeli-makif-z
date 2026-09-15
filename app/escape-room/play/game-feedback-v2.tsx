@@ -153,11 +153,11 @@ export default function GameFeedbackV2() {
       flash(kind);
     };
 
-    const scan = (root: ParentNode) => {
+    const scan = (root: Document | Element) => {
       syncTitle();
-      root.querySelectorAll?.(".feedback.wrong").forEach(markWrong);
-      root.querySelectorAll?.(".unlocked").forEach(element => markSuccess(element, "success"));
-      root.querySelectorAll?.(".victory-screen").forEach(element => markSuccess(element, "victory"));
+      root.querySelectorAll(".feedback.wrong").forEach(markWrong);
+      root.querySelectorAll(".unlocked").forEach(element => markSuccess(element, "success"));
+      root.querySelectorAll(".victory-screen").forEach(element => markSuccess(element, "victory"));
     };
 
     scan(document);
