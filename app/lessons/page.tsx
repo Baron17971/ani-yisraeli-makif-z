@@ -1,5 +1,29 @@
 import { Footer, Header, LessonCard } from "../components";
-import { lessons } from "../data";
+import { lessons, type Lesson } from "../data";
+
+const timeTunnelLesson: Lesson = {
+  id: 100,
+  slug: "time-tunnel",
+  title: "מנהרת הזמן – חדר בריחה",
+  category: "למידה במרחב המוזיאלי",
+  hook: "חדר בריחה פיזי־דיגיטלי שבו המרחב עצמו הופך לחלק מהחידה.",
+  description: "פעילות קבוצתית בת שבע תחנות המשלבת חיפוש במרחב, רמזים חזותיים, דמויות, קודים וסיפור ישראלי.",
+  coverImage: "/escape-room/station-4-timeline.jpg",
+  lessonUrl: "",
+  accentColor: "#D6B36C",
+  teacherFiles: [],
+  studentFiles: [],
+  apps: [],
+  videos: [],
+  externalLinks: [],
+  tags: ["חדר בריחה", "מרחב מוזיאלי", "זהות ישראלית"],
+  order: 0,
+  grade: "י׳",
+  duration: "גמיש",
+  lessonType: "חדר בריחה פיזי־דיגיטלי",
+};
+
+const libraryLessons = [timeTunnelLesson, ...lessons];
 
 export default function LessonsLibraryPage(){
   return <><Header showLogo={false}/><main className="lessons-library-page">
@@ -7,7 +31,7 @@ export default function LessonsLibraryPage(){
       <div><p>אני ישראלי | שכבה י׳</p><h1>ספריית השיעורים</h1><span>כל מערכי השיעור, הכלים והחומרים במקום אחד.</span></div>
     </section>
     <section className="lessons-section lessons-library-section">
-      <div className="lessons-grid">{lessons.map((lesson,index)=><LessonCard key={lesson.id} lesson={lesson} index={index}/>)}</div>
+      <div className="lessons-grid">{libraryLessons.map((lesson,index)=><LessonCard key={lesson.slug} lesson={lesson} index={index}/>)}</div>
     </section>
   </main><Footer/>
   <style>{`
@@ -18,7 +42,6 @@ export default function LessonsLibraryPage(){
     .lessons-library-hero h1{margin:0;font-size:clamp(3.1rem,6vw,5.6rem);line-height:1;letter-spacing:-.05em}
     .lessons-library-hero span{display:block;margin-top:14px;color:#dce9ea;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.55}
     .lessons-library-section{padding-top:clamp(46px,6vw,72px)}
-
     .lessons-library-section .lessons-grid{gap:clamp(20px,2.1vw,30px)}
     .lessons-library-section .lesson-card{overflow:hidden;border-radius:16px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
     .lessons-library-section .card-visual{aspect-ratio:16/9}
@@ -29,16 +52,13 @@ export default function LessonsLibraryPage(){
     .lessons-library-section .card-content p{display:block;overflow:visible;min-height:3.16em;margin:0;font-size:.92rem;line-height:1.58;-webkit-line-clamp:unset;-webkit-box-orient:initial}
     .lessons-library-section .text-link{padding-top:13px;font-size:.91rem;transition:color .2s ease}
     .lessons-library-section .text-link svg{transition:transform .22s ease}
-
     @media(hover:hover) and (pointer:fine){
       .lessons-library-section .lesson-card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 14px 34px rgba(16,45,64,.13)}
       .lessons-library-section .lesson-card:hover .text-link{color:var(--accent)}
       .lessons-library-section .lesson-card:hover .text-link svg{transform:translateX(-3px)}
     }
-
     .site-dark .lessons-library-page{background:#102129}
     .site-dark .lessons-library-section .lesson-card:hover{box-shadow:0 16px 36px rgba(0,0,0,.26)}
-
     @media(max-width:700px){
       .lessons-library-hero{min-height:205px;padding:72px 20px 28px}
       .lessons-library-hero p{margin-bottom:8px}
@@ -52,12 +72,10 @@ export default function LessonsLibraryPage(){
       .lessons-library-section .card-content p{min-height:0;font-size:.94rem;line-height:1.65}
       .lessons-library-section .text-link{min-height:44px;align-items:center;padding-top:11px}
     }
-
     @media(hover:none){
       .lessons-library-section .lesson-card:active{transform:scale(.992);border-color:var(--accent);box-shadow:0 8px 22px rgba(16,45,64,.12)}
       .lessons-library-section .lesson-card:active .text-link{color:var(--accent)}
     }
-
     @media(prefers-reduced-motion:reduce){
       .lessons-library-section .lesson-card,.lessons-library-section .card-visual img,.lessons-library-section .text-link,.lessons-library-section .text-link svg{transition:none}
       .lessons-library-section .lesson-card:hover,.lessons-library-section .lesson-card:active{transform:none}
