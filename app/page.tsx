@@ -26,5 +26,15 @@ export default function Home() {
       <div className="focus-grid">{focuses.map(([title,text])=><article className="focus-item" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
       <div className="pedagogy"><div className="pedagogy-heading" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:0,width:"100%",marginBottom:"4px"}}><img className="pedagogy-logo" src="/maof-logo.png" alt="צוות מעו״ף" style={{width:"128px",height:"128px",objectFit:"contain",background:"transparent",flex:"0 0 auto",marginBottom:"-10px"}}/><p className="pedagogy-title" style={{margin:0,color:"var(--teal)",fontSize:"clamp(1.2rem,3.2vw,1.5rem)",fontWeight:700,lineHeight:1.15}}>פיתוח פדגוגי</p></div><p className="names" style={{justifyContent:"center",textAlign:"center",fontSize:"clamp(1.03rem,2.3vw,1.16rem)",lineHeight:1.85}}><span className="person">ענת ברון לוביש - סגנית פדגוגית</span><span className="separator" aria-hidden="true">•</span><span className="person">אתי נייברג - רכזת פדגוגית חט״ב</span><span className="separator" aria-hidden="true">•</span><span className="person">נטלי בן חמו - רכזת חינוך חברתי</span></p><p className="team" style={{textAlign:"center",marginTop:"10px"}}>צוות מעו״ף | מקיף ז׳ אשדוד</p></div>
     </section>
-  </main><Footer/></>
+  </main><Footer/>
+  <style>{`
+    .lessons-section{padding-bottom:clamp(36px,5vw,58px)!important}
+    .about-section{padding-top:clamp(28px,4vw,46px)!important}
+    .focus-grid{margin-top:0!important}
+    @media(max-width:700px){
+      .lessons-section{padding-bottom:30px!important}
+      .about-section{padding-top:26px!important}
+      .focus-grid{margin-top:0!important}
+    }
+  `}</style></>
 }
