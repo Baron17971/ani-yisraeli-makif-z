@@ -31,9 +31,9 @@ export function LegacyLessonPage({index,tools,materials,guide,showGuide=true,obj
 
   return <div className="legacy-lesson-page" style={{"--accent":lesson.accentColor} as CSSProperties}>
     <link rel="stylesheet" href="/lessons/teacher-portal.css"/>
-    <header className="top"><div className="brand">✡ אני ישראלי</div><Link className="home" href="/#lessons">כל השיעורים</Link></header>
+    <header className="top"><div className="brand">✡ אני ישראלי</div><Link className="home" href="/lessons">כל השיעורים</Link></header>
     <div className="shell">
-      <nav className="crumbs"><Link href="/">ראשי</Link> / <Link href="/#lessons">השיעורים</Link> / {lesson.title}</nav>
+      <nav className="crumbs"><Link href="/">ראשי</Link> / <Link href="/lessons">השיעורים</Link> / {lesson.title}</nav>
       <header className="lesson-hero">
         <div><span className="tag">שיעור {String(index+1).padStart(2,"0")} | {lesson.category}</span><h1>{lesson.title}</h1><p className="hook">{lesson.hook}</p><div className="meta"><span>{lesson.duration?.replace(" דקות"," דק׳")??"90 דק׳"}</span><span>שכבת י׳</span><span>{lesson.lessonType}</span></div></div>
         <div className="cover"><img src={lesson.coverImage} alt={`שקף הפתיחה של ${lesson.title}`}/></div>
@@ -66,7 +66,7 @@ export function LegacyLessonPage({index,tools,materials,guide,showGuide=true,obj
 
       <section><details><summary>דגשים למורה</summary><p>{teacherNote??"בחרו את היקף הדיון והפעילות בהתאם לאופי הכיתה ולזמן העומד לרשותכם."}</p></details><details><summary>הצעות להרחבה</summary><p>אפשר להרחיב באמצעות מקור נוסף, משימת כתיבה או פעילות המשך קבוצתית.</p></details></section>
 
-      <nav className="nav-bottom" aria-label="מעבר בין שיעורים">{previous?<Link href={`/lessons/${previous.slug}`}>→ השיעור הקודם<br/>{previous.title}</Link>:<span/>}<Link className="all" href="/#lessons">כל השיעורים</Link>{next?<Link href={`/lessons/${next.slug}`}>השיעור הבא ←<br/>{next.title}</Link>:<span/>}</nav>
+      <nav className="nav-bottom" aria-label="מעבר בין שיעורים">{previous?<Link href={`/lessons/${previous.slug}`}>→ השיעור הקודם<br/>{previous.title}</Link>:<span/>}<Link className="all" href="/lessons">כל השיעורים</Link>{next?<Link href={`/lessons/${next.slug}`}>השיעור הבא ←<br/>{next.title}</Link>:<span/>}</nav>
     </div>
     <footer className="footer">© תשפ״ז | „אני ישראלי” | מקיף ז׳ אשדוד</footer>
     <style>{`
