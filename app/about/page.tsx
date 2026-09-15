@@ -22,7 +22,7 @@ const sections = [
 export default function AboutPage() {
   return <><Header/><main className="program-about-page">
     <section className="program-about-hero">
-      <img src="/about-program-banner.png" alt="פסיפס ישראלי של תלמידים, מורשת, תרבות, נופי הארץ וזהות" />
+      <img src="/file_000000001f34820aa8188af788222a31.png" alt="פסיפס ישראלי של תלמידים, מורשת, תרבות, נופי הארץ וזהות" />
       <div className="program-about-shade" />
       <div className="program-about-title">
         <p>אני ישראלי | מקיף ז׳ אשדוד</p>
