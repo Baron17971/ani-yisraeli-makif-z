@@ -1,10 +1,9 @@
 import type { ReactNode } from "react";
-import OpeningGate from "./opening-gate";
-import GameFeedback from "./game-feedback";
+import OpeningGateV2 from "./opening-gate-v2";
+import GameFeedbackV2 from "./game-feedback-v2";
 import "./student-experience.css";
 import "./opening-gate.css";
-import "./game-feedback.css";
 
 export default function StudentPlayLayout({ children }: { children: ReactNode }) {
-  return <><OpeningGate/>{children}<GameFeedback/></>;
+  return <><OpeningGateV2/>{children}<GameFeedbackV2/></>;
 }
