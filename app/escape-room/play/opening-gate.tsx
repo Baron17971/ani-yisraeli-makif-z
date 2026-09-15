@@ -6,6 +6,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 const STORAGE_PREFIX = "ani-yisraeli-time-tunnel-v2";
 const AUDIO_PREF_KEY = "ani-yisraeli-audio-muted";
 const BUNDLE_URL = "/escape-room/escape-room-opening-assets.zip";
+const GATE_VERSION = "blue-opening-v1";
 
 type Team = { names: string; className: string };
 type OpeningPhase = "team" | "image";
@@ -50,7 +51,7 @@ async function extractZipEntry(buffer: ArrayBuffer, entryName: string, mime: str
 
 export default function OpeningGate() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const hideTimerRef = useRef<number | null>(null);
+  const reloadTimerRef = useRef<number | null>(null);
   const objectUrlsRef = useRef<string[]>([]);
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -72,12 +73,13 @@ export default function OpeningGate() {
     let shouldShow = true;
     try {
       const saved = window.localStorage.getItem(`${STORAGE_PREFIX}:${room}`);
+      const openingVersion = window.localStorage.getItem(`ani-yisraeli-opening-version:${room}`);
       if (saved) {
         const parsed = JSON.parse(saved) as { stage?: number; team?: Team };
-        if ((parsed.stage ?? 0) >= 2) shouldShow = false;
-        if ((parsed.stage ?? 0) < 2 && parsed.team) {
+        if (parsed.team) {
           setTeam({ names: parsed.team.names ?? "", className: parsed.team.className || classFromLink });
         }
+        if ((parsed.stage ?? 0) >= 2 && openingVersion === GATE_VERSION) shouldShow = false;
       }
     } catch {}
     setVisible(shouldShow);
@@ -102,37 +104,41 @@ export default function OpeningGate() {
     window.addEventListener("escape-audio-muted", syncMute);
     window.addEventListener("time-tunnel-show-gate", showGate);
 
-    if (shouldShow) {
-      void (async () => {
-        try {
-          const response = await fetch(BUNDLE_URL, { cache: "force-cache" });
-          if (!response.ok) throw new Error("Opening bundle unavailable");
-          const zip = await response.arrayBuffer();
-          const [imageBlob, audioBlob] = await Promise.all([
-            extractZipEntry(zip, "tunnel-opening.webp", "image/webp"),
-            extractZipEntry(zip, "time-tunnel-intro.mp3", "audio/mpeg"),
-          ]);
-          const imageUrl = URL.createObjectURL(imageBlob);
-          const audioUrl = URL.createObjectURL(audioBlob);
-          objectUrlsRef.current.push(imageUrl, audioUrl);
-          setImageSrc(imageUrl);
-          setAudioSrc(audioUrl);
-        } catch {
-          setImageSrc("");
-          setAudioSrc("");
-        }
-      })();
-    }
+    const observer = new MutationObserver(() => {
+      if (!visible && document.querySelector(".game-intro")) showGate();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    void (async () => {
+      try {
+        const response = await fetch(BUNDLE_URL, { cache: "force-cache" });
+        if (!response.ok) throw new Error("Opening bundle unavailable");
+        const zip = await response.arrayBuffer();
+        const [imageBlob, audioBlob] = await Promise.all([
+          extractZipEntry(zip, "tunnel-opening.webp", "image/webp"),
+          extractZipEntry(zip, "time-tunnel-intro.mp3", "audio/mpeg"),
+        ]);
+        const imageUrl = URL.createObjectURL(imageBlob);
+        const audioUrl = URL.createObjectURL(audioBlob);
+        objectUrlsRef.current.push(imageUrl, audioUrl);
+        setImageSrc(imageUrl);
+        setAudioSrc(audioUrl);
+      } catch {
+        setImageSrc("");
+        setAudioSrc("");
+      }
+    })();
 
     return () => {
+      observer.disconnect();
       window.removeEventListener("escape-audio-muted", syncMute);
       window.removeEventListener("time-tunnel-show-gate", showGate);
-      if (hideTimerRef.current) window.clearTimeout(hideTimerRef.current);
+      if (reloadTimerRef.current) window.clearTimeout(reloadTimerRef.current);
       audioRef.current?.pause();
       objectUrlsRef.current.forEach(url => URL.revokeObjectURL(url));
       objectUrlsRef.current = [];
     };
-  }, []);
+  }, [visible]);
 
   const startMusic = async () => {
     const audio = audioRef.current;
@@ -147,9 +153,8 @@ export default function OpeningGate() {
     if (!team.names.trim() || !team.className.trim()) return;
 
     try {
-      const root = document.documentElement;
-      if (!document.fullscreenElement && root.requestFullscreen) {
-        void root.requestFullscreen().catch(() => undefined);
+      if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+        void document.documentElement.requestFullscreen().catch(() => undefined);
       }
     } catch {}
 
@@ -164,11 +169,11 @@ export default function OpeningGate() {
     const cleanTeam = { names: team.names.trim(), className: team.className.trim() };
     try {
       window.localStorage.setItem(`${STORAGE_PREFIX}:${roomId}`, JSON.stringify({ stage: 2, team: cleanTeam, startedAt }));
+      window.localStorage.setItem(`ani-yisraeli-opening-version:${roomId}`, GATE_VERSION);
     } catch {}
 
-    window.dispatchEvent(new CustomEvent("time-tunnel-start", { detail: { team: cleanTeam, startedAt } }));
     setLeaving(true);
-    hideTimerRef.current = window.setTimeout(() => setVisible(false), 760);
+    reloadTimerRef.current = window.setTimeout(() => window.location.reload(), 720);
   };
 
   if (!ready || !roomId) return null;
