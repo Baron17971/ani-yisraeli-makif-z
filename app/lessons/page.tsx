@@ -36,11 +36,15 @@ export default function LessonsLibraryPage(){
   </main><Footer/>
   <style>{`
     .lessons-library-page{min-height:100vh;background:#fff}
-    .lessons-library-hero{min-height:250px;padding:82px clamp(24px,7vw,120px) 38px;background:linear-gradient(135deg,#102d40,#17495e);color:#fff;display:flex;align-items:flex-end}
+    .lessons-library-hero{min-height:250px;padding:82px clamp(24px,7vw,120px) 38px;background:radial-gradient(circle at 82% 18%,rgba(144,224,239,.2),transparent 28%),linear-gradient(135deg,#03045e 0%,#0077b6 54%,#00b4d8 100%);color:#fff;display:flex;align-items:flex-end}
     .lessons-library-hero>div{max-width:900px}
-    .lessons-library-hero p{margin:0 0 10px;color:#b9d8d7;font-size:.9rem;font-weight:700;letter-spacing:.04em}
-    .lessons-library-hero h1{margin:0;font-size:clamp(3.1rem,6vw,5.6rem);line-height:1;letter-spacing:-.05em}
-    .lessons-library-hero span{display:block;margin-top:14px;color:#dce9ea;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.55}
+    .lessons-library-hero p{margin:0 0 10px;color:#caf0f8;font-size:.9rem;font-weight:700;letter-spacing:.04em}
+    .lessons-library-hero h1{margin:0;color:#fff;font-size:clamp(3.1rem,6vw,5.6rem);line-height:1;letter-spacing:-.05em}
+    .lessons-library-hero span{display:block;margin-top:14px;color:#e7f8fc;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.55}
+    body:has(.lessons-library-page) .site-header .mobile-nav{background:linear-gradient(135deg,#03045e 0%,#0077b6 100%)}
+    body:has(.lessons-library-page) .site-header .desktop-nav a.nav-active{border-bottom-color:#90e0ef}
+    body:has(.lessons-library-page) .site-header .mobile-nav a.nav-active{color:#caf0f8}
+    body:has(.lessons-library-page) .site-header .mobile-nav a.nav-active::before{background:#90e0ef}
     .lessons-library-section{padding-top:clamp(46px,6vw,72px)}
     .lessons-library-section .lessons-grid{gap:clamp(20px,2.1vw,30px)}
     .lessons-library-section .lesson-card{overflow:hidden;border-radius:16px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
@@ -58,6 +62,7 @@ export default function LessonsLibraryPage(){
       .lessons-library-section .lesson-card:hover .text-link svg{transform:translateX(-3px)}
     }
     .site-dark .lessons-library-page{background:#102129}
+    .site-dark .lessons-library-hero{background:radial-gradient(circle at 82% 18%,rgba(144,224,239,.12),transparent 28%),linear-gradient(135deg,#03045e 0%,#075f91 58%,#078dae 100%)}
     .site-dark .lessons-library-section .lesson-card:hover{box-shadow:0 16px 36px rgba(0,0,0,.26)}
     @media(max-width:700px){
       .lessons-library-hero{min-height:205px;padding:72px 20px 28px}
