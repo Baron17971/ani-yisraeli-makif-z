@@ -8,8 +8,8 @@ import type { Lesson } from "./data";
 export function Header({showLogo=true}:{showLogo?:boolean}={}) {
   const [open,setOpen]=useState(false);
   const pathname=usePathname();
-  const links=[["ראשי","/"],["על התוכנית","/about"],["השיעורים","/lessons"]];
-  const isActive=(href:string)=>href==="/"?pathname==="/":pathname===href||pathname.startsWith(`${href}/`);
+  const links=[["ראשי","/"],["על התוכנית","/about"],["המרחב","/museum-space"],["השיעורים","/lessons"]];
+  const isActive=(href:string)=>href==="/"?pathname==="/":href==="/museum-space"?(pathname===href||pathname.startsWith(`${href}/`)||pathname.startsWith("/escape-room")):(pathname===href||pathname.startsWith(`${href}/`));
   return <header className={`site-header${showLogo?"":" no-logo"}`}>
     {showLogo&&<Link className="corner-logo" href="/" scroll={true} aria-label="מקיף ז׳ אשדוד, עמוד הבית"><img src="/makif-z-logo.png" alt="מקיף ז׳ אשדוד"/></Link>}
     <div className="nav-shell"><span className="header-logo-spacer" aria-hidden="true"/><nav className="desktop-nav" aria-label="ניווט ראשי">{links.map(([l,h])=>{const active=isActive(h);return <Link key={h} href={h} className={active?"nav-active":undefined} aria-current={active?"page":undefined}>{l}</Link>})}</nav><button className="menu-button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label={open?"סגירת תפריט":"פתיחת תפריט"}>{open?<X/>:<Menu/>}</button></div>
@@ -58,6 +58,7 @@ export function Footer() {
       <nav className="footer-nav" aria-label="ניווט תחתון">
         <Link href="/">ראשי</Link>
         <Link href="/about">על התוכנית</Link>
+        <Link href="/museum-space">המרחב המוזיאלי</Link>
         <Link href="/lessons">ספריית השיעורים</Link>
       </nav>
       <p className="footer-credit">© תשפ״ז | פיתוח פדגוגי: צוות מעו״ף</p>
