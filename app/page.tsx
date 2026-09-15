@@ -81,19 +81,22 @@ export default function Home() {
     @media(max-width:900px){.home-program-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:600px){
       .quote-section{padding-bottom:24px!important}
-      .home-program-section{padding:32px 20px 36px}
-      .home-program-grid{grid-template-columns:1fr 1fr;gap:12px}
-      .home-program-card{min-height:172px;padding:18px 12px;border-radius:20px;grid-template-rows:58px 4.35em;gap:11px}
+      .home-program-section{padding:30px 18px 34px}
+      .home-program-grid{grid-template-columns:1fr 1fr;gap:10px}
+      .home-program-card{min-height:168px;padding:18px 11px;border-radius:20px;grid-template-rows:58px 4.35em;gap:10px}
       .home-program-card::before{right:18px;left:18px}
       .home-program-signature{top:11px;right:12px;font-size:.64rem}
       .home-program-icon{width:58px;height:58px}
       .home-program-icon svg{width:28px;height:28px}
-      .home-program-card h2{font-size:.96rem;line-height:1.45;height:4.35em}
-      .home-program-actions{margin-top:24px;gap:10px}
-      .home-program-button{min-width:142px;height:44px;padding:0 16px;border-radius:12px;gap:7px}
+      .home-program-card h2{font-size:.95rem;line-height:1.45;height:4.35em}
+      .home-program-actions{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:420px;margin:24px auto 0;gap:9px}
+      .home-program-button{width:100%;min-width:0;height:48px;padding:0 12px;border-radius:12px;gap:7px}
       .home-pedagogy-section{padding:22px 20px 28px!important}
       .home-pedagogy-section .pedagogy-logo{width:84px!important;height:84px!important}
-      .home-pedagogy-section .names{margin-top:7px;line-height:1.55!important}
+      .home-pedagogy-section .names{flex-direction:column;align-items:center;margin-top:7px;line-height:1.55!important;row-gap:2px}
+      .home-pedagogy-section .names .person{display:block;width:100%}
+      .home-pedagogy-section .names .separator{display:none}
     }
+    @media(max-width:360px){.home-program-actions{grid-template-columns:1fr}}
   `}</style></>;
 }
