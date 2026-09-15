@@ -22,6 +22,7 @@ export default function LessonsLibraryPage(){
     .lessons-library-section .lessons-grid{gap:clamp(20px,2.1vw,30px)}
     .lessons-library-section .lesson-card{overflow:hidden;border-radius:16px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
     .lessons-library-section .card-visual{aspect-ratio:16/9}
+    .lessons-library-section .card-visual img{transition:transform .24s ease}
     .lessons-library-section .card-content{min-height:215px;padding:20px 22px 19px}
     .lessons-library-section .category{font-size:.78rem;letter-spacing:.01em}
     .lessons-library-section .card-content h3{min-height:2.55em;margin:8px 0 9px;font-size:clamp(1.28rem,1.6vw,1.68rem);line-height:1.27}
@@ -58,7 +59,7 @@ export default function LessonsLibraryPage(){
     }
 
     @media(prefers-reduced-motion:reduce){
-      .lessons-library-section .lesson-card,.lessons-library-section .text-link,.lessons-library-section .text-link svg{transition:none}
+      .lessons-library-section .lesson-card,.lessons-library-section .card-visual img,.lessons-library-section .text-link,.lessons-library-section .text-link svg{transition:none}
       .lessons-library-section .lesson-card:hover,.lessons-library-section .lesson-card:active{transform:none}
     }
   `}</style></>;
