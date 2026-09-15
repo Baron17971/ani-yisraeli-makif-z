@@ -39,16 +39,17 @@ export default function LessonsLibraryPage(){
     .site-dark .lessons-library-section .lesson-card:hover{box-shadow:0 16px 36px rgba(0,0,0,.26)}
 
     @media(max-width:700px){
-      .lessons-library-hero{min-height:205px;padding:72px 22px 30px}
+      .lessons-library-hero{min-height:205px;padding:72px 20px 28px}
       .lessons-library-hero p{margin-bottom:8px}
       .lessons-library-hero h1{font-size:3.15rem}
       .lessons-library-hero span{font-size:1rem;line-height:1.55;margin-top:12px}
-      .lessons-library-section{padding-top:38px}
+      .lessons-library-section{padding:34px 18px 64px}
+      .lessons-library-section .lessons-grid{gap:16px}
       .lessons-library-section .lesson-card{border-radius:14px}
-      .lessons-library-section .card-content{min-height:190px;padding:18px 19px 17px}
+      .lessons-library-section .card-content{min-height:0;padding:18px 18px 16px}
       .lessons-library-section .card-content h3{min-height:auto;font-size:1.34rem;margin:7px 0 8px}
-      .lessons-library-section .card-content p{min-height:0}
-      .lessons-library-section .text-link{padding-top:12px}
+      .lessons-library-section .card-content p{min-height:0;font-size:.94rem;line-height:1.65}
+      .lessons-library-section .text-link{min-height:44px;align-items:center;padding-top:11px}
     }
 
     @media(hover:none){
