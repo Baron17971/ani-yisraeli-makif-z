@@ -70,11 +70,25 @@ export function LegacyLessonPage({index,tools,materials,guide,showGuide=true,obj
     </div>
     <footer className="footer">© תשפ״ז | „אני ישראלי” | מקיף ז׳ אשדוד</footer>
     <style>{`
+      .legacy-lesson-page .shell{padding-top:32px}
+      .legacy-lesson-page .crumbs{margin-bottom:22px}
       .legacy-lesson-page .lesson-hero{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)!important;gap:50px!important;align-items:center!important;padding-bottom:42px!important;border-bottom:1px solid var(--line)!important;aspect-ratio:auto!important;overflow:visible!important;background:transparent!important}
+      .legacy-lesson-page .lesson-hero .tag{display:block;margin-bottom:10px;font-size:.86rem;letter-spacing:.035em}
+      .legacy-lesson-page .lesson-hero h1{margin:0!important;font-size:clamp(2.75rem,5vw,4.9rem)!important;line-height:1!important;letter-spacing:-.05em!important}
+      .legacy-lesson-page .lesson-hero .hook{margin-top:14px!important;font-size:clamp(1rem,1.45vw,1.15rem)!important;line-height:1.65}
+      .legacy-lesson-page .lesson-hero .meta{margin-top:18px!important}
       .legacy-lesson-page .cover{aspect-ratio:16/9;overflow:hidden;background:var(--mist);border-bottom:5px solid var(--accent)}
       .legacy-lesson-page .cover img{width:100%;height:100%;object-fit:contain}
       .legacy-lesson-page #about p{max-width:940px;color:var(--muted);font-size:1rem}
-      @media(max-width:800px){.legacy-lesson-page .lesson-hero{grid-template-columns:1fr!important;gap:25px!important;padding-bottom:42px!important}.legacy-lesson-page .cover{width:100%}}
+      @media(max-width:800px){
+        .legacy-lesson-page .shell{padding-top:24px}
+        .legacy-lesson-page .crumbs{margin-bottom:18px}
+        .legacy-lesson-page .lesson-hero{grid-template-columns:1fr!important;gap:25px!important;padding-bottom:42px!important}
+        .legacy-lesson-page .lesson-hero .tag{margin-bottom:8px}
+        .legacy-lesson-page .lesson-hero h1{font-size:clamp(2.45rem,11vw,3.35rem)!important}
+        .legacy-lesson-page .lesson-hero .hook{margin-top:12px!important;font-size:1rem!important}
+        .legacy-lesson-page .cover{width:100%}
+      }
     `}</style>
   </div>;
 }
