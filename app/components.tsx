@@ -40,4 +40,44 @@ export function LessonCard({lesson,index}:{lesson:Lesson;index?:number}) {
   </article>
 }
 
-export function Footer() {return <footer id="contact" className="footer"><p>© תשפ״ז | „אני ישראלי” | מקיף ז׳ אשדוד</p></footer>}
+export function Footer() {
+  return <footer id="contact" className="footer">
+    <div className="footer-inner">
+      <div className="footer-brand">
+        <strong>„אני ישראלי”</strong>
+        <span>תוכנית השכלה כללית | שכבה י׳ | מקיף ז׳ אשדוד</span>
+      </div>
+      <nav className="footer-nav" aria-label="ניווט תחתון">
+        <Link href="/">ראשי</Link>
+        <Link href="/about">על התוכנית</Link>
+        <Link href="/lessons">ספריית השיעורים</Link>
+      </nav>
+      <p className="footer-credit">© תשפ״ז | פיתוח פדגוגי: צוות מעו״ף</p>
+    </div>
+    <style jsx global>{`
+      .footer{padding:0!important;text-align:initial!important}
+      .footer-inner{max-width:1180px;margin:0 auto;padding:30px clamp(22px,5vw,52px) 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 42px;align-items:center}
+      .footer-brand{display:flex;flex-direction:column;gap:2px;text-align:right}
+      .footer-brand strong{color:var(--navy);font-size:1rem;font-weight:800}
+      .footer-brand span{color:var(--muted);font-size:.82rem;line-height:1.55}
+      .footer-nav{display:flex;align-items:center;gap:24px;font-size:.84rem;font-weight:700;color:var(--deep)}
+      .footer-nav a{position:relative;padding:3px 0;transition:color .2s ease}
+      .footer-nav a::after{content:"";position:absolute;right:0;bottom:0;width:0;height:1px;background:var(--teal);transition:width .2s ease}
+      .footer-nav a:hover{color:var(--teal)}
+      .footer-nav a:hover::after{width:100%}
+      .footer-credit{grid-column:1/-1;margin:0!important;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem;text-align:right}
+      .site-dark .footer-brand strong{color:#edf5f5}
+      .site-dark .footer-brand span,.site-dark .footer-credit{color:#91a6ae}
+      .site-dark .footer-nav{color:#b8d4d3}
+      .site-dark .footer-credit{border-color:#263e48}
+      .site-dark .footer-nav a::after{background:#79c7c4}
+      @media(max-width:700px){
+        .footer-inner{grid-template-columns:1fr;padding:25px 22px 22px;gap:16px}
+        .footer-brand{text-align:center}
+        .footer-nav{justify-content:center;flex-wrap:wrap;gap:9px 20px}
+        .footer-credit{grid-column:auto;padding-top:13px;text-align:center}
+      }
+      @media(prefers-reduced-motion:reduce){.footer-nav a,.footer-nav a::after{transition:none}}
+    `}</style>
+  </footer>
+}
