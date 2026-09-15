@@ -28,7 +28,7 @@ export default function Home() {
         <p>תוכנית „אני ישראלי” נועדה לאפשר לתלמידי שכבה י׳ לפגוש את הסיפור הישראלי והיהודי מזוויות מגוונות, דרך אירועים מכוננים, מורשת, תרבות, זהות, מחלוקות, חדשנות ואישים שעיצבו את החברה והמדינה. התוכנית מבקשת לעורר סקרנות, שיח, חשיבה עצמאית ותחושת שייכות, וליצור חיבור בין העבר, ההווה והאחריות לעתיד.</p>
       </div>
       <div className="focus-grid">{focuses.map(([title,text])=><article className="focus-item" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
-      <div className="pedagogy"><p className="eyebrow">פיתוח פדגוגי</p><p className="names"><span className="person">ענת ברון לוביש - סגנית פדגוגית</span><span className="separator" aria-hidden="true">•</span><span className="person">אתי נייברג - רכזת פדגוגית חט״ב</span><span className="separator" aria-hidden="true">•</span><span className="person">נטלי בן חמו - רכזת חינוך חברתי</span></p><p className="team">צוות מעו״ף | מקיף ז׳ אשדוד</p></div>
+      <div className="pedagogy"><div className="pedagogy-heading"><img className="pedagogy-logo" src="/maof-logo.png" alt="צוות מעו״ף"/><p className="eyebrow">פיתוח פדגוגי</p></div><p className="names"><span className="person">ענת ברון לוביש - סגנית פדגוגית</span><span className="separator" aria-hidden="true">•</span><span className="person">אתי נייברג - רכזת פדגוגית חט״ב</span><span className="separator" aria-hidden="true">•</span><span className="person">נטלי בן חמו - רכזת חינוך חברתי</span></p><p className="team">צוות מעו״ף | מקיף ז׳ אשדוד</p></div>
     </section>
   </main><Footer/></>
 }
