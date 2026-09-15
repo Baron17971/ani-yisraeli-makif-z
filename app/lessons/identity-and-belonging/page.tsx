@@ -13,10 +13,10 @@ export default function Page(){
   const questions=lesson.discussionQuestions??[];
   return <div className="legacy-lesson-page">
     <link rel="stylesheet" href="/lessons/teacher-portal.css"/>
-    <header className="top"><div className="brand">✡ אני ישראלי</div><Link className="home" href="/lessons">כל השיעורים</Link></header>
+    <header className="top" style={{background:lesson.accentColor}}><div className="brand">✡ אני ישראלי</div><Link className="home" href="/lessons">כל השיעורים</Link></header>
     <div className="shell">
       <nav className="crumbs"><Link href="/">ראשי</Link> / <Link href="/lessons">השיעורים</Link> / {lesson.title}</nav>
-      <header className="lesson-hero" style={{"--accent":"#247f82"} as React.CSSProperties}>
+      <header className="lesson-hero" style={{"--accent":lesson.accentColor} as React.CSSProperties}>
         <div><span className="tag">שיעור 01 | {lesson.category}</span><h1>{lesson.title}</h1><p className="hook">{lesson.hook}</p><div className="meta"><span>90 דק׳</span><span>שכבת י׳</span><span>{lesson.lessonType}</span></div></div>
         <div className="cover"><img src={lesson.coverImage} alt={`שקף הפתיחה של ${lesson.title}`}/></div>
       </header>
