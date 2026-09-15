@@ -30,7 +30,7 @@ export default function Page(){
       <section id="materials"><h2>חומרים להורדה</h2><p className="empty">דפי עבודה, כרטיסיות וקבצי הוראה יתווספו כאן.</p></section>
       <section id="presentation"><h2>מצגת השיעור</h2><div className="presentation"><img src={lesson.coverImage} alt=""/><div><b>{lesson.title}</b><p>המצגת תיפתח בכרטיסייה חדשה.</p></div><a className="button" href={lesson.lessonUrl} target="_blank" rel="noreferrer">פתיחת המצגת</a></div></section>
       <section><details><summary>דגשים למורה</summary><p>בחרו את היקף הדיון והפעילות בהתאם לאופי הכיתה ולזמן העומד לרשותכם.</p></details><details><summary>הצעות להרחבה</summary><p>אפשר להרחיב באמצעות מקור נוסף, משימת כתיבה או פעילות המשך קבוצתית.</p></details></section>
-      <nav className="nav-bottom"><span></span><Link className="all" href="/#lessons">חזרה לכל השיעורים</Link><a href="/lessons/jewish-bookshelf.html">לשיעור הבא ←</a></nav>
+      <nav className="nav-bottom"><span></span><Link className="all" href="/#lessons">חזרה לכל השיעורים</Link><Link href="/lessons/jewish-bookshelf">לשיעור הבא ←</Link></nav>
     </div>
     <footer className="footer">© תשפ״ז | „אני ישראלי” | מקיף ז׳ אשדוד</footer>
     <style>{`
