@@ -1,3 +1,15 @@
-import type { Metadata } from "next";import { LessonView } from "../../lesson-view";import { lessons } from "../../data";
-export const metadata:Metadata={title:`${lessons[1].title} | אני ישראלי`,description:lessons[1].hook};
-export default function Page(){return <LessonView index={1}/>}
+import type { Metadata } from "next";
+import { LegacyLessonPage } from "../../legacy-lesson-page";
+import { lessons } from "../../data";
+
+const lesson=lessons[1];
+export const metadata:Metadata={title:`${lesson.title} | אני ישראלי`,description:lesson.hook};
+
+const tools=[{
+  title:"ערכים במבחן",
+  description:"פעילות דיגיטלית מלווה לשיעור ארון הספרים היהודי.",
+  url:"https://arachim-bamivhan.etty900.chatgpt.site/?utm_source=canva&utm_medium=iframely",
+  label:"פתיחת הפעילות"
+}];
+
+export default function Page(){return <LegacyLessonPage index={1} tools={tools}/>;}
