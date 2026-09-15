@@ -1,0 +1,76 @@
+:root{
+  --ui-radius-card:16px;
+  --ui-radius-feature:20px;
+  --ui-radius-control:12px;
+  --ui-radius-media:18px;
+  --ui-gap-card:16px;
+  --ui-shadow-surface:0 6px 20px rgba(16,45,64,.07);
+  --ui-shadow-feature:0 10px 28px rgba(16,45,64,.13);
+  --ui-shadow-hover:0 14px 34px rgba(16,45,64,.14);
+}
+
+/* Shared spacing and surface language */
+.site-theme-shell .home-program-grid,
+.site-theme-shell .program-about-grid{gap:var(--ui-gap-card)}
+
+.site-theme-shell .home-program-card{
+  border-radius:var(--ui-radius-feature);
+  box-shadow:var(--ui-shadow-feature);
+}
+
+.site-theme-shell .lessons-library-section .lesson-card,
+.site-theme-shell .program-about-card,
+.site-theme-shell .legacy-lesson-page .small-card,
+.site-theme-shell .legacy-lesson-page .pdf-card,
+.site-theme-shell .legacy-lesson-page .presentation,
+.site-theme-shell .legacy-lesson-page .question,
+.site-theme-shell .resource-card{
+  border-radius:var(--ui-radius-card);
+}
+
+.site-theme-shell .program-about-card,
+.site-theme-shell .lessons-library-section .lesson-card,
+.site-theme-shell .legacy-lesson-page .small-card,
+.site-theme-shell .legacy-lesson-page .pdf-card,
+.site-theme-shell .legacy-lesson-page .presentation,
+.site-theme-shell .resource-card{
+  box-shadow:var(--ui-shadow-surface);
+}
+
+.site-theme-shell .program-about-card{overflow:hidden}
+.site-theme-shell .program-about-video-frame{border-radius:var(--ui-radius-media)}
+.site-theme-shell .legacy-lesson-page .cover{border-radius:var(--ui-radius-card);overflow:hidden}
+
+/* Controls use one compact radius; chips and metadata pills stay intentionally pill-shaped */
+.site-theme-shell .home-program-button,
+.site-theme-shell .site-header .menu-button,
+.site-theme-shell .program-about-back a,
+.site-theme-shell .legacy-lesson-page .action,
+.site-theme-shell .legacy-lesson-page .button,
+.site-theme-shell .legacy-lesson-page .button-outline,
+.site-theme-shell .legacy-lesson-page .nav-bottom .all{
+  border-radius:var(--ui-radius-control);
+}
+
+@media(hover:hover) and (pointer:fine){
+  .site-theme-shell .home-program-card:hover,
+  .site-theme-shell .lessons-library-section .lesson-card:hover{
+    box-shadow:var(--ui-shadow-hover);
+  }
+}
+
+.site-theme-shell.site-dark{
+  --ui-shadow-surface:0 8px 22px rgba(0,0,0,.14);
+  --ui-shadow-feature:0 10px 28px rgba(0,0,0,.18);
+  --ui-shadow-hover:0 14px 34px rgba(0,0,0,.24);
+}
+
+@media(max-width:700px){
+  :root{
+    --ui-radius-card:14px;
+    --ui-radius-feature:18px;
+    --ui-radius-control:12px;
+    --ui-radius-media:14px;
+    --ui-gap-card:14px;
+  }
+}
