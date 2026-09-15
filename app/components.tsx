@@ -25,7 +25,15 @@ export function Header({showLogo=true}:{showLogo?:boolean}={}) {
       .site-header .desktop-nav a.nav-active{color:#fff;border-bottom-color:#84ddd2;font-weight:700}
       .site-header .mobile-nav a.nav-active{position:relative;color:#9ee6dd;font-weight:700;padding-right:13px}
       .site-header .mobile-nav a.nav-active::before{content:"";position:absolute;right:0;top:50%;width:3px;height:18px;border-radius:99px;background:#84ddd2;transform:translateY(-50%)}
-      @media(max-width:700px){.site-header .corner-logo{width:100px!important;height:100px!important;right:10px!important;top:10px!important}.site-header .header-logo-spacer{width:106px;flex-basis:106px}}
+      @media(max-width:700px){
+        .site-header .corner-logo{width:100px!important;height:100px!important;right:10px!important;top:10px!important}
+        .site-header .header-logo-spacer{width:106px;flex-basis:106px}
+        .site-header .menu-button{display:grid;width:44px;height:44px;padding:0!important;place-items:center;border-radius:12px}
+        .site-header .mobile-nav{padding:8px 18px 12px;gap:0;box-shadow:0 12px 26px rgba(4,25,35,.18)}
+        .site-header .mobile-nav a{display:flex;align-items:center;min-height:46px;padding:0;border-bottom:1px solid rgba(255,255,255,.1)}
+        .site-header .mobile-nav a:last-child{border-bottom:0}
+        .site-header .mobile-nav a.nav-active{padding-right:16px}
+      }
     `}</style>
   </header>
 }
@@ -72,10 +80,12 @@ export function Footer() {
       .site-dark .footer-credit{border-color:#263e48}
       .site-dark .footer-nav a::after{background:#79c7c4}
       @media(max-width:700px){
-        .footer-inner{grid-template-columns:1fr;padding:25px 22px 22px;gap:16px}
+        .footer-inner{grid-template-columns:1fr;padding:24px 20px 20px;gap:13px}
         .footer-brand{text-align:center}
-        .footer-nav{justify-content:center;flex-wrap:wrap;gap:9px 20px}
-        .footer-credit{grid-column:auto;padding-top:13px;text-align:center}
+        .footer-brand span{line-height:1.6}
+        .footer-nav{justify-content:center;flex-wrap:wrap;gap:2px 18px}
+        .footer-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+        .footer-credit{grid-column:auto;padding-top:12px;text-align:center}
       }
       @media(prefers-reduced-motion:reduce){.footer-nav a,.footer-nav a::after{transition:none}}
     `}</style>
