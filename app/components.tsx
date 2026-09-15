@@ -6,7 +6,7 @@ import type { Lesson } from "./data";
 
 export function Header() {
   const [open,setOpen]=useState(false);
-  const links=[["ראשי","/#home"],["השיעורים","/#lessons"],["על התוכנית","/#about"]];
+  const links=[["ראשי","/#home"],["השיעורים","/#lessons"],["על התוכנית","/about"]];
   return <header className="site-header">
     <a className="corner-logo" href="/#home" aria-label="מקיף ז׳ אשדוד, עמוד הבית"><img src="/makif-z-logo.png" alt="מקיף ז׳ אשדוד"/></a>
     <div className="nav-shell"><span className="header-logo-spacer" aria-hidden="true"/><nav className="desktop-nav" aria-label="ניווט ראשי">{links.map(([l,h])=><a key={h} href={h}>{l}</a>)}</nav><button className="menu-button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label={open?"סגירת תפריט":"פתיחת תפריט"}>{open?<X/>:<Menu/>}</button></div>
