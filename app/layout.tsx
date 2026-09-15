@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { HomeThemeShell } from "./home-theme-shell";
 
 export const metadata: Metadata = {
   title: "אני ישראלי | תוכנית השכלה כללית",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased"><HomeThemeShell>{children}</HomeThemeShell></body>
     </html>
   );
 }
