@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Building2, Sparkles, Users } from "lucide-react";
+import { ArrowLeft, BookOpen, Building2, Sparkles, Users } from "lucide-react";
 import { Footer, Header } from "./components";
 import { HeroCarousel } from "./hero-carousel";
 
@@ -25,8 +25,8 @@ export default function Home() {
         {pillars.map(({title,icon:Icon},index)=><article className="home-program-card" key={title}><span className="home-program-signature" aria-hidden="true">{String(index+1).padStart(2,"0")}</span><span className="home-program-icon"><Icon size={31} strokeWidth={1.75}/></span><h2>{title}</h2></article>)}
       </div>
       <div className="home-program-actions">
-        <Link className="home-program-button primary" href="/about">על התוכנית</Link>
-        <Link className="home-program-button secondary" href="/lessons">לכל השיעורים</Link>
+        <Link className="home-program-button primary" href="/about"><span>על התוכנית</span><ArrowLeft size={17} strokeWidth={1.8}/></Link>
+        <Link className="home-program-button secondary" href="/lessons"><span>לכל השיעורים</span><ArrowLeft size={17} strokeWidth={1.8}/></Link>
       </div>
     </section>
 
@@ -51,11 +51,13 @@ export default function Home() {
     .home-program-card:nth-child(3) .home-program-icon,.home-program-card:nth-child(4) .home-program-icon{background:rgba(255,255,255,.42);box-shadow:inset 0 0 0 1px rgba(3,4,94,.07),0 7px 18px rgba(3,4,94,.08)}
     .home-program-card h2{position:relative;z-index:1;margin:0;color:#f7fbfb;font-size:clamp(1.04rem,1.45vw,1.24rem);line-height:1.5;font-weight:700;height:4.5em;display:flex;align-items:center;justify-content:center}
     .home-program-card:nth-child(3) h2,.home-program-card:nth-child(4) h2{color:#03045e}
-    .home-program-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px;padding-top:2px}
-    .home-program-button{display:inline-flex;align-items:center;justify-content:center;min-width:158px;padding:12px 23px;border-radius:999px;font-weight:700;border:1px solid var(--deep);transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
-    .home-program-button.primary{background:var(--deep);color:#fff}
-    .home-program-button.secondary{background:rgba(255,255,255,.72);color:var(--deep)}
-    .home-program-button:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:translateY(-1px)}
+    .home-program-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px;padding-top:2px}
+    .home-program-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:164px;height:46px;padding:0 20px;border-radius:14px;font-weight:700;border:1px solid var(--deep);box-shadow:0 5px 14px rgba(16,45,64,.08);transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+    .home-program-button svg{flex:0 0 auto;transition:transform .2s ease}
+    .home-program-button.primary{background:var(--deep);color:#fff;box-shadow:0 8px 18px rgba(16,45,64,.16)}
+    .home-program-button.secondary{background:rgba(255,255,255,.82);color:var(--deep);border-color:#9fb9c3}
+    .home-program-button:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:translateY(-1px);box-shadow:0 9px 20px rgba(16,45,64,.15)}
+    .home-program-button:hover svg{transform:translateX(-2px)}
     .home-pedagogy-section{padding:clamp(34px,4.2vw,50px) clamp(22px,5vw,84px) clamp(42px,5vw,58px)!important;background:#f6f8f8!important;border-top:0}
     .home-pedagogy-section .pedagogy{max-width:1180px;margin:0 auto;padding-top:0;border-top:0}
 
@@ -69,6 +71,7 @@ export default function Home() {
     .site-dark .home-program-card h2{color:#eef5f5}
     .site-dark .home-program-icon,.site-dark .home-program-card:nth-child(3) .home-program-icon,.site-dark .home-program-card:nth-child(4) .home-program-icon{background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 7px 18px rgba(0,0,0,.13)}
     .site-dark .home-program-card:hover{box-shadow:0 18px 38px rgba(0,0,0,.25)}
+    .site-dark .home-program-button{box-shadow:none}
     .site-dark .home-program-button.primary{background:#247f82;border-color:#247f82;color:#fff}
     .site-dark .home-program-button.secondary{background:rgba(255,255,255,.035);color:#dce8ea;border-color:#58717b}
     .site-dark .home-pedagogy-section{background:#0a1920!important}
@@ -84,8 +87,8 @@ export default function Home() {
       .home-program-icon{width:58px;height:58px}
       .home-program-icon svg{width:28px;height:28px}
       .home-program-card h2{font-size:.96rem;line-height:1.45;height:4.35em}
-      .home-program-actions{margin-top:24px}
-      .home-program-button{min-width:138px}
+      .home-program-actions{margin-top:24px;gap:10px}
+      .home-program-button{min-width:142px;height:44px;padding:0 16px;border-radius:12px;gap:7px}
       .home-pedagogy-section{padding:30px 20px 38px!important}
     }
   `}</style></>;
