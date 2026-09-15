@@ -1,33 +1,27 @@
 "use client";
 
-import { ArrowLeft, Volume2, VolumeX } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const STORAGE_PREFIX = "ani-yisraeli-time-tunnel-v2";
 const GATE_PREFIX = "ani-yisraeli-opening-seen";
+const AUDIO_PREF_KEY = "ani-yisraeli-audio-muted";
 const BUNDLE_URL = "/escape-room/escape-room-opening-assets.zip";
 
 async function extractZipEntry(buffer: ArrayBuffer, entryName: string, mime: string) {
   const view = new DataView(buffer);
   const bytes = new Uint8Array(buffer);
   const decoder = new TextDecoder();
-
   let eocd = -1;
   const minOffset = Math.max(0, bytes.length - 65557);
   for (let offset = bytes.length - 22; offset >= minOffset; offset--) {
-    if (view.getUint32(offset, true) === 0x06054b50) {
-      eocd = offset;
-      break;
-    }
+    if (view.getUint32(offset, true) === 0x06054b50) { eocd = offset; break; }
   }
   if (eocd < 0) throw new Error("ZIP end record not found");
-
   const entryCount = view.getUint16(eocd + 10, true);
   let cursor = view.getUint32(eocd + 16, true);
-
   for (let index = 0; index < entryCount; index++) {
     if (view.getUint32(cursor, true) !== 0x02014b50) throw new Error("Invalid ZIP directory");
-
     const method = view.getUint16(cursor + 10, true);
     const compressedSize = view.getUint32(cursor + 20, true);
     const nameLength = view.getUint16(cursor + 28, true);
@@ -35,25 +29,20 @@ async function extractZipEntry(buffer: ArrayBuffer, entryName: string, mime: str
     const commentLength = view.getUint16(cursor + 32, true);
     const localOffset = view.getUint32(cursor + 42, true);
     const name = decoder.decode(bytes.subarray(cursor + 46, cursor + 46 + nameLength));
-
     if (name === entryName) {
       if (view.getUint32(localOffset, true) !== 0x04034b50) throw new Error("Invalid ZIP local header");
       const localNameLength = view.getUint16(localOffset + 26, true);
       const localExtraLength = view.getUint16(localOffset + 28, true);
       const dataStart = localOffset + 30 + localNameLength + localExtraLength;
       const compressed = bytes.slice(dataStart, dataStart + compressedSize);
-
       if (method === 0) return new Blob([compressed], { type: mime });
       if (method !== 8) throw new Error("Unsupported ZIP compression");
-
       const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
       const decompressed = await new Response(stream).arrayBuffer();
       return new Blob([decompressed], { type: mime });
     }
-
     cursor += 46 + nameLength + extraLength + commentLength;
   }
-
   throw new Error(`ZIP entry not found: ${entryName}`);
 }
 
@@ -64,8 +53,6 @@ export default function OpeningGate() {
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
   const [leaving, setLeaving] = useState(false);
-  const [playing, setPlaying] = useState(false);
-  const [muted, setMuted] = useState(false);
   const [roomId, setRoomId] = useState("");
   const [imageSrc, setImageSrc] = useState("");
   const [audioSrc, setAudioSrc] = useState("");
@@ -74,11 +61,7 @@ export default function OpeningGate() {
     const params = new URLSearchParams(window.location.search);
     const room = (params.get("room") ?? "").trim().toUpperCase();
     setRoomId(room);
-
-    if (!room) {
-      setReady(true);
-      return;
-    }
+    if (!room) { setReady(true); return; }
 
     let shouldShow = true;
     try {
@@ -90,9 +73,14 @@ export default function OpeningGate() {
       }
       if (seen === "1") shouldShow = false;
     } catch {}
-
     setVisible(shouldShow);
     setReady(true);
+
+    const syncMute = (event: Event) => {
+      const detail = (event as CustomEvent<{ muted?: boolean }>).detail;
+      if (audioRef.current) audioRef.current.muted = Boolean(detail?.muted);
+    };
+    window.addEventListener("escape-audio-muted", syncMute);
 
     if (shouldShow) {
       void (async () => {
@@ -117,6 +105,7 @@ export default function OpeningGate() {
     }
 
     return () => {
+      window.removeEventListener("escape-audio-muted", syncMute);
       if (hideTimerRef.current) window.clearTimeout(hideTimerRef.current);
       audioRef.current?.pause();
       objectUrlsRef.current.forEach(url => URL.revokeObjectURL(url));
@@ -128,14 +117,8 @@ export default function OpeningGate() {
     const audio = audioRef.current;
     if (!audio || !audioSrc) return;
     audio.volume = 0.12;
-    audio.muted = false;
-    setMuted(false);
-    try {
-      await audio.play();
-      setPlaying(true);
-    } catch {
-      setPlaying(false);
-    }
+    try { audio.muted = window.localStorage.getItem(AUDIO_PREF_KEY) === "1"; } catch { audio.muted = false; }
+    try { await audio.play(); } catch {}
   };
 
   const enterTunnel = async () => {
@@ -147,54 +130,19 @@ export default function OpeningGate() {
     hideTimerRef.current = window.setTimeout(() => setVisible(false), 850);
   };
 
-  const toggleMusic = async () => {
-    const audio = audioRef.current;
-    if (!audio || !audioSrc) return;
-    if (audio.paused) {
-      await startMusic();
-      return;
-    }
-    audio.muted = !audio.muted;
-    setMuted(audio.muted);
-  };
-
   if (!ready || !roomId) return null;
 
   return <>
-    <audio
-      ref={audioRef}
-      src={audioSrc || undefined}
-      preload="auto"
-      onEnded={() => setPlaying(false)}
-      aria-hidden="true"
-    />
-
+    <audio ref={audioRef} src={audioSrc || undefined} preload="auto" aria-hidden="true" />
     {visible && <section className={`tunnel-opening-gate${leaving ? " leaving" : ""}`} aria-label="פתיחת מנהרת הזמן">
-      <div
-        className={`tunnel-opening-image${imageSrc ? " loaded" : ""}`}
-        style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined}
-        aria-hidden="true"
-      />
+      <div className={`tunnel-opening-image${imageSrc ? " loaded" : ""}`} style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined} aria-hidden="true" />
       <div className="tunnel-opening-shade" aria-hidden="true" />
       <div className="tunnel-opening-copy">
         <p>עבר • הווה • עתיד</p>
         <strong>המסע מתחיל כאן</strong>
-        <button type="button" onClick={enterTunnel}>
-          כניסה למנהרת הזמן <ArrowLeft size={20}/>
-        </button>
+        <button type="button" onClick={enterTunnel}>כניסה למנהרת הזמן <ArrowLeft size={20}/></button>
         <span>{audioSrc ? "הלחיצה תפעיל מוזיקת פתיחה בעוצמה נמוכה" : "המדיה נטענת — אפשר להיכנס למסע"}</span>
       </div>
     </section>}
-
-    {playing && !visible && <button
-      type="button"
-      className="intro-music-control"
-      onClick={toggleMusic}
-      aria-label={muted ? "הפעלת מוזיקת הפתיחה" : "השתקת מוזיקת הפתיחה"}
-      aria-pressed={!muted}
-    >
-      {muted ? <VolumeX size={16}/> : <Volume2 size={16}/>}
-      <span>{muted ? "מוזיקה" : "השתקה"}</span>
-    </button>}
   </>;
 }
