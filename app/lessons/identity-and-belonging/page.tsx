@@ -11,7 +11,7 @@ export default function Page(){
   const prep=lesson.prep??[];
   const steps=lesson.steps??[];
   const questions=lesson.discussionQuestions??[];
-  return <>
+  return <div className="legacy-lesson-page">
     <link rel="stylesheet" href="/lessons/teacher-portal.css"/>
     <header className="top"><div className="brand">✡ אני ישראלי</div><Link className="home" href="/#lessons">כל השיעורים</Link></header>
     <div className="shell">
@@ -33,5 +33,37 @@ export default function Page(){
       <nav className="nav-bottom"><span></span><Link className="all" href="/#lessons">חזרה לכל השיעורים</Link><a href="/lessons/jewish-bookshelf.html">לשיעור הבא ←</a></nav>
     </div>
     <footer className="footer">© תשפ״ז | „אני ישראלי” | מקיף ז׳ אשדוד</footer>
-  </>;
+    <style>{`
+      .legacy-lesson-page .lesson-hero{
+        display:grid!important;
+        grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)!important;
+        gap:50px!important;
+        align-items:center!important;
+        padding-bottom:42px!important;
+        border-bottom:1px solid var(--line)!important;
+        aspect-ratio:auto!important;
+        overflow:visible!important;
+        background:transparent!important;
+      }
+      .legacy-lesson-page .cover{
+        aspect-ratio:16/9;
+        overflow:hidden;
+        background:var(--mist);
+        border-bottom:5px solid var(--accent);
+      }
+      .legacy-lesson-page .cover img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+      }
+      @media(max-width:800px){
+        .legacy-lesson-page .lesson-hero{
+          grid-template-columns:1fr!important;
+          gap:25px!important;
+          padding-bottom:42px!important;
+        }
+        .legacy-lesson-page .cover{width:100%;}
+      }
+    `}</style>
+  </div>;
 }
