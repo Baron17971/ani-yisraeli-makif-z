@@ -52,11 +52,13 @@ export default function Home() {
     .home-program-card h2{position:relative;z-index:1;margin:0;color:#f7fbfb;font-size:clamp(1.04rem,1.45vw,1.24rem);line-height:1.5;font-weight:700;height:4.5em;display:flex;align-items:center;justify-content:center}
     .home-program-card:nth-child(3) h2,.home-program-card:nth-child(4) h2{color:#03045e}
     .home-program-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px;padding-top:2px}
-    .home-program-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:164px;height:46px;padding:0 20px;border-radius:14px;font-weight:700;border:1px solid var(--deep);box-shadow:0 5px 14px rgba(16,45,64,.08);transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+    .home-program-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:164px;height:46px;padding:0 20px;border-radius:14px;font-weight:700;border:1px solid #0077b6;box-shadow:0 5px 14px rgba(3,4,94,.1);transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
     .home-program-button svg{flex:0 0 auto;transition:transform .2s ease}
-    .home-program-button.primary{background:var(--deep);color:#fff;box-shadow:0 8px 18px rgba(16,45,64,.16)}
-    .home-program-button.secondary{background:rgba(255,255,255,.82);color:var(--deep);border-color:#9fb9c3}
-    .home-program-button:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:translateY(-1px);box-shadow:0 9px 20px rgba(16,45,64,.15)}
+    .home-program-button.primary{background:linear-gradient(145deg,#03045e 0%,#0077b6 100%);color:#fff;border-color:#03045e;box-shadow:0 8px 18px rgba(3,4,94,.2)}
+    .home-program-button.secondary{background:linear-gradient(145deg,#90e0ef 0%,#caf0f8 100%);color:#03045e;border-color:#90e0ef;box-shadow:0 8px 18px rgba(0,119,182,.12)}
+    .home-program-button:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(3,4,94,.16)}
+    .home-program-button.primary:hover{background:linear-gradient(145deg,#0077b6 0%,#00b4d8 100%);border-color:#0077b6;color:#fff}
+    .home-program-button.secondary:hover{background:linear-gradient(145deg,#00b4d8 0%,#90e0ef 100%);border-color:#00b4d8;color:#03045e}
     .home-program-button:hover svg{transform:translateX(-2px)}
     .home-pedagogy-section{padding:clamp(24px,3.4vw,36px) clamp(22px,5vw,84px) clamp(28px,3.8vw,40px)!important;background:#f6f8f8!important;border-top:0}
     .home-pedagogy-section .pedagogy{max-width:980px;margin:0 auto;padding-top:0;border-top:0}
