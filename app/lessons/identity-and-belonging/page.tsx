@@ -65,6 +65,28 @@ export default function Page(){
         }
         .legacy-lesson-page .cover{width:100%;}
       }
+      @media(max-width:700px){
+        .legacy-lesson-page .top{padding:0 18px}
+        .legacy-lesson-page .home{display:flex;align-items:center;min-height:44px}
+        .legacy-lesson-page .shell{padding:22px 18px 58px}
+        .legacy-lesson-page .crumbs{overflow:hidden;margin-bottom:16px;white-space:nowrap;text-overflow:ellipsis}
+        .legacy-lesson-page .lesson-hero{gap:22px!important;padding-bottom:34px!important}
+        .legacy-lesson-page .lesson-hero h1{font-size:clamp(2.35rem,10.5vw,3.05rem)!important;line-height:1.03!important;letter-spacing:-.045em!important}
+        .legacy-lesson-page .lesson-hero .hook{margin-top:12px;font-size:1rem;line-height:1.65}
+        .legacy-lesson-page .lesson-hero .meta{margin-top:15px;gap:6px}
+        .legacy-lesson-page .actions{gap:8px;margin:26px 0 40px}
+        .legacy-lesson-page .action{display:grid;place-items:center;min-height:50px;padding:9px 8px;font-size:.84rem;line-height:1.35}
+        .legacy-lesson-page section{padding:36px 0}
+        .legacy-lesson-page h2{font-size:clamp(1.7rem,8vw,2.05rem)}
+        .legacy-lesson-page .small-card{padding:16px}
+        .legacy-lesson-page .flow-item{grid-template-columns:44px 1fr;gap:8px 12px;padding:16px 0}
+        .legacy-lesson-page .flow-item p{grid-column:2;padding-right:0}
+        .legacy-lesson-page .pdf-card,.legacy-lesson-page .presentation{padding:20px;gap:14px}
+        .legacy-lesson-page .button,.legacy-lesson-page .button-outline{display:grid;width:100%;min-height:46px;place-items:center;text-align:center}
+        .legacy-lesson-page .question{padding:12px 14px;line-height:1.6}
+        .legacy-lesson-page .nav-bottom{gap:12px;padding-top:30px}
+        .legacy-lesson-page .nav-bottom a{font-size:.88rem;line-height:1.5}
+      }
     `}</style>
   </div>;
 }
