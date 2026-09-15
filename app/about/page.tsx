@@ -63,14 +63,14 @@ export default function AboutPage() {
     .program-about-hero{position:relative;height:clamp(320px,42vw,540px);overflow:hidden;color:#fff}
     .program-about-hero>img{width:100%;height:100%;object-fit:cover;object-position:center}
     .program-about-shade{position:absolute;inset:0;background:linear-gradient(90deg,#071e2ca8 0%,#0a2c3b56 48%,#0a2c3b15 100%),linear-gradient(0deg,#071e2c78 0%,transparent 65%)}
-    .program-about-title{position:absolute;right:clamp(24px,7vw,120px);bottom:clamp(34px,7vw,76px);max-width:760px;text-align:right}
-    .program-about-title p{margin:0 0 8px;font-size:.9rem;font-weight:700;letter-spacing:.04em;color:#d9efed}
-    .program-about-title h1{margin:0;font-size:clamp(3.2rem,7vw,6.8rem);line-height:.95;letter-spacing:-.055em}
-    .program-about-title span{display:block;margin-top:18px;font-size:clamp(1rem,1.8vw,1.35rem);color:#e7f5f4}
-    .program-about-intro{max-width:1050px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(22px,5vw,52px) 44px;text-align:right}
+    .program-about-title{position:absolute;right:clamp(24px,7vw,120px);bottom:clamp(36px,5.5vw,64px);max-width:760px;text-align:right}
+    .program-about-title p{margin:0 0 10px;font-size:.9rem;font-weight:700;letter-spacing:.04em;color:#d9efed}
+    .program-about-title h1{margin:0;font-size:clamp(3.1rem,6vw,5.6rem);line-height:1;letter-spacing:-.05em}
+    .program-about-title span{display:block;margin-top:14px;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.55;color:#e7f5f4}
+    .program-about-intro{max-width:1050px;margin:0 auto;padding:clamp(58px,7vw,88px) clamp(22px,5vw,52px) 44px;text-align:right}
     .program-about-kicker{margin:0 0 10px;color:var(--teal);font-weight:700;font-size:.9rem}
     .program-about-intro h2{margin:0;color:var(--navy);font-size:clamp(2.1rem,4vw,4rem);line-height:1.08;letter-spacing:-.035em;max-width:900px}
-    .program-about-intro>p:last-child{margin:28px 0 0;max-width:930px;font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.95;color:#3c5968}
+    .program-about-intro>p:last-child{margin:24px 0 0;max-width:930px;font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.95;color:#3c5968}
     .program-about-grid{max-width:1180px;margin:0 auto;padding:20px clamp(22px,5vw,52px) clamp(74px,10vw,120px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .program-about-card{position:relative;min-height:290px;padding:32px 32px 30px;border:1px solid #dbe5e2;background:#fff}
     .program-about-number{display:block;margin-bottom:26px;color:#82a6a8;font-size:.78rem;font-weight:700;letter-spacing:.12em}
@@ -80,8 +80,8 @@ export default function AboutPage() {
     .program-about-pedagogy{max-width:1180px;margin:0 auto 78px;padding:30px clamp(22px,5vw,52px) 0;text-align:center}
     .program-about-back{text-align:center;padding:0 20px 74px}.program-about-back a{display:inline-flex;padding:12px 22px;border:1px solid #cadcdd;border-radius:999px;color:var(--deep);font-weight:700;background:#fff}
     @media(max-width:700px){
-      .program-about-hero{height:420px}.program-about-hero>img{object-position:center center}.program-about-title{right:22px;left:22px;bottom:38px}.program-about-title h1{font-size:3.7rem}.program-about-title span{font-size:1rem;line-height:1.6}
-      .program-about-intro{padding:56px 22px 34px}.program-about-intro h2{font-size:2.35rem}.program-about-intro>p:last-child{font-size:1.02rem;line-height:1.85}
+      .program-about-hero{height:390px}.program-about-hero>img{object-position:center center}.program-about-title{right:22px;left:22px;bottom:32px}.program-about-title p{margin-bottom:8px}.program-about-title h1{font-size:3.15rem}.program-about-title span{font-size:1rem;line-height:1.55;margin-top:12px}
+      .program-about-intro{padding:48px 22px 34px}.program-about-intro h2{font-size:2.35rem}.program-about-intro>p:last-child{font-size:1.02rem;line-height:1.85;margin-top:22px}
       .program-about-grid{grid-template-columns:1fr;padding:10px 20px 68px}.program-about-card{min-height:0;padding:27px 24px}.program-about-number{margin-bottom:18px}
       .program-about-pedagogy{margin:0 20px 64px;padding:30px 0 0}
       .program-about-back{padding-bottom:62px}
