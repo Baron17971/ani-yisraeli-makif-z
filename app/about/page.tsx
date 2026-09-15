@@ -111,17 +111,19 @@ export default function AboutPage() {
 
     @media(max-width:700px){
       .program-about-hero{height:390px}.program-about-hero>img{object-position:center center}.program-about-title{right:22px;left:22px;bottom:32px}.program-about-title p{margin-bottom:8px}.program-about-title h1{font-size:3.15rem}.program-about-title span{font-size:1rem;line-height:1.55;margin-top:12px}
-      .program-about-intro{padding:48px 22px 34px}.program-about-intro h2{font-size:2.35rem}.program-about-intro>p:last-child{max-width:none;font-size:1.02rem;line-height:1.85;margin-top:22px}
-      .program-about-grid{grid-template-columns:1fr;padding:10px 20px 46px}.program-about-card{min-height:0;padding:27px 24px}.program-about-card p{max-width:none}.program-about-number{margin-bottom:18px}
-      .program-about-video-section{padding:0 20px 62px}
-      .program-about-video-copy{margin-bottom:18px}
-      .program-about-video-copy h2{font-size:2rem;line-height:1.12}
-      .program-about-video-copy>p:last-child{font-size:.98rem;line-height:1.7;margin-top:13px}
+      .program-about-intro{padding:46px 20px 32px}.program-about-intro h2{font-size:2.25rem}.program-about-intro>p:last-child{max-width:none;font-size:1.02rem;line-height:1.85;margin-top:20px}
+      .program-about-grid{grid-template-columns:1fr;padding:8px 18px 44px;gap:14px}.program-about-card{min-height:0;padding:24px 22px}.program-about-card h2{font-size:1.45rem;line-height:1.3;margin-bottom:13px}.program-about-card p{max-width:none;line-height:1.82}.program-about-number{margin-bottom:15px}
+      .program-about-video-section{padding:0 18px 58px}
+      .program-about-video-copy{margin-bottom:16px}
+      .program-about-video-copy h2{font-size:1.9rem;line-height:1.14}
+      .program-about-video-copy>p:last-child{font-size:.98rem;line-height:1.7;margin-top:12px}
       .program-about-video-frame{border-radius:14px;box-shadow:0 15px 34px rgba(16,45,64,.14)}
-      .program-about-pedagogy{margin:0 20px 42px;padding:14px 0 0}
+      .program-about-pedagogy{margin:0 18px 38px;padding:12px 0 0}
       .program-about-pedagogy .pedagogy-logo{width:84px!important;height:84px!important}
-      .program-about-pedagogy .names{margin-top:7px;line-height:1.55!important}
-      .program-about-back{padding-bottom:56px}
+      .program-about-pedagogy .names{flex-direction:column;align-items:center;margin-top:7px;line-height:1.55!important;row-gap:2px}
+      .program-about-pedagogy .names .person{display:block;width:100%}
+      .program-about-pedagogy .names .separator{display:none}
+      .program-about-back{padding:0 18px 52px}.program-about-back a{align-items:center;justify-content:center;min-height:48px;padding:10px 20px}
     }
   `}</style></>;
 }
