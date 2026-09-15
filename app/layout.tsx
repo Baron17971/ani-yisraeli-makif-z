@@ -19,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className="antialiased"><HomeThemeShell>{children}</HomeThemeShell></body>
+      <body className="antialiased">
+        <HomeThemeShell>{children}</HomeThemeShell>
+        <style>{`
+          .time-tunnel-teacher .tt-hero-copy > p{font-size:0!important}
+          .time-tunnel-teacher .tt-hero-copy > p::before{content:"שיעור פתיחה | למידה במרחב";font-size:.9rem}
+        `}</style>
+      </body>
     </html>
   );
 }
