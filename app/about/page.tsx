@@ -56,7 +56,7 @@ export default function AboutPage() {
       <p className="team" style={{textAlign:"center",marginTop:"10px"}}>צוות מעו״ף | מקיף ז׳ אשדוד</p>
     </section>
 
-    <section className="program-about-back"><a href="/#lessons">← חזרה לספריית השיעורים</a></section>
+    <section className="program-about-back"><a href="/lessons">← חזרה לספריית השיעורים</a></section>
   </main><Footer/>
   <style>{`
     .program-about-page{background:#f7f9f8;color:var(--text)}
