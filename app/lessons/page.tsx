@@ -18,7 +18,28 @@ export default function LessonsLibraryPage(){
     .lessons-library-hero h1{margin:0;font-size:clamp(3.1rem,6vw,5.6rem);line-height:1;letter-spacing:-.05em}
     .lessons-library-hero span{display:block;margin-top:14px;color:#dce9ea;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.55}
     .lessons-library-section{padding-top:clamp(46px,6vw,72px)}
+
+    .lessons-library-section .lessons-grid{gap:clamp(20px,2.1vw,30px)}
+    .lessons-library-section .lesson-card{overflow:hidden;border-radius:16px}
+    .lessons-library-section .card-visual{aspect-ratio:16/9}
+    .lessons-library-section .card-content{min-height:215px;padding:20px 22px 19px}
+    .lessons-library-section .category{font-size:.78rem;letter-spacing:.01em}
+    .lessons-library-section .card-content h3{min-height:2.55em;margin:8px 0 9px;font-size:clamp(1.28rem,1.6vw,1.68rem);line-height:1.27}
+    .lessons-library-section .card-content p{-webkit-line-clamp:2;font-size:.92rem;line-height:1.58}
+    .lessons-library-section .text-link{padding-top:13px;font-size:.91rem}
+
     .site-dark .lessons-library-page{background:#102129}
-    @media(max-width:700px){.lessons-library-hero{min-height:205px;padding:72px 22px 30px}.lessons-library-hero p{margin-bottom:8px}.lessons-library-hero h1{font-size:3.15rem}.lessons-library-hero span{font-size:1rem;line-height:1.55;margin-top:12px}.lessons-library-section{padding-top:38px}}
+    @media(max-width:700px){
+      .lessons-library-hero{min-height:205px;padding:72px 22px 30px}
+      .lessons-library-hero p{margin-bottom:8px}
+      .lessons-library-hero h1{font-size:3.15rem}
+      .lessons-library-hero span{font-size:1rem;line-height:1.55;margin-top:12px}
+      .lessons-library-section{padding-top:38px}
+      .lessons-library-section .lesson-card{border-radius:14px}
+      .lessons-library-section .card-content{min-height:190px;padding:18px 19px 17px}
+      .lessons-library-section .card-content h3{min-height:auto;font-size:1.34rem;margin:7px 0 8px}
+      .lessons-library-section .card-content p{-webkit-line-clamp:2}
+      .lessons-library-section .text-link{padding-top:12px}
+    }
   `}</style></>;
 }
