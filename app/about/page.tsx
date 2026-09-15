@@ -45,13 +45,15 @@ export default function AboutPage() {
       </article>)}
     </section>
 
-    <section className="program-about-signature">
-      <img src="/maof-logo.png" alt="צוות מעו״ף" />
-      <div>
-        <p>פיתוח פדגוגי</p>
-        <h2>צוות מעו״ף</h2>
-        <span>מקיף ז׳ אשדוד</span>
+    <section className="pedagogy program-about-pedagogy">
+      <div className="pedagogy-heading" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:0,width:"100%",marginBottom:"4px"}}>
+        <img className="pedagogy-logo" src="/maof-logo.png" alt="צוות מעו״ף" style={{width:"128px",height:"128px",objectFit:"contain",background:"transparent",flex:"0 0 auto",marginBottom:"-10px"}}/>
+        <p className="pedagogy-title" style={{margin:0,color:"var(--teal)",fontSize:"clamp(1.2rem,3.2vw,1.5rem)",fontWeight:700,lineHeight:1.15}}>פיתוח פדגוגי</p>
       </div>
+      <p className="names" style={{justifyContent:"center",textAlign:"center",fontSize:"clamp(1.03rem,2.3vw,1.16rem)",lineHeight:1.85}}>
+        <span className="person">ענת ברון לוביש - סגנית פדגוגית</span><span className="separator" aria-hidden="true">•</span><span className="person">אתי נייברג - רכזת פדגוגית חט״ב</span><span className="separator" aria-hidden="true">•</span><span className="person">נטלי בן חמו - רכזת חינוך חברתי</span>
+      </p>
+      <p className="team" style={{textAlign:"center",marginTop:"10px"}}>צוות מעו״ף | מקיף ז׳ אשדוד</p>
     </section>
 
     <section className="program-about-back"><a href="/#lessons">← חזרה לספריית השיעורים</a></section>
@@ -75,17 +77,13 @@ export default function AboutPage() {
     .program-about-card h2{margin:0 0 16px;color:var(--navy);font-size:clamp(1.45rem,2.2vw,2rem);line-height:1.25}
     .program-about-card p{margin:0;color:#526d79;font-size:1rem;line-height:1.9}
     .program-about-card:nth-child(1){border-top:5px solid #102d40}.program-about-card:nth-child(2){border-top:5px solid #17495e}.program-about-card:nth-child(3){border-top:5px solid #2b6078}.program-about-card:nth-child(4){border-top:5px solid #247f82}
-    .program-about-signature{max-width:1180px;margin:0 auto 78px;padding:30px clamp(22px,5vw,52px);display:flex;align-items:center;justify-content:center;gap:12px;text-align:right;border-top:1px solid #dbe5e2;border-bottom:1px solid #dbe5e2}
-    .program-about-signature img{width:132px;height:132px;object-fit:contain;margin-bottom:-10px}
-    .program-about-signature p{margin:0;color:var(--teal);font-weight:700;font-size:1rem}
-    .program-about-signature h2{margin:3px 0 5px;color:var(--navy);font-size:clamp(1.35rem,2.3vw,1.8rem)}
-    .program-about-signature span{color:var(--muted)}
+    .program-about-pedagogy{max-width:1180px;margin:0 auto 78px;padding:30px clamp(22px,5vw,52px) 0;text-align:center}
     .program-about-back{text-align:center;padding:0 20px 74px}.program-about-back a{display:inline-flex;padding:12px 22px;border:1px solid #cadcdd;border-radius:999px;color:var(--deep);font-weight:700;background:#fff}
     @media(max-width:700px){
       .program-about-hero{height:420px}.program-about-hero>img{object-position:center center}.program-about-title{right:22px;left:22px;bottom:38px}.program-about-title h1{font-size:3.7rem}.program-about-title span{font-size:1rem;line-height:1.6}
       .program-about-intro{padding:56px 22px 34px}.program-about-intro h2{font-size:2.35rem}.program-about-intro>p:last-child{font-size:1.02rem;line-height:1.85}
       .program-about-grid{grid-template-columns:1fr;padding:10px 20px 68px}.program-about-card{min-height:0;padding:27px 24px}.program-about-number{margin-bottom:18px}
-      .program-about-signature{margin:0 20px 64px;padding:26px 20px;flex-direction:column;text-align:center;gap:2px}.program-about-signature img{width:118px;height:118px;margin-bottom:-6px}
+      .program-about-pedagogy{margin:0 20px 64px;padding:30px 0 0}
       .program-about-back{padding-bottom:62px}
     }
   `}</style></>;
