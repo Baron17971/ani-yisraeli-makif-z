@@ -1,7 +1,29 @@
 /* The site-wide theme toggle is unrelated to the escape-room theme switch.
    Hide it anywhere the escape-room UI is active so only one working toggle is visible. */
+body:has(.unified-intro) .site-theme-toggle,
+body:has(.unified-loading) .site-theme-toggle,
 body:has(.tunnel-opening-gate) .site-theme-toggle,
 body:has(.student-game) .site-theme-toggle,
 body:has(.victory-screen) .site-theme-toggle{
   display:none!important;
+}
+
+/* During the stations, keep the escape-room theme switch inside the top status bar.
+   This prevents it from covering the progress rail and station dots. */
+body:has(.student-game) .escape-theme-toggle{
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+body:has(.student-game) .escape-theme-toggle:hover{
+  transform:translateX(-50%) translateY(-1px);
+}
+
+@media(max-width:700px){
+  body:has(.student-game) .escape-theme-toggle{
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+  }
 }
