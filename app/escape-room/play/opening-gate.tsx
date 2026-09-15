@@ -6,7 +6,6 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 const STORAGE_PREFIX = "ani-yisraeli-time-tunnel-v2";
 const AUDIO_PREF_KEY = "ani-yisraeli-audio-muted";
 const BUNDLE_URL = "/escape-room/escape-room-opening-assets.zip";
-const GATE_VERSION = "blue-opening-v1";
 
 type Team = { names: string; className: string };
 type OpeningPhase = "team" | "image";
@@ -51,7 +50,7 @@ async function extractZipEntry(buffer: ArrayBuffer, entryName: string, mime: str
 
 export default function OpeningGate() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const reloadTimerRef = useRef<number | null>(null);
+  const transitionTimerRef = useRef<number | null>(null);
   const objectUrlsRef = useRef<string[]>([]);
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -68,20 +67,24 @@ export default function OpeningGate() {
     const classFromLink = (params.get("class") ?? "").trim();
     setRoomId(room);
     setTeam({ names: "", className: classFromLink });
-    if (!room) { setReady(true); return; }
+
+    if (!room) {
+      setReady(true);
+      return;
+    }
 
     let shouldShow = true;
     try {
       const saved = window.localStorage.getItem(`${STORAGE_PREFIX}:${room}`);
-      const openingVersion = window.localStorage.getItem(`ani-yisraeli-opening-version:${room}`);
       if (saved) {
         const parsed = JSON.parse(saved) as { stage?: number; team?: Team };
-        if (parsed.team) {
+        if ((parsed.stage ?? 0) >= 2) shouldShow = false;
+        if ((parsed.stage ?? 0) < 2 && parsed.team) {
           setTeam({ names: parsed.team.names ?? "", className: parsed.team.className || classFromLink });
         }
-        if ((parsed.stage ?? 0) >= 2 && openingVersion === GATE_VERSION) shouldShow = false;
       }
     } catch {}
+
     setVisible(shouldShow);
     setReady(true);
 
@@ -89,56 +92,38 @@ export default function OpeningGate() {
       const detail = (event as CustomEvent<{ muted?: boolean }>).detail;
       if (audioRef.current) audioRef.current.muted = Boolean(detail?.muted);
     };
-
-    const showGate = () => {
-      const freshParams = new URLSearchParams(window.location.search);
-      const freshClass = (freshParams.get("class") ?? "").trim();
-      audioRef.current?.pause();
-      if (audioRef.current) audioRef.current.currentTime = 0;
-      setTeam({ names: "", className: freshClass });
-      setPhase("team");
-      setLeaving(false);
-      setVisible(true);
-    };
-
     window.addEventListener("escape-audio-muted", syncMute);
-    window.addEventListener("time-tunnel-show-gate", showGate);
 
-    const observer = new MutationObserver(() => {
-      if (!visible && document.querySelector(".game-intro")) showGate();
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    void (async () => {
-      try {
-        const response = await fetch(BUNDLE_URL, { cache: "force-cache" });
-        if (!response.ok) throw new Error("Opening bundle unavailable");
-        const zip = await response.arrayBuffer();
-        const [imageBlob, audioBlob] = await Promise.all([
-          extractZipEntry(zip, "tunnel-opening.webp", "image/webp"),
-          extractZipEntry(zip, "time-tunnel-intro.mp3", "audio/mpeg"),
-        ]);
-        const imageUrl = URL.createObjectURL(imageBlob);
-        const audioUrl = URL.createObjectURL(audioBlob);
-        objectUrlsRef.current.push(imageUrl, audioUrl);
-        setImageSrc(imageUrl);
-        setAudioSrc(audioUrl);
-      } catch {
-        setImageSrc("");
-        setAudioSrc("");
-      }
-    })();
+    if (shouldShow) {
+      void (async () => {
+        try {
+          const response = await fetch(BUNDLE_URL, { cache: "force-cache" });
+          if (!response.ok) throw new Error("Opening bundle unavailable");
+          const zip = await response.arrayBuffer();
+          const [imageBlob, audioBlob] = await Promise.all([
+            extractZipEntry(zip, "tunnel-opening.webp", "image/webp"),
+            extractZipEntry(zip, "time-tunnel-intro.mp3", "audio/mpeg"),
+          ]);
+          const imageUrl = URL.createObjectURL(imageBlob);
+          const audioUrl = URL.createObjectURL(audioBlob);
+          objectUrlsRef.current.push(imageUrl, audioUrl);
+          setImageSrc(imageUrl);
+          setAudioSrc(audioUrl);
+        } catch {
+          setImageSrc("");
+          setAudioSrc("");
+        }
+      })();
+    }
 
     return () => {
-      observer.disconnect();
       window.removeEventListener("escape-audio-muted", syncMute);
-      window.removeEventListener("time-tunnel-show-gate", showGate);
-      if (reloadTimerRef.current) window.clearTimeout(reloadTimerRef.current);
+      if (transitionTimerRef.current) window.clearTimeout(transitionTimerRef.current);
       audioRef.current?.pause();
       objectUrlsRef.current.forEach(url => URL.revokeObjectURL(url));
       objectUrlsRef.current = [];
     };
-  }, [visible]);
+  }, []);
 
   const startMusic = async () => {
     const audio = audioRef.current;
@@ -167,20 +152,22 @@ export default function OpeningGate() {
     if (!roomId) return;
     const startedAt = Date.now();
     const cleanTeam = { names: team.names.trim(), className: team.className.trim() };
+
     try {
       window.localStorage.setItem(`${STORAGE_PREFIX}:${roomId}`, JSON.stringify({ stage: 2, team: cleanTeam, startedAt }));
-      window.localStorage.setItem(`ani-yisraeli-opening-version:${roomId}`, GATE_VERSION);
     } catch {}
 
     setLeaving(true);
-    reloadTimerRef.current = window.setTimeout(() => window.location.reload(), 720);
+    transitionTimerRef.current = window.setTimeout(() => {
+      window.location.reload();
+    }, 620);
   };
 
-  if (!ready || !roomId) return null;
+  if (!ready || !roomId || !visible) return null;
 
   return <>
     <audio ref={audioRef} src={audioSrc || undefined} preload="auto" aria-hidden="true" />
-    {visible && <section className={`tunnel-opening-gate phase-${phase}${leaving ? " leaving" : ""}`} aria-label="פתיחת מנהרת הזמן" dir="rtl">
+    <section className={`tunnel-opening-gate phase-${phase}${leaving ? " leaving" : ""}`} aria-label="פתיחת מנהרת הזמן" dir="rtl">
       {phase === "team" ? <div className="tunnel-preflight">
         <div className="preflight-glow" aria-hidden="true" />
         <div className="preflight-content">
@@ -210,6 +197,6 @@ export default function OpeningGate() {
           <button type="button" onClick={enterTunnel}>כניסה למנהרת הזמן <ArrowLeft size={20}/></button>
         </div>
       </>}
-    </section>}
+    </section>
   </>;
 }

@@ -1,7 +1,7 @@
 html:has(.student-game),
 body:has(.student-game){
   min-height:100%;
-  background:#04162f!important;
+  background:#071a3a!important;
 }
 
 body:has(.student-game){
@@ -11,134 +11,170 @@ body:has(.student-game){
 
 .student-game{
   min-height:100dvh!important;
-  --bg:#04162f!important;
-  --deep:#082b59!important;
-  --panel:#0b2d55!important;
-  --teal:#74d3ff!important;
-  --cyan:#b8ebff!important;
+  --bg:#071a3a!important;
+  --deep:#0b2f67!important;
+  --panel:#0f3774!important;
+  --teal:#7dd3fc!important;
+  --cyan:#c7eaff!important;
   background:
-    radial-gradient(circle at 80% 7%,rgba(72,156,235,.22),transparent 30%),
-    linear-gradient(180deg,#04162f 0%,#08284e 100%)!important;
+    radial-gradient(circle at 80% 7%,rgba(59,130,246,.28),transparent 31%),
+    linear-gradient(180deg,#071a3a 0%,#0a2b5f 58%,#071a3a 100%)!important;
 }
 
 .game-screen{
   min-height:100dvh!important;
   box-sizing:border-box;
   background:
-    radial-gradient(circle at 82% 0%,rgba(76,170,240,.15),transparent 30%),
-    linear-gradient(180deg,#04162f 0%,#08284e 100%)!important;
+    radial-gradient(circle at 82% 0%,rgba(56,189,248,.12),transparent 30%),
+    linear-gradient(180deg,#071a3a 0%,#0a2b5f 100%)!important;
 }
 
-.game-progress + .game-screen{min-height:calc(100dvh - 116px)!important}
-.game-dots{direction:rtl!important}
+.game-progress + .game-screen{
+  min-height:calc(100dvh - 116px)!important;
+}
 
 .game-status{
-  background:rgba(4,22,47,.95)!important;
-  border-color:rgba(130,203,255,.16)!important;
+  background:rgba(6,24,58,.94)!important;
+  border-color:rgba(191,219,254,.14)!important;
 }
-.game-status span{color:#a9c9dd!important}
-.game-time{color:#8edcff!important}
-.game-progress{
-  background:rgba(6,31,62,.96)!important;
-  border-color:rgba(130,203,255,.12)!important;
-}
-.game-progress-track{background:rgba(255,255,255,.1)!important}
-.game-progress-track span{background:linear-gradient(90deg,#3aa7ef,#9ce4ff)!important}
-.game-dots .done{border-color:#75d5ff!important;background:#75d5ff!important;color:#052143!important}
-.game-dots .current{border-color:#b8ebff!important;color:#b8ebff!important;box-shadow:0 0 0 4px rgba(115,213,255,.12)!important}
 
-.game-panel{
-  background:#0b2d55!important;
-  border-color:rgba(133,205,255,.18)!important;
-  box-shadow:0 24px 70px rgba(0,0,0,.28)!important;
+.game-status span{color:#b8ccea!important}
+.game-time{color:#9bdcff!important}
+
+.game-progress{
+  background:rgba(8,35,79,.95)!important;
+  border-color:rgba(191,219,254,.12)!important;
 }
-.game-kicker{color:#85ddff!important}
-.game-round-icon{color:#9fe4ff!important;border-color:rgba(139,216,255,.24)!important;background:rgba(117,211,255,.08)!important}
-.team-panel>p:not(.game-kicker),.game-story{color:#d5e7f1!important}
-.team-form label,.answer-box>label{color:#e8f5fc!important}
-.team-form input,.answer-row input{
-  background:#061f3f!important;
-  border-color:rgba(128,202,255,.22)!important;
+
+.game-progress-meta{color:#b8ccea!important}
+.game-progress-meta span{color:#eff6ff!important}
+.game-progress-track{background:rgba(255,255,255,.1)!important}
+.game-progress-track span{background:linear-gradient(90deg,#38bdf8,#93c5fd)!important}
+
+.game-dots{direction:rtl!important}
+.game-dots span{border-color:rgba(191,219,254,.2)!important;color:#86a6cf!important}
+.game-dots .done{border-color:#7dd3fc!important;background:#7dd3fc!important;color:#08204a!important}
+.game-dots .current{border-color:#f5d990!important;color:#f5d990!important;box-shadow:0 0 0 4px rgba(245,217,144,.1)!important}
+
+.game-panel,
+.invalid-card{
+  background:linear-gradient(180deg,#103a7a,#0d316a)!important;
+  border-color:rgba(191,219,254,.16)!important;
+  box-shadow:0 24px 70px rgba(0,8,32,.34)!important;
+}
+
+.game-heading h1{color:#fff!important}
+.game-kicker{color:#8fd3ff!important}
+.game-stamp{color:#a9dcff!important;border-color:rgba(191,219,254,.18)!important}
+.game-story{color:#dce9f8!important}
+.game-emphasis{color:#f5d990!important}
+
+.team-form label,
+.answer-box>label{color:#edf6ff!important}
+
+.team-form input,
+.answer-row input{
+  background:#071f49!important;
+  border-color:rgba(191,219,254,.2)!important;
   color:#fff!important;
 }
-.team-form input:focus,.answer-row input:focus{border-color:#72d3ff!important;box-shadow:0 0 0 3px rgba(114,211,255,.16)!important}
-.fixed-class{background:rgba(255,255,255,.055)!important;border-color:rgba(130,203,255,.16)!important}
-.fixed-class span{color:#abc8d9!important}.fixed-class strong{color:#a7e5ff!important}
-.game-heading h1{color:#fff!important}
-.game-stamp{color:#9bdfff!important;border-color:rgba(142,216,255,.18)!important}
-.game-emphasis{color:#b8ebff!important}
-.game-media,.game-media img{background:#061d39!important;border-color:rgba(130,203,255,.17)!important}
-.game-note{border-color:rgba(142,216,255,.3)!important;background:rgba(87,182,244,.08)!important;color:#b9e8ff!important}
-.answer-box{background:#061f3f!important;border-color:rgba(130,203,255,.14)!important}
-.check-button{background:linear-gradient(135deg,#66cfff,#9ce5ff)!important;color:#052143!important}
-.unlocked{border-color:rgba(105,213,255,.3)!important;background:rgba(87,189,244,.08)!important;color:#9fe5ff!important}
-.unlocked span{color:#c6dfed!important}
-.unlocked button,.game-primary{background:linear-gradient(135deg,#8bdcff,#bcecff)!important;color:#06254a!important}
-.reset-button.floating{background:rgba(4,22,47,.9)!important;border-color:rgba(130,203,255,.16)!important;color:#a9c9dd!important}
 
-.game-intro{
+.team-form input:focus,
+.answer-row input:focus{
+  border-color:#7dd3fc!important;
+  box-shadow:0 0 0 3px rgba(125,211,252,.15)!important;
+}
+
+.fixed-class{
+  background:rgba(255,255,255,.05)!important;
+  border-color:rgba(191,219,254,.15)!important;
+}
+.fixed-class span{color:#b9cce6!important}
+.fixed-class strong{color:#f5d990!important}
+
+.answer-box{
+  background:#082655!important;
+  border-color:rgba(191,219,254,.14)!important;
+}
+
+.check-button{
+  background:#7dd3fc!important;
+  color:#08204a!important;
+}
+
+.unlocked{
+  border-color:rgba(125,211,252,.3)!important;
+  background:rgba(56,189,248,.08)!important;
+  color:#b7e6ff!important;
+}
+.unlocked span{color:#c9dcef!important}
+.unlocked button,
+.game-primary{
+  background:#f5d990!important;
+  color:#0b2453!important;
+}
+
+.game-media{background:#061b40!important;border-color:rgba(191,219,254,.15)!important}
+.game-media img{background:#071a3a!important}
+.game-media>span{background:rgba(5,20,50,.88)!important}
+
+.game-note{
+  border-color:rgba(245,217,144,.38)!important;
+  background:rgba(245,217,144,.08)!important;
+  color:#f7df9d!important;
+}
+
+.reset-button.floating,
+.lightbox-close{
+  background:rgba(6,24,58,.9)!important;
+  border-color:rgba(191,219,254,.16)!important;
+}
+
+.lightbox{background:rgba(2,8,25,.95)!important}
+
+.game-intro,
+.victory-screen{
   isolation:isolate;
   min-height:100dvh!important;
   background:
-    radial-gradient(circle at 50% 31%,rgba(176,231,255,.15) 0 3%,rgba(95,190,246,.13) 7%,transparent 25%),
-    radial-gradient(circle at 50% 31%,#0c447d 0%,#082d59 30%,#041a35 68%,#021126 100%)!important;
+    radial-gradient(circle at 50% 30%,rgba(125,211,252,.13) 0 7%,transparent 27%),
+    radial-gradient(circle at 50% 31%,#144993 0%,#0b2f67 30%,#071a3a 68%,#030c20 100%)!important;
 }
 
-.game-intro::before,.game-intro::after{
-  content:"";
-  position:absolute;
-  inset:-18%;
-  pointer-events:none;
+.game-intro-shade,
+.victory-shade{
+  background:
+    radial-gradient(circle at 50% 31%,transparent 0 16%,rgba(4,17,49,.2) 33%,rgba(4,17,49,.7) 73%,rgba(3,11,32,.9) 100%),
+    linear-gradient(0deg,rgba(4,17,49,.78),transparent 55%)!important;
 }
-.game-intro::before{
-  z-index:0;
-  background:repeating-radial-gradient(ellipse at 50% 34%,transparent 0 34px,rgba(126,211,255,.22) 35px 37px,rgba(126,211,255,.05) 38px 43px,transparent 44px 74px);
-  transform:perspective(720px) rotateX(55deg) scale(1.16);
-  transform-origin:50% 34%;
-  filter:drop-shadow(0 0 18px rgba(93,187,241,.16));
-  animation:tunnel-breathe 5.2s ease-in-out infinite alternate;
-}
-.game-intro::after{
-  z-index:0;
-  background:repeating-conic-gradient(from 0deg at 50% 34%,rgba(167,226,255,.11) 0deg 1.2deg,transparent 1.4deg 12deg);
-  opacity:.42;
-  mix-blend-mode:screen;
-  animation:tunnel-spin 26s linear infinite;
-}
-.game-intro-shade{
-  z-index:1!important;
-  background:radial-gradient(circle at 50% 31%,transparent 0 16%,rgba(3,18,39,.18) 32%,rgba(3,18,39,.68) 72%,rgba(3,18,39,.9) 100%),linear-gradient(0deg,rgba(3,18,39,.78),transparent 54%)!important;
-}
-.game-intro-content{
-  z-index:3!important;
-  background:linear-gradient(180deg,rgba(5,31,64,.72),rgba(5,28,58,.92))!important;
-  border-color:rgba(154,225,255,.2)!important;
-  box-shadow:0 30px 100px rgba(0,0,0,.55),0 0 60px rgba(96,194,247,.08)!important;
-}
-.game-intro-content h1{text-shadow:0 0 24px rgba(150,225,255,.17)}
 
-.game-sound-toggle,.hint-trigger{
-  background:rgba(4,24,52,.92)!important;
-  border-color:rgba(136,211,255,.2)!important;
-  color:#d8f1ff!important;
+.game-intro-content,
+.victory-card{
+  background:linear-gradient(180deg,rgba(9,35,80,.74),rgba(7,27,64,.93))!important;
+  border-color:rgba(191,219,254,.18)!important;
+  box-shadow:0 30px 100px rgba(0,8,32,.58),0 0 60px rgba(96,165,250,.08)!important;
 }
-.hint-trigger{color:#a5e3ff!important;border-color:rgba(126,211,255,.34)!important}
-.hint-card{background:rgba(5,31,64,.97)!important;border-color:rgba(126,211,255,.34)!important;color:#e1f3fc!important}
-.hint-card-title,.hint-card .teacher-fallback{color:#9fe3ff!important}
-.celebration-core{background:rgba(7,45,86,.94)!important;color:#b8ebff!important;border-color:rgba(156,225,255,.42)!important;box-shadow:0 0 0 14px rgba(94,191,246,.08),0 0 48px rgba(94,191,246,.28)!important}
-.feedback-celebration{background:radial-gradient(circle at 50% 50%,rgba(93,190,246,.18) 0,transparent 30%)!important}
 
-@keyframes tunnel-breathe{from{transform:perspective(720px) rotateX(55deg) scale(1.08);opacity:.72}to{transform:perspective(720px) rotateX(55deg) scale(1.24);opacity:1}}
-@keyframes tunnel-spin{to{transform:rotate(360deg)}}
+.game-intro-content h2,
+.victory-team{color:#a9dcff!important}
+.game-quote,
+.victory-card blockquote{color:#f5d990!important}
+
+.game-sound-toggle,
+.hint-trigger{
+  background:rgba(6,24,58,.9)!important;
+  border-color:rgba(191,219,254,.16)!important;
+  color:#dcecff!important;
+}
+
+.hint-trigger{border-color:rgba(245,217,144,.4)!important;color:#f5d990!important}
+.hint-card{background:rgba(8,35,79,.97)!important;border-color:rgba(245,217,144,.38)!important;color:#e5f0ff!important}
+.hint-card-title,.hint-card .teacher-fallback{color:#f5d990!important}
+
+.feedback-celebration{background:radial-gradient(circle at 50% 50%,rgba(56,189,248,.18) 0,transparent 30%)!important}
+.celebration-core{background:rgba(10,43,95,.92)!important;color:#bfe8ff!important;border-color:rgba(147,197,253,.42)!important;box-shadow:0 0 0 14px rgba(56,189,248,.08),0 0 48px rgba(56,189,248,.22)!important}
 
 @media(max-width:700px){
   .game-screen{min-height:100dvh!important}
   .game-progress + .game-screen{min-height:calc(100dvh - 111px)!important}
-  .game-intro{min-height:100dvh!important;background:radial-gradient(circle at 50% 22%,rgba(184,233,255,.18) 0 2%,rgba(97,191,246,.15) 8%,transparent 28%),radial-gradient(circle at 50% 22%,#0e4c88 0%,#082f5d 29%,#041a35 66%,#021126 100%)!important}
-  .game-intro::before{inset:-22%;background:repeating-radial-gradient(ellipse at 50% 24%,transparent 0 25px,rgba(132,215,255,.24) 26px 28px,rgba(132,215,255,.055) 29px 34px,transparent 35px 57px);transform-origin:50% 24%}
-  .game-intro::after{background:repeating-conic-gradient(from 0deg at 50% 24%,rgba(167,226,255,.12) 0deg 1deg,transparent 1.3deg 11deg)}
-  .game-intro-shade{background:radial-gradient(circle at 50% 22%,transparent 0 14%,rgba(3,18,39,.12) 30%,rgba(3,18,39,.68) 73%,rgba(3,18,39,.92) 100%),linear-gradient(0deg,#04162f 0%,rgba(4,22,47,.78) 48%,rgba(4,22,47,.14) 100%)!important}
-  .game-intro-content{background:linear-gradient(180deg,rgba(5,30,62,.68),rgba(4,24,52,.94))!important;backdrop-filter:blur(5px)!important}
 }
-
-@media(prefers-reduced-motion:reduce){.game-intro::before,.game-intro::after{animation:none!important}}
