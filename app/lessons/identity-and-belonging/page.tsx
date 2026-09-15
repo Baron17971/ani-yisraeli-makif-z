@@ -54,7 +54,8 @@ export default function Page(){
       .legacy-lesson-page .cover img{
         width:100%;
         height:100%;
-        object-fit:contain;
+        object-fit:cover;
+        object-position:center;
       }
       @media(max-width:800px){
         .legacy-lesson-page .lesson-hero{
