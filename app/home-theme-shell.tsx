@@ -92,6 +92,18 @@ export function HomeThemeShell({children}:{children:React.ReactNode}){
       .site-theme-toggle:hover{transform:translateY(-1px);background:rgba(21,73,94,.94)}
       .site-theme-toggle svg{flex:0 0 auto}
 
+      /* Light mode depth */
+      .site-light{background:#f7faf9}
+      .site-light .quote-section{background:#fbfdfc}
+      .site-light .lessons-library-page{background:#f5f9f8}
+      .site-light .lessons-library-section{background:linear-gradient(180deg,#f8fbfa 0%,#f3f7f6 100%)}
+      .site-light .lesson-card,
+      .site-light .card-content{background:#fff}
+      .site-light .program-about-page{background:#f7faf9}
+      .site-light .legacy-lesson-page{background:#f7faf9;min-height:100vh}
+      .site-light .legacy-lesson-page .action,
+      .site-light .legacy-lesson-page .small-card{background:#fff}
+
       /* Home */
       .site-dark{background:#102129;color:#dce8ea}
       .site-dark .quote-section{background:#142932}
