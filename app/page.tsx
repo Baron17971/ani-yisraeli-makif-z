@@ -22,7 +22,7 @@ export default function Home() {
 
     <section className="home-program-section" aria-label="מאפייני התוכנית">
       <div className="home-program-grid">
-        {pillars.map(({title,icon:Icon})=><article className="home-program-card" key={title}><span className="home-program-icon"><Icon size={31} strokeWidth={1.75}/></span><h2>{title}</h2></article>)}
+        {pillars.map(({title,icon:Icon},index)=><article className="home-program-card" key={title}><span className="home-program-signature" aria-hidden="true">{String(index+1).padStart(2,"0")}</span><span className="home-program-icon"><Icon size={31} strokeWidth={1.75}/></span><h2>{title}</h2></article>)}
       </div>
       <div className="home-program-actions">
         <Link className="home-program-button primary" href="/about">על התוכנית</Link>
@@ -39,7 +39,9 @@ export default function Home() {
     .home-program-section{position:relative;padding:clamp(42px,5.2vw,62px) clamp(22px,5vw,84px) clamp(42px,5.4vw,62px);background:linear-gradient(180deg,#f8fcfd 0%,#f3f9fb 100%);border-bottom:1px solid #dce9ed}
     .home-program-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1180px;margin:0 auto}
     .home-program-card{position:relative;min-height:190px;padding:26px 22px;border:1px solid transparent;border-radius:24px;display:grid;grid-template-rows:68px 4.5em;align-content:center;justify-items:center;gap:16px;text-align:center;overflow:hidden;box-shadow:0 12px 30px rgba(15,48,62,.15);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background-color .34s ease}
+    .home-program-card::before{content:"";position:absolute;top:0;right:26px;left:26px;height:1px;background:currentColor;opacity:.28}
     .home-program-card::after{content:"";position:absolute;inset:auto -28px -52px auto;width:112px;height:112px;border-radius:50%;background:currentColor;opacity:.08;pointer-events:none}
+    .home-program-signature{position:absolute;top:14px;right:17px;z-index:2;color:currentColor;opacity:.66;font-size:.7rem;font-weight:700;letter-spacing:.12em;line-height:1}
     .home-program-card:nth-child(1){background:linear-gradient(145deg,#03045e 0%,#0077b6 100%);border-color:#03045e;color:#caf0f8}
     .home-program-card:nth-child(2){background:linear-gradient(145deg,#0077b6 0%,#00b4d8 100%);border-color:#0077b6;color:#caf0f8}
     .home-program-card:nth-child(3){background:linear-gradient(145deg,#00b4d8 0%,#90e0ef 100%);border-color:#00b4d8;color:#03045e}
@@ -77,6 +79,8 @@ export default function Home() {
       .home-program-section{padding:32px 20px 36px}
       .home-program-grid{grid-template-columns:1fr 1fr;gap:12px}
       .home-program-card{min-height:172px;padding:18px 12px;border-radius:20px;grid-template-rows:58px 4.35em;gap:11px}
+      .home-program-card::before{right:18px;left:18px}
+      .home-program-signature{top:11px;right:12px;font-size:.64rem}
       .home-program-icon{width:58px;height:58px}
       .home-program-icon svg{width:28px;height:28px}
       .home-program-card h2{font-size:.96rem;line-height:1.45;height:4.35em}
