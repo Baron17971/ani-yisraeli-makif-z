@@ -48,7 +48,7 @@ export function HomeThemeShell({children}:{children:React.ReactNode}){
         min-height:100vh;
         background:#fff;
         color:var(--text);
-        transition:background-color .34s ease,color .34s ease;
+        transition:background-color .26s ease,color .26s ease;
       }
       .site-theme-shell .quote-section,
       .site-theme-shell .lessons-section,
@@ -65,7 +65,7 @@ export function HomeThemeShell({children}:{children:React.ReactNode}){
       .site-theme-shell .legacy-lesson-page .pdf-card,
       .site-theme-shell .legacy-lesson-page .presentation,
       .site-theme-shell .legacy-lesson-page .question{
-        transition:background-color .34s ease,border-color .34s ease,color .34s ease;
+        transition:background-color .26s ease,border-color .26s ease,color .26s ease;
       }
       .site-theme-toggle{
         position:fixed;
