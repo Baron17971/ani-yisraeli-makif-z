@@ -31,7 +31,7 @@ export default function Home() {
     </section>
 
     <section className="about-section home-pedagogy-section">
-      <div className="pedagogy"><div className="pedagogy-heading" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:0,width:"100%",marginBottom:"4px"}}><img className="pedagogy-logo" src="/maof-logo.png" alt="צוות מעו״ף" style={{width:"128px",height:"128px",objectFit:"contain",background:"transparent",flex:"0 0 auto",marginBottom:"-10px"}}/><p className="pedagogy-title" style={{margin:0,color:"var(--teal)",fontSize:"clamp(1.2rem,3.2vw,1.5rem)",fontWeight:700,lineHeight:1.15}}>פיתוח פדגוגי</p></div><p className="names" style={{justifyContent:"center",textAlign:"center",fontSize:"clamp(1.03rem,2.3vw,1.16rem)",lineHeight:1.85}}><span className="person">ענת ברון לוביש - סגנית פדגוגית</span><span className="separator" aria-hidden="true">•</span><span className="person">אתי נייברג - רכזת פדגוגית חט״ב</span><span className="separator" aria-hidden="true">•</span><span className="person">נטלי בן חמו - רכזת חינוך חברתי</span></p><p className="team" style={{textAlign:"center",marginTop:"10px"}}>צוות מעו״ף | מקיף ז׳ אשדוד</p></div>
+      <div className="pedagogy"><div className="pedagogy-heading" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:0,width:"100%",marginBottom:"2px"}}><img className="pedagogy-logo" src="/maof-logo.png" alt="צוות מעו״ף" style={{width:"96px",height:"96px",objectFit:"contain",background:"transparent",flex:"0 0 auto",marginBottom:"-8px"}}/><p className="pedagogy-title" style={{margin:0,color:"var(--teal)",fontSize:"clamp(1.25rem,2.8vw,1.5rem)",fontWeight:800,lineHeight:1.15}}>פיתוח פדגוגי</p></div><p className="names" style={{justifyContent:"center",textAlign:"center",fontSize:"clamp(.98rem,2vw,1.08rem)",lineHeight:1.65}}><span className="person">ענת ברון לוביש - סגנית פדגוגית</span><span className="separator" aria-hidden="true">•</span><span className="person">אתי נייברג - רכזת פדגוגית חט״ב</span><span className="separator" aria-hidden="true">•</span><span className="person">נטלי בן חמו - רכזת חינוך חברתי</span></p><p className="team" style={{textAlign:"center",marginTop:"4px"}}>צוות מעו״ף | מקיף ז׳ אשדוד</p></div>
     </section>
   </main><Footer/>
   <style>{`
@@ -58,8 +58,10 @@ export default function Home() {
     .home-program-button.secondary{background:rgba(255,255,255,.82);color:var(--deep);border-color:#9fb9c3}
     .home-program-button:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:translateY(-1px);box-shadow:0 9px 20px rgba(16,45,64,.15)}
     .home-program-button:hover svg{transform:translateX(-2px)}
-    .home-pedagogy-section{padding:clamp(34px,4.2vw,50px) clamp(22px,5vw,84px) clamp(42px,5vw,58px)!important;background:#f6f8f8!important;border-top:0}
-    .home-pedagogy-section .pedagogy{max-width:1180px;margin:0 auto;padding-top:0;border-top:0}
+    .home-pedagogy-section{padding:clamp(24px,3.4vw,36px) clamp(22px,5vw,84px) clamp(28px,3.8vw,40px)!important;background:#f6f8f8!important;border-top:0}
+    .home-pedagogy-section .pedagogy{max-width:980px;margin:0 auto;padding-top:0;border-top:0}
+    .home-pedagogy-section .names{max-width:920px;margin:8px auto 0;row-gap:2px}
+    .home-pedagogy-section .team{font-size:.86rem!important}
 
     .site-dark .quote-section{border-bottom-color:#29424c}
     .site-dark .home-program-section{background:linear-gradient(180deg,#102129 0%,#0d1c23 100%);border-bottom-color:#29424c}
@@ -89,7 +91,9 @@ export default function Home() {
       .home-program-card h2{font-size:.96rem;line-height:1.45;height:4.35em}
       .home-program-actions{margin-top:24px;gap:10px}
       .home-program-button{min-width:142px;height:44px;padding:0 16px;border-radius:12px;gap:7px}
-      .home-pedagogy-section{padding:30px 20px 38px!important}
+      .home-pedagogy-section{padding:22px 20px 28px!important}
+      .home-pedagogy-section .pedagogy-logo{width:84px!important;height:84px!important}
+      .home-pedagogy-section .names{margin-top:7px;line-height:1.55!important}
     }
   `}</style></>;
 }
