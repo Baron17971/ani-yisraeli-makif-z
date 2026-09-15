@@ -45,6 +45,20 @@ export default function AboutPage() {
       </article>)}
     </section>
 
+    <section className="program-about-video-section" aria-labelledby="museum-space-title">
+      <div className="program-about-video-copy">
+        <p className="program-about-video-kicker">הצצה למרחב</p>
+        <h2 id="museum-space-title">המרחב המוזיאלי – הלמידה יוצאת מהכיתה</h2>
+        <p>מרחב שכבתי שנבנה כחלק מהתוכנית ומאפשר לתלמידים לפגוש את הסיפור הישראלי גם דרך המרחב עצמו — בתצוגות, בדימויים, בציטוטים ובתחנות תוכן.</p>
+      </div>
+      <div className="program-about-video-frame">
+        <video controls preload="metadata" playsInline aria-label="סרטון הצצה למרחב המוזיאלי של תוכנית אני ישראלי">
+          <source src="/museum-space-compressed.mp4" type="video/mp4"/>
+          הדפדפן שלך אינו תומך בניגון וידאו.
+        </video>
+      </div>
+    </section>
+
     <section className="pedagogy program-about-pedagogy">
       <div className="pedagogy-heading" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:0,width:"100%",marginBottom:"2px"}}>
         <img className="pedagogy-logo" src="/maof-logo.png" alt="צוות מעו״ף" style={{width:"96px",height:"96px",objectFit:"contain",background:"transparent",flex:"0 0 auto",marginBottom:"-8px"}}/>
@@ -71,20 +85,39 @@ export default function AboutPage() {
     .program-about-kicker{margin:0 0 10px;color:var(--teal);font-weight:700;font-size:.9rem}
     .program-about-intro h2{margin:0;color:var(--navy);font-size:clamp(2.1rem,4vw,4rem);line-height:1.08;letter-spacing:-.035em;max-width:900px}
     .program-about-intro>p:last-child{margin:24px 0 0;max-width:780px;font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.95;color:#3c5968}
-    .program-about-grid{max-width:1180px;margin:0 auto;padding:20px clamp(22px,5vw,52px) clamp(74px,10vw,120px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .program-about-grid{max-width:1180px;margin:0 auto;padding:20px clamp(22px,5vw,52px) clamp(50px,7vw,76px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .program-about-card{position:relative;min-height:290px;padding:32px 32px 30px;border:1px solid #dbe5e2;background:#fff}
     .program-about-number{display:block;margin-bottom:26px;color:#82a6a8;font-size:.78rem;font-weight:700;letter-spacing:.12em}
     .program-about-card h2{margin:0 0 16px;color:var(--navy);font-size:clamp(1.45rem,2.2vw,2rem);line-height:1.25}
     .program-about-card p{margin:0;max-width:52ch;color:#526d79;font-size:1rem;line-height:1.9}
     .program-about-card:nth-child(1){border-top:5px solid #102d40}.program-about-card:nth-child(2){border-top:5px solid #17495e}.program-about-card:nth-child(3){border-top:5px solid #2b6078}.program-about-card:nth-child(4){border-top:5px solid #247f82}
+
+    .program-about-video-section{max-width:1180px;margin:0 auto;padding:0 clamp(22px,5vw,52px) clamp(70px,8vw,96px);text-align:right}
+    .program-about-video-copy{max-width:820px;margin:0 0 24px auto}
+    .program-about-video-kicker{margin:0 0 8px;color:var(--teal);font-size:.86rem;font-weight:800;letter-spacing:.035em}
+    .program-about-video-copy h2{margin:0;color:var(--navy);font-size:clamp(2rem,3.5vw,3.45rem);line-height:1.08;letter-spacing:-.035em}
+    .program-about-video-copy>p:last-child{max-width:760px;margin:17px 0 0;color:#526d79;font-size:1.02rem;line-height:1.8}
+    .program-about-video-frame{overflow:hidden;border:1px solid #d5e1df;border-radius:22px;background:#071e2c;box-shadow:0 22px 55px rgba(16,45,64,.16)}
+    .program-about-video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#071e2c}
+
     .program-about-pedagogy{max-width:980px;margin:0 auto 48px;padding:18px clamp(22px,5vw,52px) 0;text-align:center}
     .program-about-pedagogy .names{max-width:920px;margin:8px auto 0;row-gap:2px}
     .program-about-pedagogy .team{font-size:.86rem!important}
     .program-about-back{text-align:center;padding:0 20px 62px}.program-about-back a{display:inline-flex;padding:12px 22px;border:1px solid #cadcdd;border-radius:999px;color:var(--deep);font-weight:700;background:#fff}
+
+    .site-dark .program-about-video-copy h2{color:#edf5f5}
+    .site-dark .program-about-video-copy>p:last-child{color:#b4c5ca}
+    .site-dark .program-about-video-frame{border-color:#314852;background:#07161d;box-shadow:0 24px 58px rgba(0,0,0,.3)}
+
     @media(max-width:700px){
       .program-about-hero{height:390px}.program-about-hero>img{object-position:center center}.program-about-title{right:22px;left:22px;bottom:32px}.program-about-title p{margin-bottom:8px}.program-about-title h1{font-size:3.15rem}.program-about-title span{font-size:1rem;line-height:1.55;margin-top:12px}
       .program-about-intro{padding:48px 22px 34px}.program-about-intro h2{font-size:2.35rem}.program-about-intro>p:last-child{max-width:none;font-size:1.02rem;line-height:1.85;margin-top:22px}
-      .program-about-grid{grid-template-columns:1fr;padding:10px 20px 68px}.program-about-card{min-height:0;padding:27px 24px}.program-about-card p{max-width:none}.program-about-number{margin-bottom:18px}
+      .program-about-grid{grid-template-columns:1fr;padding:10px 20px 46px}.program-about-card{min-height:0;padding:27px 24px}.program-about-card p{max-width:none}.program-about-number{margin-bottom:18px}
+      .program-about-video-section{padding:0 20px 62px}
+      .program-about-video-copy{margin-bottom:18px}
+      .program-about-video-copy h2{font-size:2rem;line-height:1.12}
+      .program-about-video-copy>p:last-child{font-size:.98rem;line-height:1.7;margin-top:13px}
+      .program-about-video-frame{border-radius:14px;box-shadow:0 15px 34px rgba(16,45,64,.14)}
       .program-about-pedagogy{margin:0 20px 42px;padding:14px 0 0}
       .program-about-pedagogy .pedagogy-logo{width:84px!important;height:84px!important}
       .program-about-pedagogy .names{margin-top:7px;line-height:1.55!important}
