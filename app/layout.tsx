@@ -4,7 +4,7 @@ import "./design-system.css";
 import { HomeThemeShell } from "./home-theme-shell";
 
 const productionUrl = "https://ani-yisraeli-makif-z.vercel.app";
-const shareImageUrl = `${productionUrl}/lesson-identity.png`;
+const shareImageUrl = `${productionUrl}/lesson-identity.png?v=6`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   openGraph: {
     type: "website",
@@ -24,6 +28,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: shareImageUrl,
+        width: 596,
+        height: 335,
         type: "image/png",
         alt: "אני ישראלי — תוכנית השכלה כללית, מקיף ז׳ אשדוד",
       },
