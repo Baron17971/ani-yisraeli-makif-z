@@ -49,7 +49,7 @@ export default function TimeTunnelTeacherPage() {
 
   return <><Header/><main className="time-tunnel-teacher">
     <section className="tt-hero">
-      <img src="/file_00000000ace88210a2e3a71c6a9c912f(2)(1).png" alt="מנהרת הזמן – אני ישראלי"/>
+      <img src="/file_00000000df648210886872fbd5db1085.png" alt="מנהרת הזמן – אני ישראלי"/>
       <div className="tt-hero-shade"/>
       <div className="tt-hero-copy">
         <p>שיעור פתיחה | למידה במרחב</p>
