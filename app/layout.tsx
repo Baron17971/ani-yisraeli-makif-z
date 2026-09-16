@@ -3,12 +3,37 @@ import "./globals.css";
 import "./design-system.css";
 import { HomeThemeShell } from "./home-theme-shell";
 
+const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "https://ani-yisraeli-makif-z.vercel.app";
+
 export const metadata: Metadata = {
-  title: "אני ישראלי | תוכנית השכלה כללית",
-  description: "ספריית השיעורים של תוכנית אני ישראלי, צוות מעו״ף, מקיף ז׳ אשדוד.",
+  metadataBase: new URL(productionUrl),
+  title: "אני ישראלי | מקיף ז׳ אשדוד",
+  description: "תוכנית השכלה כללית לשכבה י׳ | זהות, שייכות, מורשת והסיפור הישראלי | מקיף ז׳ אשדוד.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+  },
+  openGraph: {
+    type: "website",
+    locale: "he_IL",
+    siteName: "אני ישראלי | מקיף ז׳ אשדוד",
+    title: "אני ישראלי | מקיף ז׳ אשדוד",
+    description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
+    url: "/",
+    images: [
+      {
+        url: "/hero-slide-1.png",
+        alt: "אני ישראלי — תוכנית השכלה כללית, מקיף ז׳ אשדוד",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "אני ישראלי | מקיף ז׳ אשדוד",
+    description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
+    images: ["/hero-slide-1.png"],
   },
 };
 
