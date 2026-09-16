@@ -4,7 +4,7 @@ import "./design-system.css";
 import { HomeThemeShell } from "./home-theme-shell";
 
 const productionUrl = "https://ani-yisraeli-makif-z.vercel.app";
-const shareImageUrl = "https://raw.githubusercontent.com/Baron17971/ani-yisraeli-makif-z/main/public/lesson-identity.png?v=7";
+const shareImageUrl = `${productionUrl}/api/og?v=8`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "he_IL",
     siteName: "אני ישראלי",
-    title: "אני ישראלי",
+    title: "אני ישראלי | מקיף ז׳ אשדוד",
     description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
     url: productionUrl,
     images: [
       {
         url: shareImageUrl,
-        width: 596,
-        height: 335,
+        width: 1200,
+        height: 630,
         type: "image/png",
         alt: "אני ישראלי — תוכנית השכלה כללית, מקיף ז׳ אשדוד",
       },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "אני ישראלי",
+    title: "אני ישראלי | מקיף ז׳ אשדוד",
     description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
     images: [shareImageUrl],
   },
