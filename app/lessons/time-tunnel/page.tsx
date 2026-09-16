@@ -49,10 +49,10 @@ export default function TimeTunnelTeacherPage() {
 
   return <><Header/><main className="time-tunnel-teacher">
     <section className="tt-hero">
-      <img src="/file_000000001f34820aa8188af788222a31.png" alt="המרחב המוזיאלי של תוכנית אני ישראלי"/>
+      <img src="/file_00000000ace88210a2e3a71c6a9c912f(2)(1).png" alt="מנהרת הזמן – אני ישראלי"/>
       <div className="tt-hero-shade"/>
       <div className="tt-hero-copy">
-        <p>שיעור 01 | למידה במרחב</p>
+        <p>שיעור פתיחה | למידה במרחב</p>
         <h1>מנהרת הזמן</h1>
         <h2>חדר בריחה במרחב המוזיאלי</h2>
         <span>פעילות קבוצתית פיזית־דיגיטלית שבה המרחב עצמו הופך לחלק מהחידה.</span>
