@@ -3,9 +3,8 @@ import "./globals.css";
 import "./design-system.css";
 import { HomeThemeShell } from "./home-theme-shell";
 
-const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "https://ani-yisraeli-makif-z.vercel.app";
+const productionUrl = "https://ani-yisraeli-makif-z.vercel.app";
+const shareImageUrl = `${productionUrl}/api/og`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
@@ -21,10 +20,13 @@ export const metadata: Metadata = {
     siteName: "אני ישראלי | מקיף ז׳ אשדוד",
     title: "אני ישראלי | מקיף ז׳ אשדוד",
     description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
-    url: "/",
+    url: productionUrl,
     images: [
       {
-        url: "/hero-slide-1.png",
+        url: shareImageUrl,
+        width: 1200,
+        height: 630,
+        type: "image/png",
         alt: "אני ישראלי — תוכנית השכלה כללית, מקיף ז׳ אשדוד",
       },
     ],
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "אני ישראלי | מקיף ז׳ אשדוד",
     description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
-    images: ["/hero-slide-1.png"],
+    images: [shareImageUrl],
   },
 };
 
