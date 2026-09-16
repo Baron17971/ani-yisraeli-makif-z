@@ -49,7 +49,7 @@ export default function TimeTunnelTeacherPage() {
 
   return <><Header/><main className="time-tunnel-teacher">
     <section className="tt-hero">
-      <img src="/file_00000000df648210886872fbd5db1085.png" alt="מנהרת הזמן – אני ישראלי"/>
+      <img src="/file_0000000003a88210a371a05ea412fa06.png" alt="מנהרת הזמן – אני ישראלי"/>
       <div className="tt-hero-shade"/>
       <div className="tt-hero-copy">
         <p>שיעור פתיחה | למידה במרחב</p>
@@ -161,7 +161,7 @@ export default function TimeTunnelTeacherPage() {
     .time-tunnel-teacher{background:#f7f9f8;color:var(--text)}
     .tt-hero{position:relative;height:clamp(360px,47vw,600px);overflow:hidden;color:#fff}
     .tt-hero>img{width:100%;height:100%;object-fit:cover;object-position:center 44%}
-    .tt-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#071e2ce8 0%,#0a2c3ba8 54%,#0a2c3b38 100%),linear-gradient(0deg,#071e2c8c,transparent 65%)}
+    .tt-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,24,24,.84) 0%,rgba(42,42,42,.56) 54%,rgba(58,58,58,.18) 100%),linear-gradient(0deg,rgba(22,22,22,.58),transparent 65%)}
     .tt-hero-copy{position:absolute;right:clamp(24px,7vw,120px);bottom:clamp(38px,6vw,70px);max-width:840px;text-align:right}
     .tt-hero-copy p{margin:0 0 9px;color:#b9dfdb;font-size:.9rem;font-weight:800}.tt-hero-copy h1{margin:0;font-size:clamp(3.8rem,8vw,7rem);line-height:.92;letter-spacing:-.055em}.tt-hero-copy h2{margin:13px 0 0;font-size:clamp(1.45rem,3vw,2.4rem);font-weight:700}.tt-hero-copy span{display:block;max-width:700px;margin-top:14px;color:#e2efef;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.65}
     .tt-meta{max-width:1180px;margin:0 auto;padding:20px clamp(22px,5vw,52px);display:flex;flex-wrap:wrap;gap:10px;border-bottom:1px solid #dce5e3}.tt-meta span{padding:8px 12px;border:1px solid #d7e2e0;border-radius:999px;background:#fff;color:#526d79;font-size:.86rem}.tt-meta b{color:#173b4c;margin-left:5px}
