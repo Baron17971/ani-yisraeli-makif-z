@@ -8,7 +8,7 @@ const shareImageUrl = "https://raw.githubusercontent.com/Baron17971/ani-yisraeli
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
-  title: "אני ישראלי | מקיף ז׳ אשדוד",
+  title: "אני ישראלי",
   description: "תוכנית השכלה כללית לשכבה י׳ | זהות, שייכות, מורשת והסיפור הישראלי | מקיף ז׳ אשדוד.",
   icons: {
     icon: "/favicon.svg",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "he_IL",
-    siteName: "אני ישראלי | מקיף ז׳ אשדוד",
-    title: "אני ישראלי | מקיף ז׳ אשדוד",
+    siteName: "אני ישראלי",
+    title: "אני ישראלי",
     description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
     url: productionUrl,
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "אני ישראלי | מקיף ז׳ אשדוד",
+    title: "אני ישראלי",
     description: "תוכנית השכלה כללית לשכבה י׳ — זהות, שייכות, מורשת והסיפור הישראלי.",
     images: [shareImageUrl],
   },
