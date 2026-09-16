@@ -4,7 +4,7 @@ import "./design-system.css";
 import { HomeThemeShell } from "./home-theme-shell";
 
 const productionUrl = "https://ani-yisraeli-makif-z.vercel.app";
-const shareImageUrl = `${productionUrl}/lesson-identity.png?v=6`;
+const shareImageUrl = "https://raw.githubusercontent.com/Baron17971/ani-yisraeli-makif-z/main/public/lesson-identity.png?v=7";
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
