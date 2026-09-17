@@ -80,6 +80,20 @@ export default function Home() {
     .site-dark .home-program-button.secondary{background:rgba(255,255,255,.035);color:#dce8ea;border-color:#58717b}
     .site-dark .home-pedagogy-section{background:#0a1920!important}
 
+    @media(min-width:701px){
+      .hero{height:clamp(500px,68svh,640px)!important;min-height:500px!important}
+      .hero-image{object-position:center top!important}
+      .hero-content{right:clamp(40px,7vw,126px)!important;top:52%!important}
+      .hero-content h1{font-size:clamp(6rem,10.4vw,11rem)!important;line-height:.9!important}
+      .hero-content p{margin-top:22px!important;font-size:clamp(1.18rem,1.55vw,1.7rem)!important;line-height:1.45!important}
+      .site-header,.site-header .nav-shell{height:92px!important}
+      .site-header .nav-shell{padding:0 clamp(32px,5vw,86px)!important}
+      .site-header .corner-logo{width:142px!important;height:142px!important;right:clamp(18px,2.25vw,38px)!important;top:8px!important}
+      .site-header .header-logo-spacer{width:150px!important;flex-basis:150px!important}
+      .site-header .desktop-nav{font-size:1.08rem!important;gap:clamp(28px,3.7vw,58px)!important}
+      .site-header .desktop-nav a{padding:31px 0 27px!important}
+    }
+
     @media(max-width:900px){.home-program-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:600px){
       .quote-section{padding-bottom:24px!important}
