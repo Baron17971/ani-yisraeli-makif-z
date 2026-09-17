@@ -4,7 +4,7 @@ import "./design-system.css";
 import { HomeThemeShell } from "./home-theme-shell";
 
 const productionUrl = "https://ani-yisraeli-makif-z.vercel.app";
-const shareImageUrl = `${productionUrl}/api/og?v=8`;
+const shareImageUrl = `${productionUrl}/share-preview.jpg?v=9`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: shareImageUrl,
-        width: 1200,
-        height: 630,
-        type: "image/png",
+        width: 600,
+        height: 315,
+        type: "image/jpeg",
         alt: "אני ישראלי — תוכנית השכלה כללית, מקיף ז׳ אשדוד",
       },
     ],
