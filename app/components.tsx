@@ -100,3 +100,5 @@ export function Footer() {
 }
 
 // Redeploy copyright notice: 2026-09-18
+
+// Production redeploy: copyright notice verified 2026-09-19
