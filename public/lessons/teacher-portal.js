@@ -1,1 +1,266 @@
-Y29uc3QgbGVzc29ucyA9IHsKICAiaWRlbnRpdHktYW5kLWJlbG9uZ2luZyI6IHsKICAgIG46ICIwMSIsCiAgICB0OiAi15DXoNeZINeZ16nXqNeQ15zXmSDigJMg16HXmdek15XXqCDXqdecINeW15TXldeqINeV16nXmdeZ15vXldeqIiwKICAgIGNhdDogIteW15TXldeqINeV16nXmdeZ15vXldeqIiwKICAgIGhvb2s6ICLXnteUINeU15XXpNeaINeQ15XXqteg15Ug15zXmdep16jXkNec15nXnSwg15XXnteUINee15fXkdeoINeR15nXnyDXlNeh15nXpNeV16jXmdedINeU16nXldeg15nXnSDXqdec16DXlT8iLAogICAgaW1nOiAiL2xlc3Nvbi1pZGVudGl0eS5wbmciLAogICAgdXJsOiAiaHR0cHM6Ly9jYW52YS5saW5rL3Jxc25rMGlnYWd6b3EwNiIsCiAgICB0aW1lOiAiOTAg15PXp9ezIiwKICAgIHR5cGU6ICLXk9eZ15XXnyDXldei15HXldeT15Qg16fXkdeV16bXqteZ16oiLAogICAgZ29hbHM6IFsKICAgICAgWyLXmdeT16Ig15XXlNeR16DXlCIsICLXnNeW15TXldeqINee16jXm9eZ15HXmdedINee15LXldeV16DXmdedINeR15bXlNeV16og15TXmdeU15XXk9eZ16og15XXlNeZ16nXqNeQ15zXmdeqLiJdLAogICAgICBbItee15nXldee16DXldeZ15XXqiIsICLXnNeg16HXlyDXotee15PXlCDXkNeZ16nXmdeqINeV15zXlNen16nXmdeRINec16fXldec15XXqiDXqdeV16DXmdedLiJdLAogICAgICBbItei16jXm9eZ150g15XXlteU15XXqiIsICLXnNeX15bXpyDXqdeZ15nXm9eV16osINeb15HXldeTINec16jXmdeR15XXmSDXldei16jXkdeV16og15TXk9eT15nXqi4iXSwKICAgIF0sCiAgICBwcmVwOiBbCiAgICAgICLXntem15LXqiDXpNeq15XXl9eUINee16jXkNepIiwKICAgICAgIteY15zXpNeV16DXmdedINeQ15Ug157Xl9ep15HXmdedINec16TXmSDXkdeX15nXqNeUIiwKICAgICAgItei15HXldeT15Qg15HXlteV15LXldeqINeQ15Ug15HXp9eR15XXpteV16og16fXmNeg15XXqiIsCiAgICAgICLXkNeZ158g15PXpNeZINeU15PXpNeh15Qg16DXk9eo16nXmdedIiwKICAgIF0sCiAgICBmbG93OiBbCiAgICAgIFsi16TXqteZ15fXlCIsICIxMCDXk9en17MiLCAi16nXkNec16og16TXqteZ15fXlDog157XlCDXnteo15vXmdeRINeQ16og15TXlteU15XXqiDXqdec15k/Il0sCiAgICAgIFsi157Xmdek15XXmSDXlteU15XXmdeV16oiLCAiMjAg15PXp9ezIiwgIteU16rXnNee15nXk9eZ150g157XlteU15nXnSDXntei15LXnNeZINeW15TXldeqINeQ15nXqdeZ15nXnSDXlden15HXldem16rXmdeZ150uIl0sCiAgICAgIFsi16nXmdeXINen15HXldem16rXmSIsICIyNSDXk9en17MiLCAi15TXqdeV15XXkNeqINeg16fXldeT15XXqiDXnteR15gg15XXk9eZ15XXnyDXkdee16nXldeq16Mg15XXkdep15XXoNeULiJdLAogICAgICBbCiAgICAgICAgIteX15nXkdeV16gg15zXmdep16jXkNec15nXldeqIiwKICAgICAgICAiMjAg15PXp9ezIiwKICAgICAgICAi16fXmdep15XXqCDXkdeZ158g15bXlNeV16og15DXmdep15nXqiDXnNeR15nXnyDXlNeX15HXqNeUINeU15nXqdeo15DXnNeZ16ouIiwKICAgICAgXSwKICAgICAgWyLXodeZ15vXldedIiwgIjE1INeT16fXsyIsICLXoNeZ16HXldeXINeq15XXkdeg15Qg15DXmdep15nXqiDXldee16nXmdee16og15nXpteZ15DXlC4iXSwKICAgIF0sCiAgICBxczogWwogICAgICAi15DXmdec15Ug157XqNeb15nXkdeZ150g15HXlteU15XXqiDXqdec16DXlSDXkNeg15Ug15HXldeX16jXmdedINeV15DXmdec15Ug16fXmdeR15zXoNeVPyIsCiAgICAgICLXlNeQ150g15DXpNep16gg15zXlNeX15bXmdenINeR15vXnteUINeW15TXldeZ15XXqiDXkdeV1r7Xltee16DXmdeqPyIsCiAgICAgICLXnteUINeZ15vXldecINec15fXkdeoINeR15nXnyDXmdep16jXkNec15nXnSDXqdeV16DXmdedINee15DXldeTINeW15Qg157XlteUPyIsCiAgICBdLAogIH0sCiAgImpld2lzaC1ib29rc2hlbGYiOiB7CiAgICBuOiAiMDIiLAogICAgdDogIteQ16jXldefINeU16HXpNeo15nXnSDXlNeZ15TXldeT15kiLAogICAgY2F0OiAi15bXlNeV16osINee16HXldeo16og15XXqteo15HXldeqIiwKICAgIGhvb2s6ICLXnteU150g15TXqNei15nXldeg15XXqiDXlNeS15PXldec15nXnSDXqdecINeX15LXmSDXqtep16jXmSwg15XXm9eZ16bXkyDXlNedINeg15XXktei15nXnSDXkdeX15nXmdedINep15zXoNeVINeU15nXldedPyIsCiAgICBpbWc6ICIvbGVzc29uLWpld2lzaC1ib29rc2hlbGYucG5nIiwKICAgIHVybDogImh0dHBzOi8vd3d3LmNhbnZhLmNvbS9kZXNpZ24vREFIVkd4Szk1SEUvX1BCeXpKblBiTnJQTzctY0Q2Mkp5Zy92aWV3P3V0bV9jb250ZW50PURBSFZHeEs5NUhFJnV0bV9jYW1wYWlnbj1kZXNpZ25zaGFyZSZ1dG1fbWVkaXVtPWxpbmsmdXRtX3NvdXJjZT12aWV3ZXIiLAogICAgdGltZTogIjkwINeT16fXsyIsCiAgICB0eXBlOiAi15fXp9eoINeV15PXmdeV158iLAogICAgZ29hbHM6IFsKICAgICAgWyLXmdeT16Ig15XXlNeR16DXlCIsICLXnNeU15vXmdeoINeo16LXmdeV16DXldeqLCDXmNen16HXmNeZ150g15XXodee15zXmdedINee15DXqNeV158g15TXodek16jXmdedINeU15nXlNeV15PXmS4iXSwKICAgICAgWyLXnteZ15XXnteg15XXmdeV16oiLCAi15zXp9eo15XXkCDXnten15XXqCwg15zXpNeo16kg15XXnNeX15HXqCDXkNeV16rXlSDXnNeX15nXmdedINeU16LXm9ep15XXldeZ15nXnS4iXSwKICAgICAgWyLXoteo15vXmdedINeV15bXlNeV16oiLCAi15zXkdeX15XXnyDXnteh15XXqNeqINeb157XqNeX15Eg15fXmSDXqdecINee16nXntei15XXqi4iXSwKICAgIF0sCiAgICBwcmVwOiBbCiAgICAgICLXntem15LXqiDXpNeq15XXl9eUINee16jXkNepIiwKICAgICAgItee15fXqdeRINeQ15Ug15jXnNek15XXnyDXnNek15kg15HXl9eZ16jXlCIsCiAgICAgICLXoteR15XXk9eUINeR16fXkdeV16bXldeqIiwKICAgICAgIteQ16TXqdeoINec15TXm9eZ158g15PXpNeZINee16fXldeo15XXqiIsCiAgICBdLAogICAgZmxvdzogWwogICAgICBbItek16rXmdeX15QiLCAiMTAg15PXp9ezIiwgItee16TXktepINei150g15fXpNem15nXnSDXldeh157XnNeZ150g157Xl9eS15kg16rXqdeo15kuIl0sCiAgICAgIFsi157XodeiINeR15nXnyDXnten15XXqNeV16oiLCAiMjUg15PXp9ezIiwgIteU15nXm9eo15XXqiDXotedINeY16fXodeY15nXnSDXldeo16LXmdeV16DXldeqINee16jXm9eW15nXmdedLiJdLAogICAgICBbIteX16fXqCDXp9eR15XXpteq15kiLCAiMjUg15PXp9ezIiwgIteb15wg16fXkdeV16bXlCDXntei15HXk9eqINee16fXldeoINeV16nXkNec15QuIl0sCiAgICAgIFsi16nXmdeq15XXoyDXldeT15nXldefIiwgIjIwINeT16fXsyIsICLXl9eZ15HXldeoINeR15nXnyDXnteh15XXqNeqLCDXlteU15XXqiDXldeU15fXmdeZ150g15TXmdeV150uIl0sCiAgICAgIFsi16HXmdeb15XXnSIsICIxMCDXk9en17MiLCAi15HXl9eZ16jXqiDXqNei15nXldefINeQ15fXkyDXqdee15HXp9ep15nXnSDXnNen15fXqiDXlNec15DXlC4iXSwKICAgIF0sCiAgICBxczogWwogICAgICAi157XlCDXlNeV16TXmiDXmNen16HXmCDXmdep158g15zXqNec15XXldeg15jXmSDXktedINeU15nXldedPyIsCiAgICAgICLXlNeQ150g157XodeV16jXqiDXnteS15HXmdec15Qg15DXlSDXnteQ16TXqdeo16o/IiwKICAgICAgIteQ15nXlteUINeo16LXmdeV158g157Xl9eS15kg16rXqdeo15kg15nXm9eV15wg15zXlNep16TXmdeiINei15wg15TXl9eZ15nXnSDXqdec16DXlT8iLAogICAgXSwKICB9LAogICJ0YW5rcy1hbmQtY291cmFnZSI6IHsKICAgIG46ICIwMyIsCiAgICB0OiAi157XmNeg16fXmSDXotee16cg15TXkdeb15Ag15zXmNeg16fXmdeh15jXmdeV16og15HXl9eV15zXmdeqIiwKICAgIGNhdDogItee15XXqNep16og16fXqNeRINeV15DXl9eo15nXldeqIiwKICAgIGhvb2s6ICLXnteh15nXpNeV16jXmSDXlNeS15HXldeo15Qg16nXnCDXntec15fXnteqINeZ15XXnSDXlNeb15nXpNeV16jXmdedINeQ15wg15LXkdeV16jXqiDXqdeR16LXlCDXkdeQ15XXp9eY15XXkdeoLiIsCiAgICBhYm91dDoKICAgICAgIteU16nXmdei15XXqCDXnteX15HXqCDXkdeZ158g16nXoNeZINeh15nXpNeV16jXmSDXnNeX15nXnteUINep15TXqteo15fXqdeVINeR15TXpNeo16kg16nXnCDXl9ee15nXqdeZ150g16nXoNeULiDXkdee15zXl9ee16og15nXldedINeU15vXmdek15XXqNeZ150g15TXldeR15nXnCDXkNeR15nXkteT15XXqCDXp9eU15zXoNeZINeQ16og15zXldeX157XmSDXkteT15XXkyA3NyDXkden16jXkdeV16og15TXkdec15nXnteUINeR16LXntenINeU15HXm9eQLCDXnteV15wg15vXldeXINeh15XXqNeZINeS15PXldecINeV15HXqteg15DXmdedINep15wg16DXl9eZ16rXldeqINee16HXpNeo15nXqiDXldeQ15nWvteV15PXkNeV16ouINeR16nXkdei15Qg15HXkNeV16fXmNeV15HXqCAyMDIzINek16LXnNeVINem15XXldeq15kg15jXoNen15nXodeY15nXldeqINeR15LXlteo16og15TXk9eo15XXnSDXkdee16nXmiDXqdei15XXqiDXnteV15wg157Xl9eR15zXmdedLiDXpteV15XXqiDXkdek15nXp9eV15PXlCDXqdecINen16jXoNeZINeU15LXmdeiINec16fXmdeR15XXpSDXl9eV15zXmdeqINeV16HXmdeZ16Ig15HXlNeS16DXlCDXotecINeq15XXqdeR15nXlS4g15PXqNeaINep16DXmSDXlNeh15nXpNeV16jXmdedINeR15XXl9eg15nXnSDXlNeq15zXnteZ15PXmdedINeb15nXpteTINeQ15XXntelLCDXnten16bXldei15nXldeqLCDXnteg15TXmdeS15XXqiwg15nXldeW157XlCwg16jXoteV16og15XXoteR15XXk9eqINem15XXldeqINee15DXpNep16jXmdedINec16TXoteV15wg15HXqNeS16LXmSDXlNek16rXoteUINeV157XqdeR16guIiwKICAgIGltZzogIi9sZXNzb24tdGFua3MucG5nIiwKICAgIHVybDogImh0dHBzOi8vY2FudmEubGluay9mcjUzMng3bDBtc2dkaDIiLAogICAgcGRmOiAiL3RhbmtzLWxlc3Nvbi10ZWFjaGVyLWd1aWRlLnBkZiIsCiAgICB0aW1lOiAiOTAg15PXp9ezIiwKICAgIHR5cGU6ICLXnteV16jXqdeqINen16jXkSDXldeT15nXldefIiwKICAgIGdvYWxzOiBbCiAgICAgIFsi15nXk9eiINeV15TXkdeg15QiLCAi15zXlNeb15nXqCDXqdeg15kg16HXmdek15XXqNeZINec15fXmdee15Qg157Xqten15XXpNeV16og16nXldeg15XXqi4iXSwKICAgICAgWyLXnteZ15XXnteg15XXmdeV16oiLCAi15zXoNeq15cg15TXl9ec15jXldeqINep15TXqten15HXnNeVINeR16rXoNeQ15kg16HXm9eg15Qg15XXnteZ15PXoiDXl9ec16fXmS4iXSwKICAgICAgWyLXoteo15vXmdedINeV15bXlNeV16oiLCAi15zXlteU15XXqiDXoteo15vXmdedINee16nXldeq16TXmdedINec16nXoNeZINeU15DXmdeo15XXoteZ150uIl0sCiAgICAgIFsi16nXmdeq15XXoyDXpNei15XXnNeUIiwgItec15HXl9eV158g15DXqiDXlNen16nXqCDXkdeZ158g15LXkdeV16jXlCDXkNeZ16nXmdeqINec16LXkdeV15PXqiDXpteV15XXqi4iXSwKICAgICAgWyLXl9eZ15HXldeoINeQ15nXqdeZIiwgItec15fXkdeoINeR15nXnyDXoteo15vXmSDXlNep15nXoteV16gg15zXl9eZ15kg15TXqtec157XmdeT15nXnS4iXSwKICAgIF0sCiAgICBwcmVwOiBbCiAgICAgICLXntem15LXqiDXpNeq15XXl9eUINee16jXkNepIiwKICAgICAgItee16fXqNefINeV16jXnten15XXnNeZ150iLAogICAgICAi15jXnNek15XXnyDXkNeVINee15fXqdeRINec15vXnCDXp9eR15XXpteUINec16bXldeo15og15TXoden16gsINeU16LXoNefINeV15TXntep15fXpyIsCiAgICAgICLXk9ejIOKAntee16bXpNefINeQ15nXqdeZ4oCdINee15XXk9ek16Eg15zXm9ecINeq15zXnteZ15MiLAogICAgXSwKICAgIGZsb3c6IFsKICAgICAgWyLXk9eZ15zXnteqINek16rXmdeX15QiLCAiMTAg15PXp9ezIiwgIteU16bXkteqINeT15nXnNee15Qg15XXlNem15HXoteUINeR16HXp9eoINeb15nXqteq15kuIl0sCiAgICAgIFsKICAgICAgICAi16LXntenINeU15HXm9eQIiwKICAgICAgICAiMTUg15PXp9ezIiwKICAgICAgICAi16bXpNeZ15nXlCDXldeT15nXldefINeR16HXmdek15XXqCDXlNen16jXkSDXldee16DXlNeZ15LXldeq15Ug16nXnCDXkNeR15nXkteT15XXqCDXp9eU15zXoNeZLiIsCiAgICAgIF0sCiAgICAgIFsKICAgICAgICAi15TXmNeg16fXmdeh15jXmdeV16og15HXl9eV15zXmdeqIiwKICAgICAgICAiMTUg15PXp9ezIiwKICAgICAgICAi16bXpNeZ15nXlCDXldeT15nXldefINeR16HXmdek15XXqCDXlNem15XXldeqINep16TXotecINeR15LXlteo16og15TXk9eo15XXnS4iLAogICAgICBdLAogICAgICBbItei16DXnyDXoteo15vXmdedIiwgIjEwINeT16fXsyIsICLXk9eZ16jXldeSINei16jXm9eZ150g15XXmdem15nXqNeqINei16DXnyDXm9eZ16rXqteZINee16nXldeq16MuIl0sCiAgICAgIFsKICAgICAgICAi15TXqdeV15XXkNeUINeV15PXmdeV158iLAogICAgICAgICIxNSDXk9en17MiLAogICAgICAgICLXlNep15XXldeQ15Qg15HXmdefINeU15DXmdeo15XXoteZ150g16HXkdeZ15Eg15TXlNek16rXoteUINeV157Xldeb16DXldeqINeU15vXldeX15XXqi4iLAogICAgICBdLAogICAgICBbItee16bXpNefINeQ15nXqdeZIiwgIjE1INeT16fXsyIsICLXlNeq15zXnteZ15PXmdedINeR15XXoNeZ150g157Xptek158g15DXmdep15kg15zXp9eR15zXqiDXlNeX15zXmNeV16ouIl0sCiAgICAgIFsi15fXk9eoINeU16TXmden15XXkyIsICIxMCDXk9en17MiLCAi157XqdeX16cg15nXk9eiINeV16HXmdeV150g15zXlteb16gg15TXoNeV16TXnNeZ150uIl0sCiAgICBdLAogICAgcXM6IFsKICAgICAgItee15Qg15LXldeo150g15zXkNeT150g15zXp9eR15wg15DXl9eo15nXldeqINeV15zXpNei15XXnCDXkdep16LXqiDXntep15HXqD8iLAogICAgICAi15vXmdem15Mg15TXqdek15nXoteVINeU15TXpNeq16LXlCDXldee15XXm9eg15XXqiDXlNeb15XXl9eV16og16LXnCDXqdeg15kg15TXkNeZ16jXldei15nXnT8iLAogICAgICAi157XlNeVINee16fXldee150g16nXnCDXnten16bXldei15nXldeqINeV16LXkdeV15PXqiDXpteV15XXqiDXkdeq15XXmiDXntei16nXlCDXlNeS15HXldeo15Q/IiwKICAgICAgIteQ15nXlteUINei16jXmiDXntep15XXqtejINeR15XXnNeYINeR157XmdeV15fXkyDXkdep16DXmSDXlNeh15nXpNeV16jXmdedPyIsCiAgICBdLAogICAgdG9vbHM6IFsKICAgICAgWwogICAgICAgICLXoden16gg15PXmdec157XqiDXlNek16rXmdeX15QiLAogICAgICAgICLXlNem15HXoteUINeb15nXqteq15nXqiDXnNek16rXmdeX16og15TXqdeZ16LXldeoLiIsCiAgICAgICAgImh0dHBzOi8vbGl2ZS1oZWJyZXctcG9sbC5iYXJhbmF0LmNoYXRncHQuc2l0ZS8iLAogICAgICBdLAogICAgICBbCiAgICAgICAgItei16DXnyDXoteo15vXmdedINeb15nXqteq15kiLAogICAgICAgICLXkdee16HXmiDXlNek16rXmdeX15Qg15HXldeX16jXmdedIOKAntek16rXmdeX16og16LXoNefINei16jXm9eZ153igJ0uIiwKICAgICAgICAiaHR0cHM6Ly9saXZlLWhlYnJldy1wb2xsLmJhcmFuYXQuY2hhdGdwdC5zaXRlLyIsCiAgICAgIF0sCiAgICAgIFsKICAgICAgICAi15fXk9eoINeU16TXmden15XXkyIsCiAgICAgICAgItee16nXl9enINeU15nXk9eiINeU157Xodeb150g16nXnCDXlNep15nXoteV16guIiwKICAgICAgICAiaHR0cHM6Ly9vei11bmRlci1maXJlLWplb3BhcmR5LmJhcmFuYXQuY2hhdGdwdC5zaXRlLyIsCiAgICAgIF0sCiAgICBdLAogICAgbWF0ZXJpYWxzOiBbCiAgICAgIFsi157Xoteo15og15zXnteV16jXlCIsICJQREYiLCAiL3RhbmtzLWxlc3Nvbi10ZWFjaGVyLWd1aWRlLnBkZiJdLAogICAgICBbIteT16Mg157Xptek158g15DXmdep15kg15zXqtec157XmdeTIiwgItec15TXk9ek16HXlCIsICIvdGFua3MtcGVyc29uYWwtY29tcGFzcy5wZGYiXSwKICAgIF0sCiAgfSwKICAic3RhcnR1cC1uYXRpb24iOiB7CiAgICBuOiAiMDQiLAogICAgdDogIteQ150g157Xk9eZ16DXlCDXlNeZ15nXqteUINeh15jXkNeo15gg15DXpCIsCiAgICBjYXQ6ICLXl9eT16nXoNeV16og15nXqdeo15DXnNeZ16oiLAogICAgaG9vazogItep15nXoteV16gg15fXldeV15nXmdeq15kg15TXnteT157XlCDXlNen157XqiDXnteT15nXoNeUINeb16HXmNeQ16jXmNa+15DXpCwg15XXnteW157XmdefINeQ16og15TXqtec157XmdeT15nXnSDXnNen15HXnCDXlNeX15zXmNeV16osINec16rXoteT16Mg157XqdeQ15HXmdedINeV15zXkdeX15XXnyDXm9eZ16bXkyDXl9eW15XXnyDXlNeV16TXmiDXnNee16bXmdeQ15XXqi4iLAogICAgaW1nOiAiL2xlc3Nvbi1zdGFydHVwLnBuZyIsCiAgICB1cmw6ICJodHRwczovL2NhbnZhLmxpbmsvdnZ0c2oyMm5ud2xjMGlyIiwKICAgIHRpbWU6ICI5MCDXk9en17MiLAogICAgdHlwZTogItee16nXl9enINeV15nXltee15XXqiIsCiAgICBnb2FsczogWwogICAgICBbIteZ15PXoiDXldeU15HXoNeUIiwgItec15TXm9eZ16gg157XkNek15nXmdeg15nXnSDXqdecINeX15PXqdeg15XXqiDXldeZ15bXnteV16og15nXqdeo15DXnNeZ16ouIl0sCiAgICAgIFsi157XmdeV157XoNeV15nXldeqIiwgItec16rXoteT16Mg157XqdeQ15HXmdedLCDXnNen15HXnCDXlNeX15zXmNeV16og15XXnNei15HXldeTINeR16bXldeV16ouIl0sCiAgICAgIFsi16LXqNeb15nXnSDXldeW15TXldeqIiwgItec15HXl9eV158g15DXqiDXlNen16nXqCDXkdeZ158g15fXlteV158sINeQ15fXqNeZ15XXqiDXldee16LXqdeULiJdLAogICAgXSwKICAgIHByZXA6IFsKICAgICAgItee16bXkteqINek16rXldeX15Qg157XqNeQ16kiLAogICAgICAi15jXnNek15XXnyDXkNeVINee15fXqdeRINec15vXnCDXp9eR15XXpteUIiwKICAgICAgItei15HXldeT15Qg15HXp9eR15XXpteV16oiLAogICAgICAi16jXpteV15kg15zXlNeb15nXnyDXk9ek15kg15TXl9ec15jXldeqIiwKICAgIF0sCiAgICBmbG93OiBbCiAgICAgIFsi16TXqteZ15fXlCIsICIxMCDXk9en17MiLCAi15TXpteS16og157Xk9eZ16DXlCDXptei15nXqNeUINeV15DXqteS16jXmSDXlNen157XlC4iXSwKICAgICAgWyLXl9ec15XXp9eqINee16nXkNeR15nXnSIsICIyMCDXk9en17MiLCAi15TXp9eR15XXpteV16og15HXldeX16jXldeqINeR157XlCDXnNeU16nXp9eZ16Ig16rXl9eZ15zXlC4iXSwKICAgICAgWyLXp9eR15zXqiDXlNeX15zXmNeV16oiLCAiMjUg15PXp9ezIiwgIteU16rXnteV15PXk9eV16og16LXnSDXkNeZ16jXldei15nXnSDXkdec16rXmSDXptek15XXmdeZ150g15XXk9eZ15zXnteV16ouIl0sCiAgICAgIFsi16nXmdeq15XXoyDXqteV16bXkNeV16oiLCAiMjAg15PXp9ezIiwgIteb15wg16fXkdeV16bXlCDXntem15nXkteUINeQ16og15TXkdeX15nXqNeV16og16nXnNeULiJdLAogICAgICBbIteh15nXm9eV150iLCAiMTUg15PXp9ezIiwgIteT15nXldefINeR16nXkNec15Qg15vXmdem15Mg15fXlteV158g15TXldek15og15zXntem15nXkNeV16ouIl0sCiAgICBdLAogICAgcXM6IFsKICAgICAgItee15Qg15fXqdeV15Eg15nXldeq16gg15HXqteX15nXnNeqINeU15PXqNeaOiDXl9eW15XXnyDXkNeVINee16nXkNeR15nXnT8iLAogICAgICAi15DXmdeaINee16fXkdec15nXnSDXlNeX15zXmNeUINeb16nXkNeZ158g16TXqteo15XXnyDXnteV16nXnNedPyIsCiAgICAgICLXnteUINeU15XXpNeaINeb15nXqdec15XXnyDXnNeU15bXk9ee16DXldeqINec15zXnteZ15PXlD8iLAogICAgXSwKICB9LAogICJicm90aGVycy1hbmQtZGlzcHV0ZXMiOiB7CiAgICBuOiAiMDUiLAogICAgdDogIteb16nXkNeX15nXnSDXqdeV15vXl9eZ150g4oCTINee15fXnNeV16fXldeqINeR16LXnSIsCiAgICBjYXQ6ICLXnteX15zXlden16og15XXlNeR15nXqiDXlNee16nXldeq16MiLAogICAgaG9vazogIteQ15nXmiDXnteg15TXnNeZ150g157Xl9ec15XXp9eqINen16nXlCDXnteR15zXmSDXnNek16jXpyDXkNeqINeU15HXmdeqINeU157XqdeV16rXoz8iLAogICAgaW1nOiAiL2xlc3Nvbi1kaXNwdXRlcy5wbmciLAogICAgdXJsOiAiaHR0cHM6Ly9jYW52YS5saW5rL3BpNnRvOHc5dnJuZnJybyIsCiAgICB0aW1lOiAiOTAg15PXp9ezIiwKICAgIHR5cGU6ICLXk9eZ15zXnteV16og15XXk9eZ15XXnyIsCiAgICBnb2FsczogWwogICAgICBbIteZ15PXoiDXldeU15HXoNeUIiwgItec15TXm9eZ16gg157Xl9ec15XXp9eV16og157Xm9eV16DXoNeV16og15HXqteV15zXk9eV16og15TXotedINeV15TXnteT15nXoNeULiJdLAogICAgICBbItee15nXldee16DXldeZ15XXqiIsICLXnNeW15TXldeqINeY15nXoteV16DXmdedLCDXnNeU16fXqdeZ15Eg15XXnNeg15TXnCDXnteX15zXlden16ouIl0sCiAgICAgIFsi16LXqNeb15nXnSDXldeW15TXldeqIiwgItec15jXpNeXINeQ15fXqNeZ15XXqiDXnNeR15nXqiDXlNee16nXldeq16MuIl0sCiAgICBdLAogICAgcHJlcDogWwogICAgICAi157XpteS16og16TXqteV15fXlCDXnteo15DXqSIsCiAgICAgICLXmNec16TXldeg15nXnSDXnNeh16fXqCDXkNeVINek16LXmdec15XXqiDXk9eZ15LXmdeY15zXmdeqIiwKICAgICAgItei15HXldeT15Qg15HXp9eR15XXpteV16oiLAogICAgICAi157Xldee15zXpSDXnNeU15vXmdefINeT16TXmSDXl9eR16jXldeq15AiLAogICAgXSwKICAgIGZsb3c6IFsKICAgICAgWyLXpNeq15nXl9eUIiwgIjEwINeT16fXsyIsICLXk9eZ15zXnteUINen16bXqNeUINei15wg157Xl9ec15XXp9eqINeR15fXkdeo15QuIl0sCiAgICAgIFsi157XpNeS16kg16LXnSDXodeZ16TXldeo15nXnSIsICIyNSDXk9en17MiLCAi15TXmdeb16jXldeqINei150g157Xl9ec15XXp9eV16og157Xqten15XXpNeV16og16nXldeg15XXqi4iXSwKICAgICAgWyLXoteR15XXk9eUINen15HXldem16rXmdeqIiwgIjI1INeT16fXsyIsICLXoNeZ16rXldeXINeg16fXldeT16og16nXkdeoINeV15HXl9eZ16jXqiDXm9ec15wg16TXoteV15zXlC4iXSwKICAgICAgWyLXqdeZ15cg15vXmdeq16rXmSIsICIyMCDXk9en17MiLCAi15TXpteS16og15vXnNec15nXnSDXldeg15nXlNeV15wg157Xl9ec15XXp9eqINee15vXkdeT16ouIl0sCiAgICAgIFsi16HXmdeb15XXnSIsICIxMCDXk9en17MiLCAi15fXmdeR15XXqCDXnNeR15nXqiDXlNee16nXldeq16Mg16nXnCDXlNeZ15XXnS4iXSwKICAgIF0sCiAgICBxczogWwogICAgICAi157XqteZINee15fXnNeV16fXqiDXlNeV16TXm9eqINee16HXm9eg16og15TXkdeZ16og15TXntep15XXqtejPyIsCiAgICAgICLXnteU15kg15TXkNeX16jXmdeV16og16nXnCDXm9ecINem15Mg15HXltee158g15XXmdeb15XXlyDXp9ep15Q/IiwKICAgICAgIteQ15nXnNeVINeb15zXnNeZ150g15nXm9eV15zXmdedINec16LXlteV16gg15zXoNeVINec16DXlNecINee15fXnNeV16fXqiDXkdeb15nXqteUINeV15HXl9eR16jXlD8iLAogICAgXSwKICB9LAp9Owpjb25zdCBvcmRlciA9IE9iamVjdC5rZXlzKGxlc3NvbnMpLAogIHNsdWcgPSBkb2N1bWVudC5ib2R5LmRhdGFzZXQubGVzc29uLAogIGwgPSBsZXNzb25zW3NsdWddLAogIGkgPSBvcmRlci5pbmRleE9mKHNsdWcpLAogIHByZXYgPSBsZXNzb25zW29yZGVyW2kgLSAxXV0sCiAgbmV4dCA9IGxlc3NvbnNbb3JkZXJbaSArIDFdXTsKY29uc3QgZmxvdyA9IGwuZmxvdwogIC5tYXAoCiAgICAoeCkgPT4KICAgICAgYDxkaXYgY2xhc3M9ImZsb3ctaXRlbSI+PHNwYW4gY2xhc3M9ImZsb3ctbnVtIj4ke1N0cmluZyhsLmZsb3cuaW5kZXhPZih4KSArIDEpLnBhZFN0YXJ0KDIsICIwIil9PC9zcGFuPjxkaXYgY2xhc3M9ImZsb3ctdGl0bGUiPjxiPiR7eFswXX08L2I+PHNwYW4+JHt4WzFdfTwvc3Bhbj48L2Rpdj48cD4ke3hbMl19PC9wPjwvZGl2PmAsCiAgKQogIC5qb2luKCIiKTsKY29uc3QgdG9vbHMgPSBsLnRvb2xzCiAgPyBgPGRpdiBjbGFzcz0iZ29hbC1ncmlkIj4ke2wudG9vbHMubWFwKChbdGl0bGUsIGRlc2NyaXB0aW9uLCB1cmxdKSA9PiBgPGEgY2xhc3M9InNtYWxsLWNhcmQiIGhyZWY9IiR7dXJsfSIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9yZWZlcnJlciI+PGI+JHt0aXRsZX08L2I+PHA+JHtkZXNjcmlwdGlvbn08L3A+PHNwYW4gY2xhc3M9ImJ1dHRvbi1vdXRsaW5lIj7XpNeq15nXl9eqINeU15vXnNeZPC9zcGFuPjwvYT5gKS5qb2luKCIiKX08L2Rpdj5gCiAgOiBgPHAgY2xhc3M9ImVtcHR5Ij7Xp9eZ16nXldeo15nXnSDXnNeb15zXmdedINeU15PXmdeS15nXmNec15nXmdedINep15wg16nXmdei15XXqCDXlteUINeZ16rXldeV16HXpNeVINeb15DXny48L3A+YDsKY29uc3QgbWF0ZXJpYWxzID0gbC5tYXRlcmlhbHMKICA/IGA8ZGl2IGNsYXNzPSJxdWVzdGlvbnMiPiR7bC5tYXRlcmlhbHMubWFwKChbdGl0bGUsIHR5cGUsIHVybF0pID0+ICh1cmwgPyBgPGEgY2xhc3M9InF1ZXN0aW9uIiBocmVmPSIke3VybH0iIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vcmVmZXJyZXIiPjxiPiR7dGl0bGV9PC9iPjxzcGFuPiDCtyAke3R5cGV9PC9zcGFuPjwvYT5gIDogYDxkaXYgY2xhc3M9InF1ZXN0aW9uIj48Yj4ke3RpdGxlfTwvYj48c3Bhbj4gwrcgJHt0eXBlfTwvc3Bhbj48L2Rpdj5gKSkuam9pbigiIil9PC9kaXY+YAogIDogYDxwIGNsYXNzPSJlbXB0eSI+15PXpNeZINei15HXldeT15QsINeb16jXmNeZ16HXmdeV16og15XXp9eR16bXmSDXlNeV16jXkNeUINeZ16rXldeV16HXpNeVINeb15DXny48L3A+YDsKaWYgKGwuYWJvdXQgfHwgbC5wZGYpIHsKICBxdWV1ZU1pY3JvdGFzaygoKSA9PiB7CiAgICBpZiAobC5hYm91dCkgewogICAgICBkb2N1bWVudAogICAgICAgIC5xdWVyeVNlbGVjdG9yKCIuYWN0aW9ucyIpCiAgICAgICAgPy5pbnNlcnRBZGphY2VudEhUTUwoCiAgICAgICAgICAiYWZ0ZXJlbmQiLAogICAgICAgICAgYDxzZWN0aW9uIGNsYXNzPSJsZXNzb24tc3VtbWFyeSI+PGgyPtei15wg15TXqdeZ16LXldeoPC9oMj48cD4ke2wuYWJvdXR9PC9wPjwvc2VjdGlvbj5gLAogICAgICAgICk7CiAgICAgIGNvbnN0IHRvb2xzU2VjdGlvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoIiN0b29scyIpOwogICAgICBpZiAodG9vbHNTZWN0aW9uKQogICAgICAgIHRvb2xzU2VjdGlvbi5pbm5lckhUTUwgPSBgPGgyPteb15zXmdedINeT15nXkteZ15jXnNeZ15nXnSDXkdep15nXoteV16g8L2gyPiR7dG9vbHN9YDsKICAgICAgY29uc3QgbWF0ZXJpYWxzU2VjdGlvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoIiNtYXRlcmlhbHMiKTsKICAgICAgaWYgKG1hdGVyaWFsc1NlY3Rpb24pCiAgICAgICAgbWF0ZXJpYWxzU2VjdGlvbi5pbm5lckhUTUwgPSBgPGgyPteX15XXnteo15nXnSDXnNeU15PXpNeh15Q8L2gyPiR7bWF0ZXJpYWxzfWA7CiAgICB9CiAgICBpZiAobC5wZGYpIHsKICAgICAgY29uc3QgZ3VpZGVBY3Rpb24gPSBbLi4uZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiLmFjdGlvbiIpXS5maW5kKAogICAgICAgIChhY3Rpb24pID0+IGFjdGlvbi50ZXh0Q29udGVudC5pbmNsdWRlcygi157Xoteo15og157XnNeQINec157Xldeo15QiKSwKICAgICAgKTsKICAgICAgZ3VpZGVBY3Rpb24/LnNldEF0dHJpYnV0ZSgiaHJlZiIsIGwucGRmKTsKICAgICAgZ3VpZGVBY3Rpb24/LnNldEF0dHJpYnV0ZSgidGFyZ2V0IiwgIl9ibGFuayIpOwogICAgICBjb25zdCBwZGZCdXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKAogICAgICAgICIjdGVhY2hlci1ndWlkZSAuYnV0dG9uLW91dGxpbmUiLAogICAgICApOwogICAgICBpZiAocGRmQnV0dG9uKQogICAgICAgIHBkZkJ1dHRvbi5vdXRlckhUTUwgPSBgPGEgY2xhc3M9ImJ1dHRvbi1vdXRsaW5lIiBocmVmPSIke2wucGRmfSIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9yZWZlcnJlciI+16TXqteZ15fXqiDXlNee16LXqNeaINeU157XnNeQIFBERjwvYT5gOwogICAgfQogIH0pOwp9CmNvbnN0IHBhZ2VTdHlsZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInN0eWxlIik7CnBhZ2VTdHlsZS50ZXh0Q29udGVudCA9ICIucXVpY2stbmF2e2Rpc3BsYXk6bm9uZSFpbXBvcnRhbnR9IjsKZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChwYWdlU3R5bGUpOwpkb2N1bWVudC50aXRsZSA9IGAke2wudH0gfCDXkNeg15kg15nXqdeo15DXnNeZYDsKZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiI2xlc3Nvbi1hcHAiKS5pbm5lckhUTUwgPQogIGA8aGVhZGVyIGNsYXNzPSJ0b3AiPjxpbWcgY2xhc3M9ImxvZ28iIHNyYz0iL21ha2lmLXotbG9nby5wbmciIGFsdD0i157Xp9eZ16Mg15bXsyDXkNep15PXldeTIj48ZGl2IGNsYXNzPSJicmFuZCI+4pyhINeQ16DXmSDXmdep16jXkNec15k8L2Rpdj48YSBjbGFzcz0iaG9tZSIgaHJlZj0iLyNsZXNzb25zIj7Xm9ecINeU16nXmdei15XXqNeZ1508L2E+PC9oZWFkZXI+PGRpdiBjbGFzcz0ic2hlbGwiPjxuYXYgY2xhc3M9ImNydW1icyI+PGEgaHJlZj0iLyI+16jXkNep15k8L2E+IC8gPGEgaHJlZj0iLyNsZXNzb25zIj7XlNep15nXoteV16jXmdedPC9hPiAvICR7bC50fTwvbmF2PjxoZWFkZXIgY2xhc3M9Imxlc3Nvbi1oZXJvIiBzdHlsZT0iLS1hY2NlbnQ6IzI0N2Y4MiI+PGRpdj48c3BhbiBjbGFzcz0idGFnIj7XqdeZ16LXldeoICR7bC5ufSB8ICR7bC5jYXR9PC9zcGFuPjxoMT4ke2wudH08L2gxPjxwIGNsYXNzPSJob29rIj4ke2wuaG9va308L3A+PGRpdiBjbGFzcz0ibWV0YSI+PHNwYW4+JHtsLnRpbWV9PC9zcGFuPjxzcGFuPtep15vXkdeqINeZ17M8L3NwYW4+PHNwYW4+JHtsLnR5cGV9PC9zcGFuPjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9ImNvdmVyIj48aW1nIHNyYz0iJHtsLmltZ30iIGFsdD0i16nXp9ejINeU16TXqteZ15fXlCDXqdecICR7bC50fSI+PC9kaXY+PC9oZWFkZXI+PG5hdiBjbGFzcz0icXVpY2stbmF2IiBhcmlhLWxhYmVsPSLXoNeZ15XXldeYINeR15PXoyI+PGEgaHJlZj0iI2Zsb3ciPtee15TXnNeaINeU16nXmdei15XXqDwvYT48YSBocmVmPSIjZ29hbHMiPtee15jXqNeV16o8L2E+PGEgaHJlZj0iI3Rvb2xzIj7Xm9ec15nXnSDXk9eZ15LXmdeY15zXmdeZ1508L2E+PGEgaHJlZj0iI21hdGVyaWFscyI+15fXldee16jXmdedPC9hPjxhIGhyZWY9IiNwcmVzZW50YXRpb24iPtee16bXkteqPC9hPjxhIGhyZWY9IiN0ZWFjaGVyLWd1aWRlIj5QREY8L2E+PC9uYXY+PGRpdiBjbGFzcz0iYWN0aW9ucyI+PGEgY2xhc3M9ImFjdGlvbiIgaHJlZj0iJHtsLnVybH0iIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vcmVmZXJyZXIiPtee16bXkteqINeU16nXmdei15XXqDwvYT48YSBjbGFzcz0iYWN0aW9uIiBocmVmPSIjdGVhY2hlci1ndWlkZSI+157Xoteo15og157XnNeQINec157Xldeo15QgUERGPC9hPjxhIGNsYXNzPSJhY3Rpb24iIGhyZWY9IiN0b29scyI+15vXnNeZ150g15PXmdeS15nXmNec15nXmdedPC9hPjxhIGNsYXNzPSJhY3Rpb24iIGhyZWY9IiNtYXRlcmlhbHMiPteX15XXnteo15nXnSDXnNeU15XXqNeT15Q8L2E+PC9kaXY+PHNlY3Rpb24gaWQ9ImdvYWxzIj48aDI+157XmNeo15XXqiDXlNep15nXoteV16g8L2gyPjxkaXYgY2xhc3M9ImdvYWwtZ3JpZCI+JHtsLmdvYWxzLm1hcCgoZykgPT4gYDxhcnRpY2xlIGNsYXNzPSJzbWFsbC1jYXJkIj48Yj4ke2dbMF19PC9iPjxwPiR7Z1sxXX08L3A+PC9hcnRpY2xlPmApLmpvaW4oIiIpfTwvZGl2Pjwvc2VjdGlvbj48c2VjdGlvbiBpZD0icHJlcCI+PGgyPtec16TXoNeZINep157XqteX15nXnNeZ1508L2gyPjxkaXYgY2xhc3M9InByZXAtZ3JpZCI+JHtsLnByZXAubWFwKChwKSA9PiBgPGRpdiBjbGFzcz0icHJlcC1pdGVtIj48Yj7XlNeb16DXlDwvYj4ke3B9PC9kaXY+YCkuam9pbigiIil9PC9kaXY+PC9zZWN0aW9uPjxzZWN0aW9uIGlkPSJmbG93Ij48aDI+157XlNec15og15TXqdeZ16LXldeoPC9oMj48ZGl2IGNsYXNzPSJmbG93Ij4ke2Zsb3d9PC9kaXY+PC9zZWN0aW9uPjxzZWN0aW9uIGlkPSJ0ZWFjaGVyLWd1aWRlIj48aDI+157Xoteo15og157XnNeQINec157Xldeo15Q8L2gyPjxkaXYgY2xhc3M9InBkZi1jYXJkIj48ZGl2PjxiPtee16LXqNeaINee16TXldeo15gg15TXm9eV15zXnCDXqNen16Ig16rXldeb16DXmSwg157XmNeo15XXqiwg157XlNec15og157XnNeQLCDXqdeQ15zXldeqINec15PXmdeV158g15XXk9eS16nXmdedINek15PXkteV15LXmdeZ150uPC9iPjxwPten15XXkdelINeU1r5QREYg16nXnCDXlNep15nXoteV16gg15nXqteV15XXodejINeb15DXny48L3A+PC9kaXY+PHNwYW4gY2xhc3M9ImJ1dHRvbi1vdXRsaW5lIj7XpNeq15nXl9eqINeU157Xoteo15og15TXntec15AgUERGPC9zcGFuPjwvZGl2Pjwvc2VjdGlvbj48c2VjdGlvbiBpZD0iZGlzY3Vzc2lvbiI+PGgyPtep15DXnNeV16og15zXk9eZ15XXnzwvaDI+PGRpdiBjbGFzcz0icXVlc3Rpb25zIj4ke2wucXMubWFwKChxKSA9PiBgPGRpdiBjbGFzcz0icXVlc3Rpb24iPiR7cX08L2Rpdj5gKS5qb2luKCIiKX08L2Rpdj48L3NlY3Rpb24+PHNlY3Rpb24gaWQ9InRvb2xzIj48aDI+15vXnNeZ150g15PXmdeS15nXmNec15nXmdedINeR16nXmdei15XXqDwvaDI+PHAgY2xhc3M9ImVtcHR5Ij7Xp9eZ16nXldeo15nXnSDXnNeb15zXmdedINeU15PXmdeS15nXmNec15nXmdedINep15wg16nXmdei15XXqCDXlteUINeZ16rXldeV16HXpNeVINeb15DXny48L3A+PC9zZWN0aW9uPjxzZWN0aW9uIGlkPSJtYXRlcmlhbHMiPjxoMj7Xl9eV157XqNeZ150g15zXlNeV16jXk9eUPC9oMj48cCBjbGFzcz0iZW1wdHkiPteT16TXmSDXoteR15XXk9eULCDXm9eo15jXmdeh15nXldeqINeV16fXkdem15kg15TXldeo15DXlCDXmdeq15XXldeh16TXlSDXm9eQ158uPC9wPjwvc2VjdGlvbj48c2VjdGlvbiBpZD0icHJlc2VudGF0aW9uIj48aDI+157XpteS16og15TXqdeZ16LXldeoPC9oMj48ZGl2IGNsYXNzPSJwcmVzZW50YXRpb24iPjxpbWcgc3JjPSIke2wuaW1nfSIgYWx0PSIiPjxkaXY+PGI+JHtsLnR9PC9iPjxwPteU157XpteS16og16rXmdek16rXlyDXkdeb16jXmNeZ16HXmdeZ15Qg15fXk9ep15QuPC9wPjwvZGl2PjxhIGNsYXNzPSJidXR0b24iIGhyZWY9IiR7bC51cmx9IiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub3JlZmVycmVyIj7XpNeq15nXl9eqINeU157XpteS16o8L2E+PC9kaXY+PC9zZWN0aW9uPjxzZWN0aW9uPjxkZXRhaWxzPjxzdW1tYXJ5PteT15LXqdeZ150g15zXnteV16jXlDwvc3VtbWFyeT48cD7XkdeX16jXlSDXkNeqINeU15nXp9ejINeU15PXmdeV158g15XXlNek16LXmdec15XXqiDXkdeU16rXkNedINec15DXldek15kg15TXm9eZ16rXlCDXldec15bXntefINeU16LXldee15Mg15zXqNep15XXqteb150uPC9wPjwvZGV0YWlscz48ZGV0YWlscz48c3VtbWFyeT7XlNem16LXldeqINec15TXqNeX15HXlDwvc3VtbWFyeT48cD7XkNek16nXqCDXnNeU16jXl9eZ15Eg15HXkNee16bXoteV16og157Xp9eV16gg16DXldeh16MsINee16nXmdee16og15vXqteZ15HXlCDXkNeVINek16LXmdec15XXqiDXlNee16nXmiDXp9eR15XXpteq15nXqi48L3A+PC9kZXRhaWxzPjwvc2VjdGlvbj48bmF2IGNsYXNzPSJuYXYtYm90dG9tIj4ke3ByZXYgPyBgPGEgaHJlZj0iL2xlc3NvbnMvJHtvcmRlcltpIC0gMV19Lmh0bWwiPuKGkiDXnNep15nXoteV16gg15TXp9eV15PXnTwvYT5gIDogIjxzcGFuPjwvc3Bhbj4ifTxhIGNsYXNzPSJhbGwiIGhyZWY9Ii8jbGVzc29ucyI+15fXlteo15Qg15zXm9ecINeU16nXmdei15XXqNeZ1508L2E+JHtuZXh0ID8gYDxhIGhyZWY9Ii9sZXNzb25zLyR7b3JkZXJbaSArIDFdfS5odG1sIj7XnNep15nXoteV16gg15TXkdeQIOKGkDwvYT5gIDogIjxzcGFuPjwvc3Bhbj4ifTwvbmF2PjwvZGl2Pjxmb290ZXIgY2xhc3M9ImZvb3RlciI+wqkgMjAyNiDXoteg16og15HXqNeV15/Wvtec15XXkdeZ16ksINeQ16rXmSDXoNeZ15nXkdeo15Ig15XXoNeY15zXmSDXkdefINeX157XlS4g15vXnCDXlNeW15vXldeZ15XXqiDXqdee15XXqNeV16ouINeQ15nXnyDXnNeU16LXqteZ16csINec15TXpNeZ16UsINec16TXqNeh150sINec16nXoNeV16og15DXlSDXnNei16nXldeqINeR16rXm9eg15nXnSDXqdeZ157XldepINee16HXl9eo15kg15zXnNeQINeQ15nXqdeV16gg157XqNeQ16kg15XXkdeb16rXkSDXnteR16LXnNeV16og15TXlteb15XXmdeV16ouPC9mb290ZXI+YDsK
+const lessons = {
+  "identity-and-belonging": {
+    n: "01",
+    t: "אני ישראלי – סיפור של זהות ושייכות",
+    cat: "זהות ושייכות",
+    hook: "מה הופך אותנו לישראלים, ומה מחבר בין הסיפורים השונים שלנו?",
+    img: "/lesson-identity.png",
+    url: "https://canva.link/rqsnk0igagzoq06",
+    time: "90 דק׳",
+    type: "דיון ועבודה קבוצתית",
+    goals: [
+      ["ידע והבנה", "לזהות מרכיבים מגוונים בזהות היהודית והישראלית."],
+      ["מיומנויות", "לנסח עמדה אישית ולהקשיב לקולות שונים."],
+      ["ערכים וזהות", "לחזק שייכות, כבוד לריבוי וערבות הדדית."],
+    ],
+    prep: [
+      "מצגת פתוחה מראש",
+      "טלפונים או מחשבים לפי בחירה",
+      "עבודה בזוגות או בקבוצות קטנות",
+      "אין דפי הדפסה נדרשים",
+    ],
+    flow: [
+      ["פתיחה", "10 דק׳", "שאלת פתיחה: מה מרכיב את הזהות שלי?"],
+      ["מיפוי זהויות", "20 דק׳", "התלמידים מזהים מעגלי זהות אישיים וקבוצתיים."],
+      ["שיח קבוצתי", "25 דק׳", "השוואת נקודות מבט ודיון במשותף ובשונה."],
+      [
+        "חיבור לישראליות",
+        "20 דק׳",
+        "קישור בין זהות אישית לבין החברה הישראלית.",
+      ],
+      ["סיכום", "15 דק׳", "ניסוח תובנה אישית ומשימת יציאה."],
+    ],
+    qs: [
+      "אילו מרכיבים בזהות שלנו אנו בוחרים ואילו קיבלנו?",
+      "האם אפשר להחזיק בכמה זהויות בו־זמנית?",
+      "מה יכול לחבר בין ישראלים שונים מאוד זה מזה?",
+    ],
+  },
+  "jewish-bookshelf": {
+    n: "02",
+    t: "ארון הספרים היהודי",
+    cat: "זהות, מסורת ותרבות",
+    hook: "מהם הרעיונות הגדולים של חגי תשרי, וכיצד הם נוגעים בחיים שלנו היום?",
+    img: "/lesson-jewish-bookshelf.png",
+    url: "https://www.canva.com/design/DAHVGxK95HE/_PByzJnPbNrPO7-cD62Jyg/view?utm_content=DAHVGxK95HE&utm_campaign=designshare&utm_medium=link&utm_source=viewer",
+    time: "90 דק׳",
+    type: "חקר ודיון",
+    goals: [
+      ["ידע והבנה", "להכיר רעיונות, טקסטים וסמלים מארון הספרים היהודי."],
+      ["מיומנויות", "לקרוא מקור, לפרש ולחבר אותו לחיים העכשוויים."],
+      ["ערכים וזהות", "לבחון מסורת כמרחב חי של משמעות."],
+    ],
+    prep: [
+      "מצגת פתוחה מראש",
+      "מחשב או טלפון לפי בחירה",
+      "עבודה בקבוצות",
+      "אפשר להכין דפי מקורות",
+    ],
+    flow: [
+      ["פתיחה", "10 דק׳", "מפגש עם חפצים וסמלים מחגי תשרי."],
+      ["מסע בין מקורות", "25 דק׳", "היכרות עם טקסטים ורעיונות מרכזיים."],
+      ["חקר קבוצתי", "25 דק׳", "כל קבוצה מעבדת מקור ושאלה."],
+      ["שיתוף ודיון", "20 דק׳", "חיבור בין מסורת, זהות והחיים היום."],
+      ["סיכום", "10 דק׳", "בחירת רעיון אחד שמבקשים לקחת הלאה."],
+    ],
+    qs: [
+      "מה הופך טקסט ישן לרלוונטי גם היום?",
+      "האם מסורת מגבילה או מאפשרת?",
+      "איזה רעיון מחגי תשרי יכול להשפיע על החיים שלנו?",
+    ],
+  },
+  "tanks-and-courage": {
+    n: "03",
+    t: "מטנקי עמק הבכא לטנקיסטיות בחולית",
+    cat: "מורשת קרב ואחריות",
+    hook: "מסיפורי הגבורה של מלחמת יום הכיפורים אל גבורת שבעה באוקטובר.",
+    about:
+      "השיעור מחבר בין שני סיפורי לחימה שהתרחשו בהפרש של חמישים שנה. במלחמת יום הכיפורים הוביל אביגדור קהלני את לוחמי גדוד 77 בקרבות הבלימה בעמק הבכא, מול כוח סורי גדול ובתנאים של נחיתות מספרית ואי־ודאות. בשבעה באוקטובר 2023 פעלו צוותי טנקיסטיות בגזרת הדרום במשך שעות מול מחבלים. צוות בפיקודה של קרני הגיע לקיבוץ חולית וסייע בהגנה על תושביו. דרך שני הסיפורים בוחנים התלמידים כיצד אומץ, מקצועיות, מנהיגות, יוזמה, רעות ועבודת צוות מאפשרים לפעול ברגעי הפתעה ומשבר.",
+    img: "/lesson-tanks.png",
+    url: "https://canva.link/fr532x7l0msgdh2",
+    pdf: "/tanks-lesson-teacher-guide.pdf",
+    time: "90 דק׳",
+    type: "מורשת קרב ודיון",
+    goals: [
+      ["ידע והבנה", "להכיר שני סיפורי לחימה מתקופות שונות."],
+      ["מיומנויות", "לנתח החלטות שהתקבלו בתנאי סכנה ומידע חלקי."],
+      ["ערכים וזהות", "לזהות ערכים משותפים לשני האירועים."],
+      ["שיתוף פעולה", "לבחון את הקשר בין גבורה אישית לעבודת צוות."],
+      ["חיבור אישי", "לחבר בין ערכי השיעור לחיי התלמידים."],
+    ],
+    prep: [
+      "מצגת פתוחה מראש",
+      "מקרן ורמקולים",
+      "טלפון או מחשב לכל קבוצה לצורך הסקר, הענן והמשחק",
+      "דף „מצפן אישי” מודפס לכל תלמיד",
+    ],
+    flow: [
+      ["דילמת פתיחה", "10 דק׳", "הצגת דילמה והצבעה בסקר כיתתי."],
+      [
+        "עמק הבכא",
+        "15 דק׳",
+        "צפייה ודיון בסיפור הקרב ומנהיגותו של אביגדור קהלני.",
+      ],
+      [
+        "הטנקיסטיות בחולית",
+        "15 דק׳",
+        "צפייה ודיון בסיפור הצוות שפעל בגזרת הדרום.",
+      ],
+      ["ענן ערכים", "10 דק׳", "דירוג ערכים ויצירת ענן כיתתי משותף."],
+      [
+        "השוואה ודיון",
+        "15 דק׳",
+        "השוואה בין האירועים סביב ההפתעה ומוכנות הכוחות.",
+      ],
+      ["מצפן אישי", "15 דק׳", "התלמידים בונים מצפן אישי לקבלת החלטות."],
+      ["חדר הפיקוד", "10 דק׳", "משחק ידע וסיום לזכר הנופלים."],
+    ],
+    qs: [
+      "מה גורם לאדם לקבל אחריות ולפעול בשעת משבר?",
+      "כיצד השפיעו ההפתעה ומוכנות הכוחות על שני האירועים?",
+      "מהו מקומם של מקצועיות ועבודת צוות בתוך מעשה הגבורה?",
+      "איזה ערך משותף בולט במיוחד בשני הסיפורים?",
+    ],
+    tools: [
+      [
+        "סקר דילמת הפתיחה",
+        "הצבעה כיתתית לפתיחת השיעור.",
+        "https://live-hebrew-poll.baranat.chatgpt.site/",
+      ],
+      [
+        "ענן ערכים כיתתי",
+        "במסך הפתיחה בוחרים „פתיחת ענן ערכים”.",
+        "https://live-hebrew-poll.baranat.chatgpt.site/",
+      ],
+      [
+        "חדר הפיקוד",
+        "משחק הידע המסכם של השיעור.",
+        "https://oz-under-fire-jeopardy.baranat.chatgpt.site/",
+      ],
+    ],
+    materials: [
+      ["מערך למורה", "PDF", "/tanks-lesson-teacher-guide.pdf"],
+      ["דף מצפן אישי לתלמיד", "להדפסה", "/tanks-personal-compass.pdf"],
+    ],
+  },
+  "startup-nation": {
+    n: "04",
+    t: "אם מדינה הייתה סטארט אפ",
+    cat: "חדשנות ישראלית",
+    hook: "שיעור חווייתי המדמה הקמת מדינה כסטארט־אפ, ומזמין את התלמידים לקבל החלטות, לתעדף משאבים ולבחון כיצד חזון הופך למציאות.",
+    img: "/lesson-startup.png",
+    url: "https://canva.link/vvtsj22nnwlc0ir",
+    time: "90 דק׳",
+    type: "משחק ויזמות",
+    goals: [
+      ["ידע והבנה", "להכיר מאפיינים של חדשנות ויזמות ישראלית."],
+      ["מיומנויות", "לתעדף משאבים, לקבל החלטות ולעבוד בצוות."],
+      ["ערכים וזהות", "לבחון את הקשר בין חזון, אחריות ומעשה."],
+    ],
+    prep: [
+      "מצגת פתוחה מראש",
+      "טלפון או מחשב לכל קבוצה",
+      "עבודה בקבוצות",
+      "רצוי להכין דפי החלטות",
+    ],
+    flow: [
+      ["פתיחה", "10 דק׳", "הצגת מדינה צעירה ואתגרי הקמה."],
+      ["חלוקת משאבים", "20 דק׳", "הקבוצות בוחרות במה להשקיע תחילה."],
+      ["קבלת החלטות", "25 דק׳", "התמודדות עם אירועים בלתי צפויים ודילמות."],
+      ["שיתוף תוצאות", "20 דק׳", "כל קבוצה מציגה את הבחירות שלה."],
+      ["סיכום", "15 דק׳", "דיון בשאלה כיצד חזון הופך למציאות."],
+    ],
+    qs: [
+      "מה חשוב יותר בתחילת הדרך: חזון או משאבים?",
+      "איך מקבלים החלטה כשאין פתרון מושלם?",
+      "מה הופך כישלון להזדמנות ללמידה?",
+    ],
+  },
+  "brothers-and-disputes": {
+    n: "05",
+    t: "כשאחים שוכחים – מחלוקות בעם",
+    cat: "מחלוקת והבית המשותף",
+    hook: "איך מנהלים מחלוקת קשה מבלי לפרק את הבית המשותף?",
+    img: "/lesson-disputes.png",
+    url: "https://canva.link/pi6to8w9vrnfrro",
+    time: "90 דק׳",
+    type: "דילמות ודיון",
+    goals: [
+      ["ידע והבנה", "להכיר מחלוקות מכוננות בתולדות העם והמדינה."],
+      ["מיומנויות", "לזהות טיעונים, להקשיב ולנהל מחלוקת."],
+      ["ערכים וזהות", "לטפח אחריות לבית המשותף."],
+    ],
+    prep: [
+      "מצגת פתוחה מראש",
+      "טלפונים לסקר או פעילות דיגיטלית",
+      "עבודה בקבוצות",
+      "מומלץ להכין דפי חברותא",
+    ],
+    flow: [
+      ["פתיחה", "10 דק׳", "דילמה קצרה על מחלוקת בחברה."],
+      ["מפגש עם סיפורים", "25 דק׳", "היכרות עם מחלוקות מתקופות שונות."],
+      ["עבודה קבוצתית", "25 דק׳", "ניתוח נקודת שבר ובחירת כלל פעולה."],
+      ["שיח כיתתי", "20 דק׳", "הצגת כללים וניהול מחלוקת מכבדת."],
+      ["סיכום", "10 דק׳", "חיבור לבית המשותף של היום."],
+    ],
+    qs: [
+      "מתי מחלוקת הופכת מסכנת הבית המשותף?",
+      "מהי האחריות של כל צד בזמן ויכוח קשה?",
+      "אילו כללים יכולים לעזור לנו לנהל מחלוקת בכיתה ובחברה?",
+    ],
+  },
+};
+const order = Object.keys(lessons),
+  slug = document.body.dataset.lesson,
+  l = lessons[slug],
+  i = order.indexOf(slug),
+  prev = lessons[order[i - 1]],
+  next = lessons[order[i + 1]];
+const flow = l.flow
+  .map(
+    (x) =>
+      `<div class="flow-item"><span class="flow-num">${String(l.flow.indexOf(x) + 1).padStart(2, "0")}</span><div class="flow-title"><b>${x[0]}</b><span>${x[1]}</span></div><p>${x[2]}</p></div>`,
+  )
+  .join("");
+const tools = l.tools
+  ? `<div class="goal-grid">${l.tools.map(([title, description, url]) => `<a class="small-card" href="${url}" target="_blank" rel="noreferrer"><b>${title}</b><p>${description}</p><span class="button-outline">פתיחת הכלי</span></a>`).join("")}</div>`
+  : `<p class="empty">קישורים לכלים הדיגיטליים של שיעור זה יתווספו כאן.</p>`;
+const materials = l.materials
+  ? `<div class="questions">${l.materials.map(([title, type, url]) => (url ? `<a class="question" href="${url}" target="_blank" rel="noreferrer"><b>${title}</b><span> · ${type}</span></a>` : `<div class="question"><b>${title}</b><span> · ${type}</span></div>`)).join("")}</div>`
+  : `<p class="empty">דפי עבודה, כרטיסיות וקבצי הוראה יתווספו כאן.</p>`;
+if (l.about || l.pdf) {
+  queueMicrotask(() => {
+    if (l.about) {
+      document
+        .querySelector(".actions")
+        ?.insertAdjacentHTML(
+          "afterend",
+          `<section class="lesson-summary"><h2>על השיעור</h2><p>${l.about}</p></section>`,
+        );
+      const toolsSection = document.querySelector("#tools");
+      if (toolsSection)
+        toolsSection.innerHTML = `<h2>כלים דיגיטליים בשיעור</h2>${tools}`;
+      const materialsSection = document.querySelector("#materials");
+      if (materialsSection)
+        materialsSection.innerHTML = `<h2>חומרים להדפסה</h2>${materials}`;
+    }
+    if (l.pdf) {
+      const guideAction = [...document.querySelectorAll(".action")].find(
+        (action) => action.textContent.includes("מערך מלא למורה"),
+      );
+      guideAction?.setAttribute("href", l.pdf);
+      guideAction?.setAttribute("target", "_blank");
+      const pdfButton = document.querySelector(
+        "#teacher-guide .button-outline",
+      );
+      if (pdfButton)
+        pdfButton.outerHTML = `<a class="button-outline" href="${l.pdf}" target="_blank" rel="noreferrer">פתיחת המערך המלא PDF</a>`;
+    }
+  });
+}
+const pageStyle = document.createElement("style");
+pageStyle.textContent = ".quick-nav{display:none!important}";
+document.head.appendChild(pageStyle);
+document.title = `${l.t} | אני ישראלי`;
+document.querySelector("#lesson-app").innerHTML =
+  `<header class="top"><img class="logo" src="/makif-z-logo.png" alt="מקיף ז׳ אשדוד"><div class="brand">✡ אני ישראלי</div><a class="home" href="/#lessons">כל השיעורים</a></header><div class="shell"><nav class="crumbs"><a href="/">ראשי</a> / <a href="/#lessons">השיעורים</a> / ${l.t}</nav><header class="lesson-hero" style="--accent:#247f82"><div><span class="tag">שיעור ${l.n} | ${l.cat}</span><h1>${l.t}</h1><p class="hook">${l.hook}</p><div class="meta"><span>${l.time}</span><span>שכבת י׳</span><span>${l.type}</span></div></div><div class="cover"><img src="${l.img}" alt="שקף הפתיחה של ${l.t}"></div></header><nav class="quick-nav" aria-label="ניווט בדף"><a href="#flow">מהלך השיעור</a><a href="#goals">מטרות</a><a href="#tools">כלים דיגיטליים</a><a href="#materials">חומרים</a><a href="#presentation">מצגת</a><a href="#teacher-guide">PDF</a></nav><div class="actions"><a class="action" href="${l.url}" target="_blank" rel="noreferrer">מצגת השיעור</a><a class="action" href="#teacher-guide">מערך מלא למורה PDF</a><a class="action" href="#tools">כלים דיגיטליים</a><a class="action" href="#materials">חומרים להורדה</a></div><section id="goals"><h2>מטרות השיעור</h2><div class="goal-grid">${l.goals.map((g) => `<article class="small-card"><b>${g[0]}</b><p>${g[1]}</p></article>`).join("")}</div></section><section id="prep"><h2>לפני שמתחילים</h2><div class="prep-grid">${l.prep.map((p) => `<div class="prep-item"><b>הכנה</b>${p}</div>`).join("")}</div></section><section id="flow"><h2>מהלך השיעור</h2><div class="flow">${flow}</div></section><section id="teacher-guide"><h2>מערך מלא למורה</h2><div class="pdf-card"><div><b>מערך מפורט הכולל רקע תוכני, מטרות, מהלך מלא, שאלות לדיון ודגשים פדגוגיים.</b><p>קובץ ה־PDF של השיעור יתווסף כאן.</p></div><span class="button-outline">פתיחת המערך המלא PDF</span></div></section><section id="discussion"><h2>שאלות לדיון</h2><div class="questions">${l.qs.map((q) => `<div class="question">${q}</div>`).join("")}</div></section><section id="tools"><h2>כלים דיגיטליים בשיעור</h2><p class="empty">קישורים לכלים הדיגיטליים של שיעור זה יתווספו כאן.</p></section><section id="materials"><h2>חומרים להורדה</h2><p class="empty">דפי עבודה, כרטיסיות וקבצי הוראה יתווספו כאן.</p></section><section id="presentation"><h2>מצגת השיעור</h2><div class="presentation"><img src="${l.img}" alt=""><div><b>${l.t}</b><p>המצגת תיפתח בכרטיסייה חדשה.</p></div><a class="button" href="${l.url}" target="_blank" rel="noreferrer">פתיחת המצגת</a></div></section><section><details><summary>דגשים למורה</summary><p>בחרו את היקף הדיון והפעילות בהתאם לאופי הכיתה ולזמן העומד לרשותכם.</p></details><details><summary>הצעות להרחבה</summary><p>אפשר להרחיב באמצעות מקור נוסף, משימת כתיבה או פעילות המשך קבוצתית.</p></details></section><nav class="nav-bottom">${prev ? `<a href="/lessons/${order[i - 1]}.html">→ לשיעור הקודם</a>` : "<span></span>"}<a class="all" href="/#lessons">חזרה לכל השיעורים</a>${next ? `<a href="/lessons/${order[i + 1]}.html">לשיעור הבא ←</a>` : "<span></span>"}</nav></div><footer class="footer">© 2026 ענת ברון־לוביש, אתי נייברג ונטלי בן חמו. כל הזכויות שמורות. אין להעתיק, להפיץ, לפרסם, לשנות או לעשות בתכנים שימוש מסחרי ללא אישור מראש ובכתב מבעלות הזכויות.</footer>`;
